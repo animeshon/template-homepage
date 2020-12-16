@@ -1,0 +1,92 @@
+html {
+  font-family: 'Roboto', 'Helvetica-Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: #06aed5;
+}
+
+p {
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+b {
+  font-weight: 700;
+}
+
+footer {
+  margin-top: auto;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* header padder */
+.header_padder {
+  min-height: 96px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-header {
+  height: 70px;
+  width: 100%;
+  padding: 20px;
+}
+
+.home-search-box {
+  height: calc(100vh - 137px);
+  min-height: 280px;
+  padding: 20px;
+  display: flex;
+}
+
+.home-search-box h1 {
+  margin: 0 auto 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-search-box h3 {
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .home-search-box .internal-space {
+  flex-direction: column;
+}
+
+.home .internal-space {
+  max-width: 1280px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-content: center;
+}
+
+.internal-space .user-type-button-grid {
+  height: 100%;
+  display: -webkit-box;
+}
+
+@media screen and (max-width: 1180px) {
+  .internal-space .user-type-button-grid {
+    display: contents;
+  }
+
+  .home-search-box {
+    height: unset
+  }
+}
