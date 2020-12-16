@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from '@/root/i18n'
 
 import styles from './UserTypeButton.module.scss';
 

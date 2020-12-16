@@ -1,5 +1,8 @@
 import React from 'react';
+import App from 'next/app'
 import Head from 'next/head';
+
+import { appWithTranslation } from '@/root/i18n'
 
 import '../styles/reset.scss';
 import '../styles/globals.scss'
@@ -15,4 +18,6 @@ const AnimeshonAbout = ({ Component, pageProps }) => {
   )
 }
 
-export default AnimeshonAbout
+AnimeshonAbout.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })
+
+export default appWithTranslation(AnimeshonAbout);

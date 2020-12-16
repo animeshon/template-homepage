@@ -6,11 +6,11 @@ const Header = () => {
     return (
         <>
             <header className={styles.search_header}>
-                <Link href="/">
+                <a href="/">
                     <h1 className={styles.brand}>
                         <span>Search Manga and Anime</span>
                     </h1>
-                </Link>
+                </a>
             </header>
             <div className="header_padder" />
         </>

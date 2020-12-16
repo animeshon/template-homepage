@@ -1,9 +1,9 @@
 .user_type_button {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-
   margin-right: 40px;
   margin-bottom: 40px;
   width: 30%;
@@ -11,14 +11,11 @@
   font-size: 30px;
   text-align: center;
   line-height: 100px;
-  border-radius: 50px;
+  border-radius: 25px;
 }
 
 .user_type_creator {
   background: #ebbcc7;
-  background-size: 600%;
-  -webkit-animation: anime 16s linear infinite;
-          animation: anime 16s linear infinite;
   &:focus,
   &:hover {
     background: #f05378;
@@ -27,9 +24,6 @@
 
 .user_type_user {
   background: #86d2e7;
-  background-size: 600%;
-  -webkit-animation: anime 16s linear infinite;
-          animation: anime 16s linear infinite;
   &:focus,
   &:hover {
     background: #2dbee6;
@@ -38,9 +32,6 @@
 
 .user_type_dev {
   background: #ebd66f;
-  background-size: 600%;
-  -webkit-animation: anime 16s linear infinite;
-          animation: anime 16s linear infinite;
   &:focus,
   &:hover {
     background: #F0C808;

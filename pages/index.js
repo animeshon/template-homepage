@@ -2,7 +2,7 @@ import React from 'react';
 import Header from '@/components/Header/Header'
 import UserTypeButton from '@/components/UserTypeButton'
 
-export default function Home() {
+const UserDispacher = () => {
   return (
     <div className="home">
       <Header />
@@ -17,12 +17,12 @@ export default function Home() {
           <div className="user-type-button-grid">
             <UserTypeButton type={"creator"} href={"/creator"}>
               <img src={"../svg/painter.svg"} />
-            <span>Creator</span>
+              <span>Creator</span>
             </UserTypeButton>
             <UserTypeButton type={"user"} href={"/user"}>
               <img src={"../svg/open-book.svg"} />
               <span>User</span>
-              </UserTypeButton>
+            </UserTypeButton>
             <UserTypeButton type={"dev"} href={"/developer"}>
               <img src={"../svg/material-computer.svg"} />
               <span>Developer</span>
@@ -34,3 +34,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default UserDispacher;
