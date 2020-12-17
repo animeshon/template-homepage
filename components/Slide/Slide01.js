@@ -52,8 +52,4 @@ function Slide01({ t, strings, lang }) {
     );
 }
 
-Slide01.getInitialProps = async () => ({
-    namespacesRequired: ['developer-page'],
-})
-
 export default withTranslation('developer-page')(Slide01);

@@ -3,5 +3,13 @@
   "aboutDispatcher_subtitle": "Which kind of user are you?",
   "aboutDispatcher_choose_creator": "Creator",
   "aboutDispatcher_choose_user": "User",
-  "aboutDispatcher_choose_developer": "Developer"
+  "aboutDispatcher_choose_developer": "Developer",
+  "subscribeNewsLetterPlaceholder": "E-mail",
+  "subscribeNewsLetterAction": "Subscribe",
+  "subscribeNewsLetter_invalidEmail": "Please provide a valid email address.",
+  "subscribeNewsLetter_internalServerError":"An error has occurred trying to process your request. Please refresh the page and try again.",
+  "subscribeNewsLetter_badRequest": "An error has occurred trying to process your request. Please refresh the page and try again.",
+  "subscribeNewsLetter_invalidResource": "The email address you provided is either invalid or suspicious. Please check the email address and try again.",
+  "subscribeNewsLetter_alreadySubscribed": "The email address you provided is already registered.",
+  "subscribeNewsLetter_successfulStatus": "Thank you for registering to Animeshon! You will receive a confirmation email soon."
 }
