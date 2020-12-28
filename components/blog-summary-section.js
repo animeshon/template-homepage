@@ -11,6 +11,14 @@ const BlogSummarySection = () => {
       teaser: "This article gives a short introduction to Dockertest and how Google is using it against Covid19, also an overview about the open-source virus response in general.",
       path: "/",
     },
+  },
+  {
+    id: "test2",
+    frontmatter: {
+      title: "Keeping Covid-19 in check with ORY Dockertest",
+      teaser: "This article gives a short introduction to Dockertest and how Google is using it against Covid19, also an overview about the open-source virus response in general.",
+      path: "/",
+    },
   }];
   return (
     <div className={styles['blog-summary']}>
@@ -19,7 +27,7 @@ const BlogSummarySection = () => {
           <div
             className={cn(
               'col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10',
-              styles.blogRow
+              styles['blog-row']
             )}
           >
             {posts.map(
