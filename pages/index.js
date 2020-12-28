@@ -4,19 +4,21 @@ import UserTypeButton from '@/components/UserTypeButton'
 
 import { withTranslation } from '@/root/i18n'
 
+import * as style from './index.module.scss'
+
 const UserDispacher = ({t}) => {
   return (
-    <div className="home">
+    <div className={style.home}>
       <Header />
-      <div className="home-search-box">
-        <div className="internal-space">
+      <div className={style["home-search-box"]}>
+        <div className={style["internal-space"]}>
           <h1>
             <span>{t('aboutDispatcher_title')}</span>
           </h1>
           <h3>
             <span>{t('aboutDispatcher_subtitle')}</span>
           </h3>
-          <div className="user-type-button-grid">
+          <div className={style["user-type-button-grid"]}>
             <UserTypeButton type={"creator"} href={"/creator"}>
               <img src={"../svg/painter.svg"} />
               <span>{t('aboutDispatcher_choose_creator')}</span>
