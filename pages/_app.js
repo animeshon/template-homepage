@@ -5,7 +5,11 @@ import Head from 'next/head';
 import { appWithTranslation } from '@/root/i18n'
 
 import '../styles/reset.scss';
-import '../styles/globals.scss'
+import '../styles/globals.scss';
+import '../styles/grid.scss';
+
+import '../styles/themes/default.scss'
+import '../styles/typography.scss'
 
 const AnimeshonAbout = ({ Component, pageProps }) => {
   return (

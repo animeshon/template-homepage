@@ -8,11 +8,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "lost": "^8.3.1",
     "next": "10.0.3",
     "next-i18next": "^7.0.1",
     "next-images": "^1.6.2",
+    "numeral": "^2.0.6",
+    "postcss": "^8.2.1",
+    "postcss-custom-media": "^7.0.8",
     "react": "17.0.1",
+    "react-countup": "^4.3.3",
     "react-dom": "17.0.1",
+    "react-lottie": "^1.2.3",
+    "react-vertical-timeline-component": "^3.3.1",
+    "react-visibility-sensor": "^5.1.1",
     "sass": "^1.30.0"
   },
   "devDependencies": {

@@ -1,0 +1,18 @@
+.divider {
+  border-left: 1px solid;
+  position: absolute;
+  left: 50%;
+  border-color: var(--colors-themed-default);
+}
+
+@media (--sm-viewport) {
+  .divider {
+    display: none;
+  }
+}
+
+@media (--md-viewport) {
+  .divider {
+    display: none;
+  }
+}
