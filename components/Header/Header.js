@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
-import styles from './Header.module.css';
+import HeaderDropdown from './header-dropdown';
+import styles from './Header.module.scss';
 
 const Header = () => {
     return (
@@ -11,6 +11,8 @@ const Header = () => {
                         <span>Search Manga and Anime</span>
                     </h1>
                 </a>
+                <div className={styles.space}/>
+                <HeaderDropdown />
             </header>
             <div className="header_padder" />
         </>

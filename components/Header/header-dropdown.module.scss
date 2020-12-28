@@ -1,0 +1,21 @@
+.arrow {
+    top: 24px;
+}
+
+.menu {
+    border: unset;
+    width: 180px;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    & .icon {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+}
