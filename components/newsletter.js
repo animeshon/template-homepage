@@ -13,7 +13,7 @@ export const validate = (string) => {
   return true;
 };
 
-const Newsletter = ({ t }) => {
+const Newsletter = ({ t, title, description }) => {
   const [subscriptionState, setSubscriptionState] = useState({
   });
 
@@ -134,11 +134,8 @@ const Newsletter = ({ t }) => {
           <VerticalDivider padding={64} />
           <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
             <>
-              <h3>Never miss a patch</h3>
-              <p>
-                ORY ships regular product patches and updates. Subscribe to
-                our newsletter to get the good stuff, and stay up to date.
-                  </p>
+              <h3>{title}</h3>
+              <p>{description}</p>
             </>
           </div>
           <div
@@ -147,21 +144,21 @@ const Newsletter = ({ t }) => {
               styles.right
             )}
           >
-            <h3>Subscribe now</h3>
+            <h3>{t('subscribeNewsLetterTitle')}</h3>
             <form className={styles.form}
               onSubmit={e => handleSubmit(e)}
             >
               <input
                 type="email"
                 name={'email'}
-                placeholder={'Enter your email'}
+                placeholder={t('subscribeNewsLetterPlaceholder')}
                 required
                 onChange={e => handleTypeEmail(e)}
               />
               <input
                 type="button"
                 name={'submit'}
-                value={'Subscribe'}
+                value={t('subscribeNewsLetterAction')}
                 onClick={e => handleSubmit(e)}
               />
             </form>
