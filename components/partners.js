@@ -14,6 +14,12 @@ const adopters = [
     image: require('../public/images/partner-visualnovel-info.png'),
     url: 'https://visual-novel.info/'
   },
+  {
+    title: 'KaDoKo',
+    featured: true,
+    image: require('../public/images/partner-kadoko.png'),
+    url: 'https://github.com/skyborgff/KaDoKo'
+  },
 ]
 
 const Partners = ({ onlyFeatured }) => (
