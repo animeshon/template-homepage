@@ -22,6 +22,8 @@ const AnimeshonAbout = ({ Component, pageProps }) => {
   )
 }
 
-AnimeshonAbout.getInitialProps = async (appContext) => ({ ...await App.getInitialProps(appContext) })
+AnimeshonAbout.getInitialProps = async (appContext) => {
+  return {...await App.getInitialProps(appContext)}
+}
 
 export default appWithTranslation(AnimeshonAbout);

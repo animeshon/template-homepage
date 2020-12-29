@@ -133,7 +133,7 @@ const Developer = ({ dataLang }) => {
 }
 
 Developer.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'dev-page'],
+  namespacesRequired: ['common'],
 })
 
-export default withTranslation()(Developer);
+export default withTranslation('common')(Developer);

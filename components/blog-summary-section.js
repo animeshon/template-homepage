@@ -3,23 +3,7 @@ import * as styles from './blog-summary-section.module.scss'
 import cn from 'classnames'
 import { Link } from '@/root/i18n'
 
-const BlogSummarySection = () => {
-  const posts = [{
-    id: "test",
-    frontmatter: {
-      title: "Keeping Covid-19 in check with ORY Dockertest",
-      teaser: "This article gives a short introduction to Dockertest and how Google is using it against Covid19, also an overview about the open-source virus response in general.",
-      path: "/",
-    },
-  },
-  {
-    id: "test2",
-    frontmatter: {
-      title: "Keeping Covid-19 in check with ORY Dockertest",
-      teaser: "This article gives a short introduction to Dockertest and how Google is using it against Covid19, also an overview about the open-source virus response in general.",
-      path: "/",
-    },
-  }];
+const BlogSummarySection = ({ posts }) => {
   return (
     <div className={styles['blog-summary']}>
       <div className="container-fluid">
@@ -30,12 +14,9 @@ const BlogSummarySection = () => {
               styles['blog-row']
             )}
           >
-            {posts.map(
-              ({
-                id,
-                frontmatter: { title, teaser, path }
-              }) => (
-                <Link key={id} href={path} >
+            {posts.slice(0, 3).map(
+              ({ title, teaser, path }) => (
+                <Link key={path} href={path} >
                   <div className={cn(styles['blog-box'])}>
                     <h3 className={cn('col-lg-offset-1 col-lg-10')}>{title}</h3>
                     <p className={cn('col-lg-offset-1 col-lg-10', 'secondary')}>

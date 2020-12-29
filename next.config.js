@@ -4,7 +4,14 @@ const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
 const withImages = require('next-images');
 
 module.exports = withImages({
-    webpack: (config) => {
+    webpack: (config, { isServer }) => {
+        // Fixes npm packages that depend on `fs` module
+        if (!isServer) {
+          config.node = {
+            fs: 'empty'
+          }
+        }
+        
         const oneOf = config.module.rules.find(
             (rule) => typeof rule.oneOf === 'object'
         );

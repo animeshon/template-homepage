@@ -20,8 +20,8 @@ const CallToActionButton = ({
   </a>
 )
 
-const Hero = ({ title, subtitle, cta }) => (
-  <div className={cn(styles.hero)}>
+const Hero = ({ title, subtitle, cta, fullpage = false }) => (
+  <div className={cn(styles.hero, fullpage ? styles.full : undefined)}>
     <div className={styles.overlay}>
     </div>
     <div className="container-fluid">

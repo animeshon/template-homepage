@@ -10,6 +10,8 @@ import BlogSummarySection from '@/components/blog-summary-section'
 import Partners from '@/components/partners'
 import Timeline from '@/components/vertical-timeline'
 
+import { GetGlobalBlogCache } from '@/src/blog-cache';
+
 const timeline = {
   "header": {
     title: "What comes next?"
@@ -95,7 +97,8 @@ const newsletter = {
   description: "ORY ships regular product patches and updates. Subscribe to our newsletter to get the good stuff, and stay up to date."
 }
 
-const Developer = ({ dataLang }) => {
+const Developer = ({ dataLang, blogPosts }) => {
+  const showablePosts = blogPosts.slice(0, 3);
   return (
     <StrictMode>
       <div className={`theme-default`}>
@@ -103,6 +106,7 @@ const Developer = ({ dataLang }) => {
           <Header />
 
           <Hero
+            fullpage={showablePosts.length == 0}
             title="Open Source Identity Infrastructure and Services"
             subtitle="Run User Management, Permission and Role Management, and OAuth 2.0 & OpenID Connect anywhere from your cloud to a Raspberry Pi."
             cta={[
@@ -120,20 +124,27 @@ const Developer = ({ dataLang }) => {
               }
             ]}
           />
-          <BlogSummarySection />
+          {showablePosts.length && <BlogSummarySection posts={showablePosts}/>}
           <Partners onlyFeatured={true} />
           <ThinProjectList projects={projects} />
           <Timeline events={timeline.events} header={timeline.header} />
           <Stats stats={stats.numbers} header={stats.header} />
-          <Newsletter title={newsletter.title} description={newsletter.description}/>
+          <Newsletter title={newsletter.title} description={newsletter.description} />
         </main>
       </div>
     </StrictMode>
   )
 }
 
-Developer.getInitialProps = async () => ({
-  namespacesRequired: ['common', 'dev-page'],
-})
+export const getServerSideProps = async () => {
+  const cache = GetGlobalBlogCache();
+  const blogPosts = await cache.GetOrRefresh()
+  return {
+    props: {
+      blogPosts: blogPosts,
+      namespacesRequired: ['common'],
+    }
+  }
+}
 
-export default withTranslation()(Developer);
+export default withTranslation('common')(Developer);

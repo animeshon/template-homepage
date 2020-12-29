@@ -7,7 +7,7 @@
   position: relative;
 
   &.full {
-    min-height: calc(100vh - 258px);
+    height: calc(100vh - 258px);
     background-size: cover;
     background-position: bottom center;
     flex-direction: column;
@@ -19,6 +19,10 @@
     right: 0;
     background-image: url('../public/images/background-header.png');
     height: calc(100% + 96px);
+  }
+
+  &.full .overlay {
+    height: calc(100%);
   }
 
   & h2 {

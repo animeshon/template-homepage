@@ -1,0 +1,116 @@
+//@import '../styles/properties.css';
+
+.section {
+  padding: 32px 0;
+  background-color: var(--colors-base-white);
+
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6 {
+    margin-top: 1rem;
+  }
+
+  & li,
+  & code,
+  & dl,
+  & dd,
+  & dt,
+  & p {
+    margin-top: 0;
+    color: var(--colors-base-black);
+  }
+
+  & p,
+  & li {
+    & strong {
+      font-weight: 500;
+    }
+  }
+
+  & pre {
+    margin-bottom: 32px !important;
+  }
+
+  & p,
+  & ul,
+  & ol {
+    margin-bottom: 32px;
+  }
+
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & li {
+    margin-bottom: 16px;
+  }
+
+  & p a {
+    transition: all ease 200ms;
+  }
+
+  & a:any-link {
+    color: var(--colors-themed-default);
+  }
+
+  & p a:hover,
+  & p a:active {
+    color: var(--colors-base-black);
+    text-decoration: underline;
+  }
+
+  & p + p {
+    margin-top: -8px;
+  }
+
+  & img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  & :not(pre) > code[class*='language-'] {
+    padding: 0 6px;
+    font-weight: 500;
+    word-break: break-all;
+    color: var(--colors-base-dark);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  & blockquote {
+    margin: 2rem 0 3rem 0;
+    padding-left: 2rem;
+    border-left: 1px solid var(--colors-themed-default);
+  }
+
+  & blockquote p {
+    font-weight: 300;
+  }
+
+  & figure {
+    margin: 2rem 0 3rem 0;
+    padding-top: 16px;
+
+    & figcaption {
+      text-align: center;
+      color: var(--colors-base-grey);
+      font-size: 0.694rem;
+      margin: 16px 0 32px;
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .section {
+    padding: 32px 0;
+  }
+}
+
+@media (--md-viewport) {
+  .section {
+    padding: 32px 0;
+  }
+}
