@@ -20,12 +20,12 @@ const Timeline = ({ header, events }) => {
                 <VerticalTimelineElement
                   key={e.id}
                   className="vertical-timeline-element--work"
-                  contentStyle={e.highligthStyle && e.highligthStyle}
-                  contentArrowStyle={e.highligthArrowStyle && e.highligthArrowStyle}
+                  contentStyle={e.highligthStyle}
+                  contentArrowStyle={e.highligthArrowStyle}
                   dateClassName={style['date-default']}
                   date={e.date}
-                  iconStyle={e.iconStyle && e.iconStyle}
-                  icon={e.icon && e.icon}
+                  iconStyle={e.iconStyle}
+                  icon={e.icon}
                 >
                   <h3 className="vertical-timeline-element-title">{e.title}</h3>
                   <h4 className="vertical-timeline-element-subtitle">{e.subtitle}</h4>

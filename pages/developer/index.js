@@ -16,10 +16,10 @@ const timeline = {
   },
   "events": [{
     id: "1",
-    highligthArrowStyle: { borderRight: '7px solid  var(--colors-themed-weak)' },
+    highligthArrowStyle: { borderRight: '7px solid  var(--colors-themed-default)' },
     highligthStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
     date: "2011 - present",
-    iconStyle: { background: 'var(--colors-themed-weak)', color: '#fff' },
+    iconStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
     icon: undefined,
     title: "Creative Director",
     subtitle: "Miami, FL",
@@ -28,7 +28,7 @@ const timeline = {
   {
     id: "2",
     date: "2010 - 2011",
-    iconStyle: { background: 'var(--colors-themed-weak)', color: '#fff' },
+    iconStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
     title: "Creative Director",
     subtitle: "Miami, FL",
     description: "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
