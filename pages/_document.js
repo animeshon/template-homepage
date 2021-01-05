@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
-const TAG_MANAGER_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || 'GTM-NRN5LVP';
+const TAG_MANAGER_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID || 'GTM-WPNFW73';
 const ASSET_PREFIX = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
 
 {/* https://developers.google.com/search/docs/data-types/sitelinks-searchbox */ }

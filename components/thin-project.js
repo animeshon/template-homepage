@@ -7,7 +7,7 @@ import Lottie from 'react-lottie';
 const ThinProject = ({
   title,
   description,
-  learn,
+  action,
   href,
   visual
 }) => {
@@ -32,7 +32,7 @@ const ThinProject = ({
             </Link>
             <p>{description}</p>
             <Link href={href} className={cn(styles.cap, 'secondary')}>
-              {learn}
+              {action}
             </Link>
           </div>
           {visual &&

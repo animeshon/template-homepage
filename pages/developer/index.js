@@ -20,43 +20,51 @@ const timeline = {
     id: "1",
     highligthArrowStyle: { borderRight: '7px solid  var(--colors-themed-default)' },
     highligthStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
-    date: "2011 - present",
+    date: "March 2021",
     iconStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
     icon: undefined,
-    title: "Creative Director",
-    subtitle: "Miami, FL",
-    description: "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+    title: "Canonicals and Universes",
+    subtitle: "Related content and media!",
+    description: "Content will be groupd through a hierarchical structure that includes universes and canonical franchises.",
   },
   {
     id: "2",
-    date: "2010 - 2011",
+    date: "June 2021",
     iconStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
-    title: "Creative Director",
-    subtitle: "Miami, FL",
-    description: "Creative Direction, User Experience, Visual Design, Project Management, Team Leading",
+    title: "Accounts and Tracking Lists",
+    subtitle: "Save that title for later!",
+    description: "Users accounts will be available and it will be possible to start syncing watch-, read-, and play- tracking lists.",
+  },
+  {
+    id: "3",
+    date: "October 2021",
+    iconStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
+    title: "Release of the Media Platform",
+    subtitle: "Read without leaving Animeshon!",
+    description: "Independent content will be available directly on Animeshon. A distribution network for independent content creators and translators!",
   },
   ]
 };
 
 const stats = {
   "header": {
-    title: "Adoption rate",
-    description: `All of our security-relevant code is open source, and our flows and concepts are rooted in open standards and industry best practices.`,
+    title: "A growing ecosystem",
+    description: `Animeshon is already the largest platform on the market and its continuous growth is only possible thanks to the global community.`,
   },
   "numbers": [
     {
-      title: 'Requests secured',
-      amount: 5465465,
+      title: 'Official titles',
+      amount: 176000,
       description: `Overall`
     },
     {
-      title: 'Docker pulls',
-      amount: 111111,
+      title: 'Independent titles',
+      amount: 1500000,
       description: 'Overall'
     },
     {
-      title: 'GitHub stars',
-      amount: 654654,
+      title: 'External links',
+      amount: 12000000,
       description: 'Overall'
     }
   ],
@@ -64,37 +72,45 @@ const stats = {
 
 const projects = [
   {
-    id: 'kratos',
-    title: `Kratos`,
-    descriptiveTitle: 'User Management',
+    action: 'Search in our graph database',
+    title: 'Search in one place',
     description:
-      'Cloud native user management system. Provision IDs, store user information, configure authentication methods and use a headless API.',
-    path: '/kratos',
-    links: {
-      quickstart: 'https://www.ory.sh/docs/next/kratos/quickstart'
-    },
+      'Search your favorite content through over 2 million official and independent Anime, Manga, Light-, and Visual- Novels.',
+    href: 'https://animeshon/encyclopedia',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/lf30_editor_Poez3y.json'),
     }
   },
   {
-    id: 'hydra',
-    title: `Hydra`,
-    descriptiveTitle: 'OAuth 2.0 and OpenID Connect',
+    action: 'Explore universes and canonicals',
+    title: 'Explore multiple universes',
     description:
-      'OAuth 2.0 and OpenID Certified® OpenID Connect server. Secure access to your applications and APIs.',
-    path: '/hydra',
-    links: {
-      quickstart: 'https://www.ory.sh/hydra/docs/5min-tutorial'
-    },
+      'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
+    href: '/hydra',
+    // visual: hydraAnimation
+  },
+  {
+    action: 'Sync all your lists now',
+    title: 'Track all your lists',
+    description:
+      'Import and export all tracking lists from your favorite websites - or build your own directly on Animeshon.',
+    href: '/hydra',
+    // visual: hydraAnimation
+  },
+  {
+    action: 'Start reading new titles',
+    title: 'Read independent titles',
+    description:
+      'Read independent stories directly from our community of content creators - our network promotes legal distribution and translations.',
+    href: '/hydra',
     // visual: hydraAnimation
   },
 ];
 
 const newsletter = {
-  title: "Never miss a patch",
-  description: "ORY ships regular product patches and updates. Subscribe to our newsletter to get the good stuff, and stay up to date."
+  title: "Stay up to date",
+  description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
 const Developer = ({ dataLang, blogPosts }) => {

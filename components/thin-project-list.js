@@ -3,14 +3,13 @@ import ThinProject from './thin-project'
 
 const ThinProjectList = ({ projects }) => (
   <div>
-    {projects.map(({ id, descriptiveTitle, description, path, visual }) => (
+    {projects.map(({ id, action, title, description, href, visual }) => (
       <ThinProject
         key={id}
-        href={path}
-        theme={id}
-        title={descriptiveTitle}
+        href={href}
+        title={title}
         description={description}
-        learn={`Explore ${id}`}
+        action={`${action}`}
         visual={visual}
       />
     ))}

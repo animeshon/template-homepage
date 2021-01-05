@@ -32,7 +32,7 @@ const Partners = ({ onlyFeatured }) => (
               {adopters
                 .filter(({ featured }) => (onlyFeatured ? featured : true))
                 .map(({ title, image, url }) => (
-                  <a href={url} key={title}>
+                  <a href={url} key={title} target="_blank">
                     <img loading="lazy" src={image} alt={title} />
                   </a>
                 ))}
