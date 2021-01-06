@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev:developers": "rm -f pages/index.js && ln -s $(pwd)/templates/_developers/index.js pages/index.js && next dev",
+    "dev:creators": "rm -f pages/index.js && ln -s $(pwd)/templates/_creators/index.js pages/index.js && next dev",
+    "dev": "rm -f pages/index.js && ln -s $(pwd)/templates/_users/index.js pages/index.js && next dev",
     "build": "next build",
     "start": "next start"
   },

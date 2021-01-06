@@ -11,7 +11,7 @@ import '../styles/grid.scss';
 import '../styles/themes/default.scss'
 import '../styles/typography.scss'
 
-const AnimeshonAbout = ({ Component, pageProps }) => {
+const Homepage = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
@@ -45,8 +45,8 @@ const AnimeshonAbout = ({ Component, pageProps }) => {
   )
 }
 
-AnimeshonAbout.getInitialProps = async (appContext) => {
+Homepage.getInitialProps = async (appContext) => {
   return { ...await App.getInitialProps(appContext) }
 }
 
-export default appWithTranslation(AnimeshonAbout);
+export default appWithTranslation(Homepage);

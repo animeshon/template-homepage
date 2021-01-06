@@ -8,5 +8,9 @@
             "@/src/*": ["src/*"],
             "@/blog/*": ["blog/*"],
         }
-    }
+    },
+    "exclude": [
+        "node_modules",
+        "templates"
+    ]
 }

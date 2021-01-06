@@ -35,3 +35,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# dynamic page
+/pages/index.js

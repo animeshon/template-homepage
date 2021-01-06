@@ -1,0 +1,10 @@
+.backup
+.codefresh.yaml
+.dockerignore
+.gitignore
+.next
+/.github
+/node_modules
+/terraform
+Dockerfile
+README.md
