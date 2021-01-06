@@ -83,6 +83,7 @@ const stats = {
 
 const projects = [
   {
+    id: '1',
     action: 'Search in our graph database',
     title: 'Search in one place',
     description:
@@ -94,6 +95,7 @@ const projects = [
     }
   },
   {
+    id: '2',
     action: 'Explore universes and canonicals',
     title: 'Explore multiple universes',
     description:
@@ -102,6 +104,7 @@ const projects = [
     // visual: hydraAnimation
   },
   {
+    id: '3',
     action: 'Sync all your lists now',
     title: 'Track all your lists',
     description:
@@ -110,6 +113,7 @@ const projects = [
     // visual: hydraAnimation
   },
   {
+    id: '4',
     action: 'Start reading new titles',
     title: 'Read independent titles',
     description:
@@ -124,7 +128,7 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
-const Developer = ({ dataLang, blogPosts }) => {
+const Developers = ({ dataLang, blogPosts }) => {
   const showablePosts = blogPosts.slice(0, 3);
   return (
     <StrictMode>
@@ -174,4 +178,4 @@ export const getServerSideProps = async () => {
   }
 }
 
-export default withTranslation('common')(Developer);
+export default withTranslation('common')(Developers);

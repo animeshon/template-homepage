@@ -1,9 +1,9 @@
 {
   "aboutDispatcher_title": "Creator, User or Developer?",
   "aboutDispatcher_subtitle": "Which kind of user are you?",
-  "aboutDispatcher_choose_creator": "Creator",
-  "aboutDispatcher_choose_user": "User",
-  "aboutDispatcher_choose_developer": "Developer",
+  "aboutDispatcher_choose_creator": "Creators",
+  "aboutDispatcher_choose_user": "Users",
+  "aboutDispatcher_choose_developer": "Developers",
   "subscribeNewsLetterTitle": "Subscribe now",
   "subscribeNewsLetterPlaceholder": "Enter your email",
   "subscribeNewsLetterAction": "Subscribe",
