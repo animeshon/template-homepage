@@ -17,7 +17,8 @@ export const GetGlobalBlogCache = () => {
 
 class BlogCache {
     constructor() {
-        this.memoryCache = cacheManager.caching({ store: 'memory', ttl: 60*60*10/*10 hours*/ });
+        // this.memoryCache = cacheManager.caching({ store: 'memory', ttl: 60*60*10/*10 hours*/ });
+        this.memoryCache = cacheManager.caching({ store: 'memory', ttl: 1 });
     };
 
     getfsBlog = () => {
@@ -43,7 +44,7 @@ class BlogCache {
             }
         };
         return arr.sort(function (a, b) {
-            return (new Date(a.publishedAt).getTime() < new Date(b.publishedAt).getTime()) ? -1 : 1;
+            return (new Date(a.publishedAt).getTime() < new Date(b.publishedAt).getTime()) ? 1 : -1;
         });
     };
 
@@ -79,7 +80,7 @@ class BlogCache {
 
     GetOrRefresh = async () => {
         let that = this;
-        return await this.memoryCache.get("_").then((err, result) => {
+        return await this.memoryCache.get("_").then((result, err) => {
             if (err) { throw err; }
             if (result == undefined) {
                 const data = that.getfsBlog();

@@ -19,15 +19,15 @@ const UserDispacher = ({t}) => {
             <span>{t('aboutDispatcher_subtitle')}</span>
           </h3>
           <div className={style["user-type-button-grid"]}>
-            <UserTypeButton type={"creator"} href={"/creator"}>
+            <UserTypeButton type={"creator"} href={"/creators"}>
               <img src={"../svg/painter.svg"} />
               <span>{t('aboutDispatcher_choose_creator')}</span>
             </UserTypeButton>
-            <UserTypeButton type={"user"} href={"/user"}>
+            <UserTypeButton type={"user"} href={"/users"}>
               <img src={"../svg/open-book.svg"} />
               <span>{t('aboutDispatcher_choose_user')}</span>
             </UserTypeButton>
-            <UserTypeButton type={"dev"} href={"/developer"}>
+            <UserTypeButton type={"dev"} href={"/developers"}>
               <img src={"../svg/material-computer.svg"} />
               <span>{t('aboutDispatcher_choose_developer')}</span>
             </UserTypeButton>
