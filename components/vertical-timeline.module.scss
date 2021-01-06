@@ -6,12 +6,12 @@
 
 @media (min-width: 1170px) {
   .date-default {
-    color: var(--colors-base-light);
+    color: var(--colors-base-black);
   }
 }
 
 .header {
-  color: var(--colors-base-white);
+  color: var(-colors-base-dark);
   & p {
     margin-bottom: 16px;
   }

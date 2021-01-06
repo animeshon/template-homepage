@@ -8,9 +8,13 @@
   --colors-base-light: #fafafa;
   --colors-base-white: #ffffff;
 
-  --colors-themed-default: #5528ff;
-  --colors-themed-weak: #8e70ff;
-  --colors-themed-light: #fafaff;
+  --colors-themed-default: var(--colors-red-default);
+  --colors-themed-weak: var(--colors-red-weak);
+  --colors-themed-light: var(--colors-red-light);
+
+  --colors-purple-default: #5528ff;
+  --colors-purple-weak: #8e70ff;
+  --colors-purple-light: #fafaff;
 
   --colors-green-default: #4caf50;
   --colors-green-weak: #7bc67e;
@@ -20,7 +24,7 @@
   --colors-yellow-weak: #ffdfa0;
   --colors-yellow-light: #fff8ea;
 
-  --colors-red-default: #f44336;
-  --colors-red-weak: #f88078;
+  --colors-red-default: #f13434;
+  --colors-red-weak: #ffdada;
   --colors-red-light: #feedec;
 }

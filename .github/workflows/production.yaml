@@ -1,0 +1,37 @@
+name: Homepage Workflow Dispatch [Tier 0]
+
+on:
+  push:
+    branches: [ master, main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Trigger workflow for all repositories
+      run: |
+        curl \
+          -XPOST \
+          -u "${{ secrets.WORKFLOW_GITHUB_USERNAME }}:${{secrets.WORKFLOW_GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.everest-preview+json" \
+          -H "Content-Type: application/json" \
+          --data '{"ref": "master"}' \
+            https://api.github.com/repos/animeshon/website-developers/actions/workflows/production.yaml/dispatches
+        
+        # curl \
+        #   -XPOST \
+        #   -u "${{ secrets.WORKFLOW_GITHUB_USERNAME }}:${{secrets.WORKFLOW_GITHUB_TOKEN }}" \
+        #   -H "Accept: application/vnd.github.everest-preview+json" \
+        #   -H "Content-Type: application/json" \
+        #   --data '{"ref": "master"}' \
+        #     https://api.github.com/repos/animeshon/website-creators/actions/workflows/production.yaml/dispatches
+
+        # curl \
+        #   -XPOST \
+        #   -u "${{ secrets.WORKFLOW_GITHUB_USERNAME }}:${{secrets.WORKFLOW_GITHUB_TOKEN }}" \
+        #   -H "Accept: application/vnd.github.everest-preview+json" \
+        #   -H "Content-Type: application/json" \
+        #   --data '{"ref": "master"}' \
+        #     https://api.github.com/repos/animeshon/website-homepage/actions/workflows/production.yaml/dispatches
+    
