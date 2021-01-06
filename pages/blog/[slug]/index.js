@@ -20,6 +20,8 @@ const renderers = {
 }
 
 const BlogPost = ({ post }) => {
+    if (!post) return null;
+
     return (
         <>
             <Header />

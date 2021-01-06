@@ -32,6 +32,7 @@ module.exports = withImages({
             });
         }
 
+        config.resolve.symlinks = false
         return config;
     },
     basePath: basePath,

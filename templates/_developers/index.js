@@ -128,8 +128,8 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
-const Developers = ({ dataLang, blogPosts }) => {
-  const showablePosts = blogPosts.slice(0, 3);
+const Developers = ({ t, posts }) => {
+  const showablePosts = posts.slice(0, 3);
   return (
     <StrictMode>
       <div className={`theme-default`}>
@@ -154,15 +154,16 @@ const Developers = ({ dataLang, blogPosts }) => {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
-  const blogPosts = await cache.GetOrRefresh()
+  const posts = await cache.GetOrRefresh()
+
   return {
     props: {
-      blogPosts: blogPosts,
-      namespacesRequired: ['common'],
+      namespacesRequired: ['common', 'blog'],
+      posts: posts
     }
-  }
+  };
 }
 
 export default withTranslation('common')(Developers);

@@ -44,12 +44,12 @@ const BlogList = ({ t, posts }) => {
 
 export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
-  const blogPosts = await cache.GetOrRefresh()
+  const posts = await cache.GetOrRefresh()
 
   return {
     props: {
       namespacesRequired: ['common', 'blog'],
-      posts: blogPosts
+      posts: posts
     }
   };
 }

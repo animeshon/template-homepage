@@ -3,11 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev:users": "rm -f pages/index.js && ln -s $(pwd)/templates/_users/index.js pages/index.js && next dev",
+    "build:users": "rm -f pages/index.js && ln -s $(pwd)/templates/_users/index.js pages/index.js && next build",
+
     "dev:developers": "rm -f pages/index.js && ln -s $(pwd)/templates/_developers/index.js pages/index.js && next dev",
+    "build:developers": "rm -f pages/index.js && ln -s $(pwd)/templates/_developers/index.js pages/index.js && next build",
+
     "dev:creators": "rm -f pages/index.js && ln -s $(pwd)/templates/_creators/index.js pages/index.js && next dev",
-    "dev": "rm -f pages/index.js && ln -s $(pwd)/templates/_users/index.js pages/index.js && next dev",
-    "build": "next build",
-    "start": "next start"
+    "build:creators": "rm -f pages/index.js && ln -s $(pwd)/templates/_creators/index.js pages/index.js && next build",
+
+    "start": "next start",
+    "start:production": "next start -p $PORT"
   },
   "dependencies": {
     "cache-manager": "^3.4.0",
