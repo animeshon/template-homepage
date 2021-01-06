@@ -17,7 +17,7 @@ jobs:
           -H "Accept: application/vnd.github.everest-preview+json" \
           -H "Content-Type: application/json" \
           --data '{"ref": "master"}' \
-            https://api.github.com/repos/animeshon/website-developers/actions/workflows/production.yaml/dispatches
+            https://api.github.com/repos/animeshon/website-developers/actions/workflows/production.yml/dispatches
         
         # curl \
         #   -XPOST \
@@ -25,7 +25,7 @@ jobs:
         #   -H "Accept: application/vnd.github.everest-preview+json" \
         #   -H "Content-Type: application/json" \
         #   --data '{"ref": "master"}' \
-        #     https://api.github.com/repos/animeshon/website-creators/actions/workflows/production.yaml/dispatches
+        #     https://api.github.com/repos/animeshon/website-creators/actions/workflows/production.yml/dispatches
 
         # curl \
         #   -XPOST \
@@ -33,5 +33,5 @@ jobs:
         #   -H "Accept: application/vnd.github.everest-preview+json" \
         #   -H "Content-Type: application/json" \
         #   --data '{"ref": "master"}' \
-        #     https://api.github.com/repos/animeshon/website-homepage/actions/workflows/production.yaml/dispatches
+        #     https://api.github.com/repos/animeshon/website-homepage/actions/workflows/production.yml/dispatches
     
