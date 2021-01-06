@@ -5,9 +5,9 @@ publishedAt: '2021-01-06'
 author: Christian Roggia feat. Shoko Anime
 target: developers
 
-title: 'Basic Anime collection-manager app through Ashen APIs'
+title: 'Basic Anime collection manager through Ashen Image Search'
 teaser: |
-  Learn how to build a basic Anime collection-manager app that is fast, accurate,
+  Learn how to build a basic Anime collection manager that is fast, accurate,
   and privacy-oriented through our Reverse Image Search Engine.
 
 subtitle: >
