@@ -128,32 +128,19 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
-const Users = ({ dataLang, blogPosts }) => {
-  const showablePosts = blogPosts.slice(0, 3);
+const Users = ({ t, posts }) => {
+  const showablePosts = posts.slice(0, 3);
   return (
     <StrictMode>
       <div className={`theme-default`}>
         <main>
-          <Header />
+          <Header theme={`users`} />
 
           <Hero
             fullpage={showablePosts.length == 0}
-            title="Open Source Identity Infrastructure and Services"
-            subtitle="Run User Management, Permission and Role Management, and OAuth 2.0 & OpenID Connect anywhere from your cloud to a Raspberry Pi."
-            cta={[
-              {
-                title: 'Demo',
-                href:
-                  'https://docs.google.com/forms/d/e/1FAIpQLSc5sViXt5rR44MLbJM5QjSDoSiZxXaXtmkHvAg22KC-x3z1Dg/viewform',
-                style: 'primary',
-                openInNewWindow: true
-              },
-              {
-                title: 'GitHub',
-                href: 'https://github.com/ory',
-                style: 'secondary'
-              }
-            ]}
+            title="This part of the page will be removed"
+            subtitle="It will be replaced with a search bar or a console for developers."
+            cta={[]}
           />
           {showablePosts.length && <BlogSummarySection posts={showablePosts}/>}
           <Partners onlyFeatured={true} />
@@ -167,15 +154,16 @@ const Users = ({ dataLang, blogPosts }) => {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
-  const blogPosts = await cache.GetOrRefresh()
+  const posts = await cache.GetOrRefresh()
+
   return {
     props: {
-      blogPosts: blogPosts,
-      namespacesRequired: ['common'],
+      namespacesRequired: ['common', 'blog'],
+      posts: posts
     }
-  }
+  };
 }
 
 export default withTranslation('common')(Users);

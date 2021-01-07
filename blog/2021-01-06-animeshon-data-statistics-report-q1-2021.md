@@ -1,6 +1,6 @@
 ---
-path: '/blog/animeshon-statistics-report-january-2021/'
-slug: 'animeshon-statistics-report-january-2021'
+path: '/blog/animeshon-data-statistics-report-q1-2021/'
+slug: 'animeshon-data-statistics-report-q1-2021'
 publishedAt: '2021-01-01'
 author: Asuka Sōryū Langley (Animeshon Robot)
 target: all
@@ -14,5 +14,5 @@ subtitle: >
   TODO
 
 overline: >
-  Regular statistics reports
+  Animeshon statistics report
 ---

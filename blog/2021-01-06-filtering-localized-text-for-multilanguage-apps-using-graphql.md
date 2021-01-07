@@ -1,6 +1,6 @@
 ---
-path: '/blog/fetching-localized-text-for-discord-bots/'
-slug: 'fetching-localized-text-for-discord-bots'
+path: '/blog/filtering-localized-text-for-multilanguage-apps-using-graphql/'
+slug: 'filtering-localized-text-for-multilanguage-apps-using-graphql'
 publishedAt: '2021-01-06'
 author: Christian Roggia
 target: developers
@@ -14,5 +14,5 @@ subtitle: >
   TODO
 
 overline: >
-  TODO
+  GraphQL API insight
 ---

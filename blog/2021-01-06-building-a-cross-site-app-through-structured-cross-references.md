@@ -1,6 +1,6 @@
 ---
-path: '/blog/building-a-cross-site-application/'
-slug: 'building-a-cross-site-application'
+path: '/blog/building-a-cross-site-app-through-structured-cross-references/'
+slug: 'building-a-cross-site-app-through-structured-cross-references'
 publishedAt: '2021-01-06'
 author: Christian Roggia
 target: developers
@@ -14,5 +14,5 @@ subtitle: >
   TODO
 
 overline: >
-  TODO
+  GraphQL API insight
 ---

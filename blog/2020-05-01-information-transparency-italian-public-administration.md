@@ -15,7 +15,7 @@ subtitle: >
   This page is available only in Italian language.
 
 overline: >
-  Transparency page for public institutions
+  Business transparency
 ---
 
 :warning: **Questa pagina è dedicata alla trasparenza come richiesto dall'obbligo informativo ai sensi dell'art. 25 comma 11 del DL 179/201.**

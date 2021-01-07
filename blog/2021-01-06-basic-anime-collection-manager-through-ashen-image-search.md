@@ -1,6 +1,6 @@
 ---
-path: '/blog/basic-collection-management-through-ashen-apis/'
-slug: 'basic-collection-management-through-ashen-apis'
+path: '/blog/basic-anime-collection-manager-through-ashen-image-search/'
+slug: 'basic-anime-collection-manager-through-ashen-image-search'
 publishedAt: '2021-01-06'
 author: Christian Roggia feat. Shoko Anime
 target: developers
@@ -14,5 +14,5 @@ subtitle: >
   TODO
 
 overline: >
-  TODO
+  Image Search insight
 ---

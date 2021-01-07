@@ -27,6 +27,10 @@ const BlogPost = ({ post }) => {
             <Header />
             <BlogHero
                 title={post.title}
+                subtitle={post.subtitle}
+                overline={post.overline}
+                date={post.publishedAt}
+                author={post.author}
             />
             <BlogSection>
                 <ReactMarkdown plugins={[gfm, emoji]} renderers={renderers} children={post.body} />

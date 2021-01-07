@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderDropdown from './header-dropdown';
 import styles from './Header.module.scss';
 
-const Header = () => {
+const Header = ({ theme }) => {
     return (
         <>
             <header className={styles.search_header}>
@@ -12,7 +12,7 @@ const Header = () => {
                     </h1>
                 </a>
                 <div className={styles.space}/>
-                <HeaderDropdown />
+                <HeaderDropdown theme={theme} />
             </header>
             <div className="header_padder" />
         </>

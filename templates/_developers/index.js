@@ -134,7 +134,7 @@ const Developers = ({ t, posts }) => {
     <StrictMode>
       <div className={`theme-default`}>
         <main>
-          <Header />
+          <Header theme={`developers`} />
 
           <Hero
             fullpage={showablePosts.length == 0}
