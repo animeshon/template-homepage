@@ -88,7 +88,7 @@ const projects = [
     title: 'Search in one place',
     description:
       'Search your favorite content through over 2 million official and independent Anime, Manga, Light-, and Visual- Novels.',
-    href: 'https://animeshon/encyclopedia',
+    href: '/',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/lf30_editor_Poez3y.json'),
@@ -100,8 +100,7 @@ const projects = [
     title: 'Explore multiple universes',
     description:
       'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
-    href: '/hydra',
-    // visual: hydraAnimation
+    href: '/',
   },
   {
     id: '3',
@@ -109,8 +108,7 @@ const projects = [
     title: 'Track all your lists',
     description:
       'Import and export all tracking lists from your favorite websites - or build your own directly on Animeshon.',
-    href: '/hydra',
-    // visual: hydraAnimation
+    href: '/',
   },
   {
     id: '4',
@@ -118,8 +116,7 @@ const projects = [
     title: 'Read independent titles',
     description:
       'Read independent stories directly from our community of content creators - our network promotes legal distribution and translations.',
-    href: '/hydra',
-    // visual: hydraAnimation
+    href: '/',
   },
 ];
 

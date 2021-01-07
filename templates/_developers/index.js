@@ -101,7 +101,6 @@ const projects = [
     description:
       'We can identify up to 2 billion frames from 25.000 anime episodes and provide graph knowledge such as episode and anime metadata (incl. ids and names).',
     href: 'https://source.animeshon.com/',
-    // visual: hydraAnimation
   },
   {
     id: '3',
@@ -109,8 +108,7 @@ const projects = [
     title: 'Cross-site references',
     description:
       'We can lookup references, links, or ids from external websites and return the equivalent resource in Animeshon as well as all other known data sources.',
-    href: '/hydra',
-    // visual: hydraAnimation
+    href: 'https://developers.animeshon.com/blog/building-a-cross-site-app-through-structured-cross-references',
   },
   {
     id: '4',
@@ -118,8 +116,7 @@ const projects = [
     title: 'We are integration driven',
     description:
       'We work together with research institutions and universities to make the most advanced technologies ready to be integrated by third-party applications.',
-    href: '/hydra',
-    // visual: hydraAnimation
+    href: 'https://docs.animeshon.com/docs/ecosystem/introduction',
   },
 ];
 
