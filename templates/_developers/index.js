@@ -64,19 +64,19 @@ const stats = {
   },
   "numbers": [
     {
-      title: 'Official titles',
-      amount: 176000,
+      title: 'Graph edges',
+      amount: 1200000000,
       description: `Overall`
     },
     {
-      title: 'Independent titles',
-      amount: 1500000,
-      description: 'Overall'
+      title: 'Indexed frames',
+      amount: 2250000000,
+      description: 'Estimated'
     },
     {
-      title: 'External links',
-      amount: 12000000,
-      description: 'Overall'
+      title: 'Average request time',
+      amount: 50,
+      description: 'Milliseconds'
     }
   ],
 };
@@ -84,11 +84,11 @@ const stats = {
 const projects = [
   {
     id: '1',
-    action: 'Search in our graph database',
-    title: 'Search in one place',
+    action: 'Explore GraphQL directly from your browser',
+    title: 'Your graph knowledge-base',
     description:
-      'Search your favorite content through over 2 million official and independent Anime, Manga, Light-, and Visual- Novels.',
-    href: 'https://animeshon/encyclopedia',
+      'Everything about Anime, Manga, Light-, and Visual- Novels is available to you from the most interconnected graph database on the planet.',
+    href: 'https://play.animeshon.com/',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/lf30_editor_Poez3y.json'),
@@ -96,28 +96,28 @@ const projects = [
   },
   {
     id: '2',
-    action: 'Explore universes and canonicals',
-    title: 'Explore multiple universes',
+    action: 'Lookup your own screenshot',
+    title: 'Anime image search at scale',
     description:
-      'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
-    href: '/hydra',
+      'We can identify up to 2 billion frames from 25.000 anime episodes and provide graph knowledge such as episode and anime metadata (incl. ids and names).',
+    href: 'https://source.animeshon.com/',
     // visual: hydraAnimation
   },
   {
     id: '3',
-    action: 'Sync all your lists now',
-    title: 'Track all your lists',
+    action: 'Learn more about cross-references',
+    title: 'Cross-site references',
     description:
-      'Import and export all tracking lists from your favorite websites - or build your own directly on Animeshon.',
+      'We can lookup references, links, or ids from external websites and return the equivalent resource in Animeshon as well as all other known data sources.',
     href: '/hydra',
     // visual: hydraAnimation
   },
   {
     id: '4',
-    action: 'Start reading new titles',
-    title: 'Read independent titles',
+    action: 'Explore our integration ecosystem',
+    title: 'We are integration driven',
     description:
-      'Read independent stories directly from our community of content creators - our network promotes legal distribution and translations.',
+      'We work together with research institutions and universities to make the most advanced technologies ready to be integrated by third-party applications.',
     href: '/hydra',
     // visual: hydraAnimation
   },
