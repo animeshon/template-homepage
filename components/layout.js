@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react'
 
 // import { Menu, IconMenu } from './header'
-import Header from './header'
 // import Announcement from './announcement'
 import Footer from './footer'
 
