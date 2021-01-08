@@ -12,5 +12,8 @@
   "subscribeNewsLetter_badRequest": "An error has occurred trying to process your request. Please refresh the page and try again.",
   "subscribeNewsLetter_invalidResource": "The email address you provided is either invalid or suspicious. Please check the email address and try again.",
   "subscribeNewsLetter_alreadySubscribed": "The email address you provided is already registered.",
-  "subscribeNewsLetter_successfulStatus": "Thank you for registering to Animeshon! You will receive a confirmation email soon."
+  "subscribeNewsLetter_successfulStatus": "Thank you for registering to Animeshon! You will receive a confirmation email soon.",
+  "arrowCreator": "Are you a creator?",
+  "arrowUser": "Are you an user?",
+  "arrowDeveloper": "Are you a developer?"
 }

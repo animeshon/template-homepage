@@ -129,7 +129,8 @@ const Users = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
     <Layout headerTheme={"users"}>
-      <Hero
+      <Hero 
+        theme={"users"}
         fullpage={showablePosts.length == 0}
         title="This part of the page will be removed"
         subtitle="It will be replaced with a search bar or a console for developers."

@@ -1,6 +1,12 @@
 import React from 'react'
+import { withTranslation } from '@/root/i18n';
+
 import cn from 'classnames'
 import * as styles from './hero.module.scss'
+
+import ArrowCard from './arrow-card';
+
+import { ThemeLinks } from '@/root/config';
 
 
 const CallToActionButton = ({
@@ -20,7 +26,40 @@ const CallToActionButton = ({
   </a>
 )
 
-const Hero = ({ title, subtitle, cta, fullpage = false }) => (
+const themeToArrow = {
+  users: {
+    left: {
+      text: "arrowCreator",
+      href: ThemeLinks.creators,
+    },
+    right: {
+      text: "arrowDeveloper",
+      href: ThemeLinks.developers,
+    }
+  },
+  creators: {
+    left: {
+      text: "arrowDeveloper",
+      href: ThemeLinks.developers,
+    },
+    right: {
+      text: "arrowUser",
+      href: ThemeLinks.users,
+    }
+  },
+  developers: {
+    left: {
+      text: "arrowUser",
+      href: ThemeLinks.users,
+    },
+    right: {
+      text: "arrowCreator",
+      href: ThemeLinks.creators,
+    }
+  },
+}
+
+const Hero = ({ title, subtitle, cta, theme, fullpage = false, t }) => (
   <div className={cn(styles.hero, fullpage ? styles.full : undefined)}>
     <div className={styles.overlay}>
     </div>
@@ -32,8 +71,14 @@ const Hero = ({ title, subtitle, cta, fullpage = false }) => (
           <>{cta.map(CallToActionButton)}</>
         </div>
       </div>
+      <ArrowCard href={themeToArrow[theme].right.href}>
+        {t(themeToArrow[theme].right.text)}
+      </ArrowCard>
+      <ArrowCard left={true} href={themeToArrow[theme].left.href}>
+        {t(themeToArrow[theme].left.text)}
+      </ArrowCard>
     </div>
   </div>
 )
 
-export default Hero
+export default withTranslation()(Hero);
