@@ -1,5 +1,5 @@
 /* header */
-.search_header {
+.header {
     z-index: 9999999;
     position: fixed;
     height: 96px;
@@ -11,7 +11,11 @@
     display: flex;
 }
 
-.search_header .brand {
+.padder {
+  min-height: 96px;
+}
+
+.header .brand {
     cursor: pointer;
     display: block;
     width: 148px;
@@ -20,15 +24,15 @@
     margin-right: 40px;
 }
 
-.search_header .brand span {
+.header .brand span {
     font-size: 12px;
     opacity: 0;
 }
-.search_header .search_group {
+.header .search_group {
     flex: 1;
     margin-right: 30px;
 }
-.search_header .search_input {
+.header .search_input {
     text-indent: 20px;
     max-width: 500px;
     width: 100%;
@@ -37,7 +41,7 @@
     border-radius: 22px;
     outline: none;
 }
-.search_header .hamburger_icon {
+.header .hamburger_icon {
     display: block;
     height: 32px;
     width: 32px;
@@ -53,7 +57,7 @@
     outline: none;
     cursor: pointer;
 }
-.search_header .hamburger_icon span {
+.header .hamburger_icon span {
     height: 1px;
     background-color: #7f7f7f;
     width: 100%;

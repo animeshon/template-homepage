@@ -8,6 +8,7 @@ import * as style from './header-dropdown.module.scss';
 
 
 const HeaderDropdown = ({ t, theme }) => {
+    console.log(theme)
     const options = [
         { href: 'https://animeshon.com/', value: 'users', label: <div className={style.wrapper}><img src={"../svg/open-book.svg"} className={style.icon} /><span>{t('aboutDispatcher_choose_user')}</span></div> },
         { href: 'https://creators.animeshon.com/', value: 'creators', label: <div className={style.wrapper}><img src={"../svg/painter.svg"} className={style.icon} /><span>{t('aboutDispatcher_choose_creator')}</span></div> },
@@ -20,7 +21,6 @@ const HeaderDropdown = ({ t, theme }) => {
         });
     };
 
-    const router = useRouter();
     const defaultOption = options.filter(o => o.value == theme)[0];
 
     return (

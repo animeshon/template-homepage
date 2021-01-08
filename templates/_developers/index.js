@@ -128,7 +128,7 @@ const newsletter = {
 const Developers = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <Layout>
+    <Layout headerTheme={"developers"}>
       <Hero
         fullpage={showablePosts.length == 0}
         title="This part of the page will be removed"
