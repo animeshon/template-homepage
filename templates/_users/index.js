@@ -23,9 +23,9 @@ const timeline = {
     date: "March 2021",
     iconStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
     icon: undefined,
-    title: "Canonicals and Universes",
+    title: "Universes and Series",
     subtitle: "Find related content and media!",
-    description: "Content will be groupd through a hierarchical structure that includes universes and canonical franchises.",
+    description: "Content will be grouped through a hierarchical structure that includes universes and series.",
   },
   {
     id: "2",
@@ -84,10 +84,10 @@ const stats = {
 const projects = [
   {
     id: '1',
-    action: 'Search in our graph database',
-    title: 'Search in one place',
+    action: 'Search in our multimedia database',
+    title: 'Everything in one place',
     description:
-      'Search your favorite content through over 2 million official and independent Anime, Manga, Light-, and Visual- Novels.',
+      'Search your favorite content through millions of official and independent Anime, Manga, Light-, and Visual- Novels.',
     href: '/',
     visual: {
       type: "lottie",
@@ -96,7 +96,7 @@ const projects = [
   },
   {
     id: '2',
-    action: 'Explore universes and canonicals',
+    action: 'Explore universes and series',
     title: 'Explore multiple universes',
     description:
       'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
@@ -113,9 +113,9 @@ const projects = [
   {
     id: '4',
     action: 'Start reading new titles',
-    title: 'Read independent titles',
+    title: 'Read independent Manga',
     description:
-      'Read independent stories directly from our community of content creators - our network promotes legal distribution and translations.',
+      'Join our community of independent content creators and make sure your favorite stories are never interrupted and always available in your language.',
     href: '/',
   },
 ];

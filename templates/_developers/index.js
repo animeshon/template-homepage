@@ -24,9 +24,9 @@ const timeline = {
     date: "March 2021",
     iconStyle: { background: 'var(--colors-themed-default)', color: '#fff' },
     icon: undefined,
-    title: "Canonicals and Universes",
+    title: "Universes and Series",
     subtitle: "Find related content and media!",
-    description: "Content will be groupd through a hierarchical structure that includes universes and canonical franchises.",
+    description: "Content will be grouped through a hierarchical structure that includes universes and series.",
   },
   {
     id: "2",
@@ -133,7 +133,7 @@ const Developers = ({ t, posts }) => {
         <Hero
           theme={"developers"}
           fullpage={showablePosts.length == 0}
-          title="This part of the page will be removed"
+          title="Want"
           subtitle="It will be replaced with a search bar or a console for developers."
           cta={[]}
         >

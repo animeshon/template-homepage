@@ -60,6 +60,10 @@ const comp = [
       {
         title: 'License',
         href: 'https://www.animeshon.com/animeshon/license'
+      },
+      {
+        title: 'Legal',
+        href: 'https://animeshon.com/blog/information-transparency-italian-public-administration'
       }
     ]
   }
@@ -67,7 +71,7 @@ const comp = [
 
 const menu = [
   {
-    title: 'Resources',
+    title: 'Community',
     items: [
       {
         title: 'Twitter',
@@ -75,7 +79,7 @@ const menu = [
       },
       {
         title: 'Discord',
-        // href: 'https://www.iubenda.com/privacy-policy/48776658/cookie-policy'
+        href: 'https://discord.gg/WvNsjtR'
       },
       {
         title: 'Reddit',
@@ -85,19 +89,27 @@ const menu = [
         title: 'Patreon',
         href: 'https://www.patreon.com/animeshon'
       },
-      {
-        title: 'Docs',
-        href: 'docs.animeshon.com'
-      },
     ]
   },
   {
-    title: 'GitHub',
+    title: 'Developers',
     items: [
       {
-        title: `Animeshon`,
+        title: `GitHub`,
         href: 'https://github.com/animeshon'
       },
+      {
+        title: 'Documentation',
+        href: 'https://docs.animeshon.com/'
+      },
+      {
+        title: 'Playground',
+        href: 'https://play.animeshon.com/'
+      },
+      {
+        title: 'Blog',
+        href: 'https://developers.animeshon.com/blog'
+      }
     ]
   }
 ];

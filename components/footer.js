@@ -13,10 +13,10 @@ const Footer = ({menu, comp}) => (
           <p className={cn(styles.contact)}>
             Get in touch with us
             <br />
-            <a href="mailto:office@ory.sh">office@animeson.sh</a>
+            <a href="mailto:hello@animeshon.com">hello@animeshon.com</a>
           </p>
-          <br />
           <p className={cn(styles.contact)}>Made with ❤️ by Animeshon</p>
+          <br />
         </div>
         <div className="col-lg-7 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile mobile-offset-64">
           <div className={cn('row', styles['menu-row'])}>
@@ -47,7 +47,7 @@ const Footer = ({menu, comp}) => (
 
       <div className="row">
         <div className="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
-          <p className={styles.copyright}>&copy; Copyright 2020 Animeshon S.R.L</p>
+          <p className={styles.copyright}>All rights belong to their respective owners.</p>
         </div>
 
         <div className="col-lg-6 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
