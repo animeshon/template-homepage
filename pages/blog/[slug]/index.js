@@ -31,6 +31,7 @@ const BlogPost = ({ post }) => {
                 overline={post.overline}
                 date={post.publishedAt}
                 author={post.author}
+                target={post.target}
             />
             <BlogSection>
                 <ReactMarkdown plugins={[gfm, emoji]} renderers={renderers} children={post.body} />

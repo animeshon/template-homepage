@@ -10,10 +10,10 @@ import { GetGlobalBlogCache } from '@/src/blog-cache';
 
 import * as styles from './blog.module.scss'
 
-const Post = ({ path, title, teaser, overline, author, publishedAt }) => (
+const Post = ({ path, title, teaser, target, overline, author, publishedAt }) => (
 
   <div>
-    <p className={styles['post-overline']}>{overline}</p>
+    <p className={styles['post-overline']}>{target &&<b>{target} | </b>}{overline}</p>
     <h2 className={styles['post-title']}>
       <Link href={path}>{title}</Link>
     </h2>

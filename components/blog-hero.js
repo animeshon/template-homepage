@@ -3,7 +3,7 @@ import * as styles from './blog-hero.module.scss'
 import cn from 'classnames'
 import Author from './author'
 
-const BlogHero = ({ title, date, author, overline, subtitle }) => (
+const BlogHero = ({ title, date, author, target, overline, subtitle }) => (
   <>
     <div className={styles.title}>
       <div className="container-fluid">
@@ -14,7 +14,7 @@ const BlogHero = ({ title, date, author, overline, subtitle }) => (
               styles.line
             )}
           >
-            {overline && <p className={styles.subtitle}>{overline}</p>}
+            {overline && <p className={styles.subtitle}>{target &&<b>{target} | </b>}{overline}</p>}
             <h1>{title}</h1>
             {subtitle && <h2>{subtitle}</h2>}
             <p className={styles.info}>
