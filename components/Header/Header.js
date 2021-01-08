@@ -17,7 +17,7 @@ const Header = ({ theme }) => {
     };
 
     return (
-        <>
+        <div className={styles.padder}>
             <header className={styles.header}>
                 <a href="/">
                     <h1 className={styles.brand}>
@@ -34,8 +34,7 @@ const Header = ({ theme }) => {
                 </form>
                 <HeaderDropdown theme={theme} />
             </header>
-            <div className={styles.padder} />
-        </>
+        </div>
     );
 };
 
