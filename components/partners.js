@@ -20,6 +20,24 @@ const adopters = [
     image: require('../public/images/partner-kadoko.png'),
     url: 'https://github.com/skyborgff/KaDoKo'
   },
+  {
+    title: 'NOI',
+    featured: true,
+    image: require('../public/images/partner-noi.png'),
+    url: 'https://noi.bz.it'
+  },
+  {
+    title: 'Free University of Bolzano',
+    featured: true,
+    image: require('../public/images/partner-lub.png'),
+    url: 'https://www.unibz.it'
+  },
+  // {
+  //   title: 'Enterprise Europe Network',
+  //   featured: true,
+  //   image: require('../public/images/partner-een.png'),
+  //   url: 'https://een.ec.europa.eu/'
+  // },
 ]
 
 const Partners = ({ onlyFeatured }) => (
