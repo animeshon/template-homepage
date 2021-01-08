@@ -18,7 +18,7 @@ const ThinProject = ({
     animationData: visual?.type == "lottie" ? visual.data : undefined,
     rendererSettings: {
       //hideOnTransparent:true,
-      preserveAspectRatio: "YMidxMid meet"
+      preserveAspectRatio: "xMidYMid meet"
     }
   }
 
@@ -41,13 +41,12 @@ const ThinProject = ({
                 <img loading="lazy" src={visual.data} alt={`${title} visualized`} />
               </Link>}
               {visual.type == "lottie" && <Link href={href}>
-                <div style={{ maxHeight: "330px" }}>
-                  <Lottie
-                    options={lottieOption}
-                    //width={200}
-                    title={`${title} visualized`}
-                  />
-                </div>
+                <Lottie
+                  options={lottieOption}
+                  width={330}
+                  height={330}
+                  title={`${title} visualized`}
+                />
               </Link>}
             </div>}
         </div>
