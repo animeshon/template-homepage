@@ -14,20 +14,20 @@ export const validate = (string) => {
 };
 
 const Newsletter = ({ t, title, description }) => {
-  const [subscriptionState, setSubscriptionState] = useState({
-  });
+  const [subscriptionState, setSubscriptionState] = useState({});
+  const [email, setEmail] = useState("");
 
   const handleTypeEmail = e => {
-    setSubscriptionState({
-      email: e.target.value,
-    })
+    setEmail(e.target.value);
   };
 
   const handleSubmit = e => {
     e.preventDefault();
     e.persist();
+    setSubscriptionState({});
+
     const requestBody = {
-      email: subscriptionState.email,
+      email: email,
       status: 'subscribed',
       language: 'en',
       //tags: [isoLang, machine],
@@ -43,7 +43,7 @@ const Newsletter = ({ t, title, description }) => {
       },
     };
 
-    if (validate(subscriptionState.email) === true) {
+    if (validate(email) === true) {
       fetch(
         'https://mailchimp-api.animeshon.com/api/v1/audience',
         options
@@ -112,14 +112,14 @@ const Newsletter = ({ t, title, description }) => {
             });
           }
         })
-        .catch(error => {
+        .catch(e => {
           setSubscriptionState({
             error: t('subscribeNewsLetter_badRequest'),
             success: false,
           });
-          throw new Error(error);
+          throw new Error(e);
         });
-    } else if (!validate(subscriptionState.email)) {
+    } else if (!validate(email)) {
       setSubscriptionState({
         error: t('subscribeNewsLetter_invalidEmail'),
         success: false,
@@ -153,6 +153,7 @@ const Newsletter = ({ t, title, description }) => {
                 name={'email'}
                 placeholder={t('subscribeNewsLetterPlaceholder')}
                 required
+                value={email}
                 onChange={e => handleTypeEmail(e)}
               />
               <input
