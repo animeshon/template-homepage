@@ -4,6 +4,9 @@
   position: relative;
 
   & a img {
+    -webkit-transition: all ease 200ms;
+    -moz-transition: all ease 200ms;
+    -o-transition: all ease 200ms;
     transition: all ease 200ms;
   }
 
@@ -12,7 +15,7 @@
     &:active,
     &:focus {
       & img {
-        filter: invert(1);
+        filter: contrast(0.5);
       }
     }
   }
