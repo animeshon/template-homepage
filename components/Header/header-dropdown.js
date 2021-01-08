@@ -27,8 +27,9 @@ const HeaderDropdown = ({ t, theme }) => {
     return (
         <>
             {defaultOption && <Dropdown
-                controlClassName={style.menu}
+                controlClassName={style.control}
                 arrowClassName={style.arrow}
+                menuClassName={style.menu}
                 onChange={onSelect}
                 options={options} value={defaultOption} />}
         </>

@@ -5,9 +5,10 @@
   color: var(--colors-base-white);
   text-align: center;
   position: relative;
+  // height: calc(100vh - 192px);
 
   &.full {
-    height: calc(100vh - 258px);
+    // height: calc(100vh - 96px);
     background-size: cover;
     background-position: bottom center;
     flex-direction: column;
@@ -83,5 +84,11 @@
         font-size: 1.266rem;
       }
     }
+  }
+}
+
+@media (--xlg-viewport) {
+  .hero-left-align {
+    text-align: left;
   }
 }

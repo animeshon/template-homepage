@@ -9,6 +9,7 @@ import ThinProjectList from '@/components/thin-project-list'
 import BlogSummarySection from '@/components/blog-summary-section'
 import Partners from '@/components/partners'
 import Timeline from '@/components/vertical-timeline'
+import ClientPlayground from '@/components/client-playground'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
@@ -128,21 +129,24 @@ const newsletter = {
 const Developers = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <Layout headerTheme={"developers"}>
-      <Hero 
-        theme={"developers"}
-        fullpage={showablePosts.length == 0}
-        title="This part of the page will be removed"
-        subtitle="It will be replaced with a search bar or a console for developers."
-        cta={[]}
-      />
-      {showablePosts.length && <BlogSummarySection posts={showablePosts} />}
-      <Partners onlyFeatured={true} />
-      <ThinProjectList projects={projects} />
-      <Timeline events={timeline.events} header={timeline.header} />
-      <Stats stats={stats.numbers} header={stats.header} />
-      <Newsletter title={newsletter.title} description={newsletter.description} />
-    </Layout>
+      <Layout headerTheme={"developers"}>
+        <Hero
+          theme={"developers"}
+          fullpage={showablePosts.length == 0}
+          title="This part of the page will be removed"
+          subtitle="It will be replaced with a search bar or a console for developers."
+          cta={[]}
+        >
+          <ClientPlayground />
+
+        </Hero>
+        {showablePosts.length && <BlogSummarySection posts={showablePosts} />}
+        <Partners onlyFeatured={true} />
+        <ThinProjectList projects={projects} />
+        <Timeline events={timeline.events} header={timeline.header} />
+        <Stats stats={stats.numbers} header={stats.header} />
+        <Newsletter title={newsletter.title} description={newsletter.description} />
+      </Layout>
   )
 }
 

@@ -24,6 +24,14 @@
     margin-right: 40px;
 }
 
+@media (--md-viewport) { 
+    .header .brand {
+        width: 46px; 
+        margin-right: 20px;
+        background: url('../../public/brand/animeshon-brand-horizontal-small.svg');
+    } 
+}
+
 .header .brand span {
     font-size: 12px;
     opacity: 0;

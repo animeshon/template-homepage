@@ -18,7 +18,7 @@
     &:focus {
       color: var(--colors-themed-weak);
       & .icon {
-        color: var(--colors-themed-default);
+        color: var(--colors-themed-weak);
       }
     }
   }
@@ -31,14 +31,18 @@
 
 .right {
   position: absolute;
-  top: 110%;
+  top: calc(100% + 30px);
   right: -80px;
 }
 
 .left {
   position: absolute;
-  top: 110%;
+  top: calc(100% + 30px);
   left: -80px;
+}
+
+.rise {
+  top: calc(100% - 70px);
 }
 
 @media (max-width: 1500px) {

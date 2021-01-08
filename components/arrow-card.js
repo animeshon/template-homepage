@@ -6,9 +6,9 @@ import { Link } from '@/root/i18n'
 
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
-const ArrowCard = ({ href, left = false, children }) => (
+const ArrowCard = ({ href, left = false, fullpage, children }) => (
   <Link href={href} >
-    <div className={cn(styles.arrow, left ? styles.left : styles.right)}>
+    <div className={cn(styles.arrow, left ? styles.left : styles.right, fullpage ? styles.rise : "")}>
       {left && <FaArrowLeft className={styles.icon} />}
       {children}
       {!left && <FaArrowRight size={"1em"} className={styles.icon} />}

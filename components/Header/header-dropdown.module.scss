@@ -2,11 +2,32 @@
     top: 24px;
 }
 
-.menu {
+.control {
     border: unset;
     width: 180px;
     cursor: pointer;
 }
+
+@media (--md-viewport) { 
+    .control {
+        width: 60px;
+        .wrapper {
+            & span {
+                display: none;
+            }
+        }
+    }
+
+    .arrow {
+        top: 20px;
+    }
+
+    .menu {
+        width: 180px;
+        left: -118px;
+    }
+}
+
 
 .wrapper {
     display: flex;

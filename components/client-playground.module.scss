@@ -1,0 +1,19 @@
+@import '@/styles/reset.scss';
+
+
+.graphql-playground {
+  width: 100%;
+  height: 500px;
+} 
+
+@media (--lg-strict-viewport) {
+  .graphql-playground {
+    margin-top: 60px;
+  }
+}
+
+@media (--md-viewport) {
+  .graphql-playground {
+    display: none;
+  }
+}
