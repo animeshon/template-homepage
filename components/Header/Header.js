@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderDropdown from './header-dropdown';
-import styles from './Header.module.scss';
+import styles from './header.module.scss';
 
 const Header = ({ theme }) => {
     return (
