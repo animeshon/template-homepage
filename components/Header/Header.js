@@ -1,8 +1,21 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import Router, { useRouter } from 'next/router';
+
 import HeaderDropdown from './header-dropdown';
 import styles from './header.module.scss';
 
 const Header = ({ theme }) => {
+    const input = useRef(undefined)
+    const handleQuerySubmit = e => {
+        e.preventDefault();
+        if (input.current.value != '') {
+            Router.push({
+                pathname: 'https://animeshon.com/e/search',
+                query: { q: input.current.value },
+            });
+        }
+    };
+
     return (
         <>
             <header className={styles.search_header}>
@@ -11,7 +24,14 @@ const Header = ({ theme }) => {
                         <span>Search Manga and Anime</span>
                     </h1>
                 </a>
-                <div className={styles.space}/>
+                <form onSubmit={handleQuerySubmit} className={styles.search_group}>
+                    <input
+                        ref={input}
+                        type="text"
+                        className={styles.search_input}
+                        name="searchQuery"
+                    />
+                </form>
                 <HeaderDropdown theme={theme} />
             </header>
             <div className="header_padder" />
