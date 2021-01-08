@@ -1,7 +1,7 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { withTranslation } from '@/root/i18n'
 
-import Header from '@/components/Header/Header'
+import Layout from '@/components/layout'
 import Hero from '@/components/hero'
 import Stats from '@/components/stats';
 import Newsletter from '@/components/newsletter';
@@ -128,26 +128,20 @@ const newsletter = {
 const Users = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <StrictMode>
-      <div className={`theme-default`}>
-        <main>
-          <Header theme={`users`} />
-
-          <Hero
-            fullpage={showablePosts.length == 0}
-            title="This part of the page will be removed"
-            subtitle="It will be replaced with a search bar or a console for developers."
-            cta={[]}
-          />
-          {showablePosts.length && <BlogSummarySection posts={showablePosts}/>}
-          <Partners onlyFeatured={true} />
-          <ThinProjectList projects={projects} />
-          <Timeline events={timeline.events} header={timeline.header} />
-          <Stats stats={stats.numbers} header={stats.header} />
-          <Newsletter title={newsletter.title} description={newsletter.description} />
-        </main>
-      </div>
-    </StrictMode>
+    <Layout>
+      <Hero
+        fullpage={showablePosts.length == 0}
+        title="This part of the page will be removed"
+        subtitle="It will be replaced with a search bar or a console for developers."
+        cta={[]}
+      />
+      {showablePosts.length && <BlogSummarySection posts={showablePosts} />}
+      <Partners onlyFeatured={true} />
+      <ThinProjectList projects={projects} />
+      <Timeline events={timeline.events} header={timeline.header} />
+      <Stats stats={stats.numbers} header={stats.header} />
+      <Newsletter title={newsletter.title} description={newsletter.description} />
+    </Layout>
   )
 }
 

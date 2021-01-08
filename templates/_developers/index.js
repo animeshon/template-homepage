@@ -1,7 +1,7 @@
-import React, { StrictMode } from 'react';
+import React from 'react';
 import { withTranslation } from '@/root/i18n'
 
-import Header from '@/components/Header/Header'
+import Layout from '@/components/layout'
 import Hero from '@/components/hero'
 import Stats from '@/components/stats';
 import Newsletter from '@/components/newsletter';
@@ -9,7 +9,6 @@ import ThinProjectList from '@/components/thin-project-list'
 import BlogSummarySection from '@/components/blog-summary-section'
 import Partners from '@/components/partners'
 import Timeline from '@/components/vertical-timeline'
-import Footer from '@/components/footer'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
@@ -126,94 +125,23 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
-const comp = [
-  {
-    items: [
-      {
-        title: 'Privacy',
-        href: 'https://www.iubenda.com/privacy-policy/48776658'
-      },
-      {
-        title: 'Cookie',
-        href: 'https://www.iubenda.com/privacy-policy/48776658/cookie-policy'
-      },
-      {
-        title: 'Terms',
-        href: 'https://www.iubenda.com/terms-and-conditions/48776658'
-      },
-      {
-        title: 'Contacts',
-        href: 'https://www.animeshon.com/animeshon/contacts'
-      },
-      {
-        title: 'License',
-        href: 'https://www.animeshon.com/animeshon/license'
-      }
-    ]
-  }
-]
-
-const menu = [
-  {
-    title: 'Resources',
-    items: [
-      {
-        title: 'Twitter',
-        href: 'https://twitter.com/animeshonsns'
-      },
-      {
-        title: 'Discord',
-        // href: 'https://www.iubenda.com/privacy-policy/48776658/cookie-policy'
-      },
-      {
-        title: 'Reddit',
-        href: 'https://www.reddit.com/r/animeshon/'
-      },
-      {
-        title: 'Patreon',
-        href: 'https://www.patreon.com/animeshon'
-      },
-      {
-        title: 'Docs',
-        href: 'docs.animeshon.com'
-      },
-    ]
-  },
-  {
-    title: 'GitHub',
-    items: [
-      {
-        title: `Animeshon`,
-        href: 'https://github.com/animeshon'
-      },
-    ]
-  }
-];
-
 const Developers = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <StrictMode>
-      <div className={`theme-default`}>
-        <main>
-          <Header theme={`developers`} />
-
-          <Hero
-            fullpage={showablePosts.length == 0}
-            title="This part of the page will be removed"
-            subtitle="It will be replaced with a search bar or a console for developers."
-            cta={[]}
-          />
-          {showablePosts.length && <BlogSummarySection posts={showablePosts}/>}
-          <Partners onlyFeatured={true} />
-          <ThinProjectList projects={projects} />
-          <Timeline events={timeline.events} header={timeline.header} />
-          <Stats stats={stats.numbers} header={stats.header} />
-          <Newsletter title={newsletter.title} description={newsletter.description} />
-        </main>
-        <Footer menu={menu} comp={comp}/>
-      </div>
-    </StrictMode>
+    <Layout>
+      <Hero
+        fullpage={showablePosts.length == 0}
+        title="This part of the page will be removed"
+        subtitle="It will be replaced with a search bar or a console for developers."
+        cta={[]}
+      />
+      {showablePosts.length && <BlogSummarySection posts={showablePosts} />}
+      <Partners onlyFeatured={true} />
+      <ThinProjectList projects={projects} />
+      <Timeline events={timeline.events} header={timeline.header} />
+      <Stats stats={stats.numbers} header={stats.header} />
+      <Newsletter title={newsletter.title} description={newsletter.description} />
+    </Layout>
   )
 }
 
