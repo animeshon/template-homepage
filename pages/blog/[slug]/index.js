@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link, withTranslation } from '@/root/i18n'
 
-import Header from '@/components/Header/Header'
+import Header from '@/components/header/header'
 import BlogSection from '@/components/blog-section'
 import BlogHero from '@/components/blog-hero'
 
