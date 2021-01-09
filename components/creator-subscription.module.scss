@@ -1,0 +1,16 @@
+// @import '@/styles/properties.scss';
+@import '@/styles/grid.scss';
+@import '@/styles/globals.scss';
+@import '@/styles/typography.scss';
+
+.form {
+  text-align: initial;
+
+  & .submit-button {
+    border: 1px solid var(--colors-themed-light);
+  }
+
+  & .input {
+    padding: 9px 16px;
+  }
+}

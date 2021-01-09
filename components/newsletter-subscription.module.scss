@@ -1,0 +1,65 @@
+// @import '@/styles/properties.scss';
+@import '@/styles/grid.scss';
+@import '@/styles/globals.scss';
+@import '@/styles/typography.scss';
+
+.form {
+  width: 100%;
+  margin-bottom: 10px;
+
+  & input {
+    font-style: normal;
+    font-size: 14px;
+    color: var(--colors-base-white);
+    padding: 8px 16px;
+    border: none;
+    line-height: 168%;
+    outline:none;
+  }
+
+  & input[type='button'] {
+    font-weight: 500;
+    width: calc(40%);
+    cursor: pointer;
+    transition: color ease 200ms, background-color ease 200ms,
+      border-color ease 200ms;
+
+    background-color: var(--colors-themed-default);
+
+    &:hover,
+    &:focus {
+      color: var(--colors-themed-default);
+      background-color: var(--colors-base-white);
+    }
+
+    &:active {
+      background-color: var(--colors-base-white);
+    }
+  }
+
+  & input[type='email'] {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: calc(60%);
+
+    &::placeholder {
+      color: var(--colors-base-white);
+    }
+  }
+}
+
+p.error,
+p.success {
+    margin: 0px;
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    background-color: #e60011;
+    font-size: 15px!important;
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+p.success {
+    background-color: #00d833;
+}

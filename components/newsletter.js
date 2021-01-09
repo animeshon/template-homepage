@@ -1,131 +1,12 @@
-import React, { useState } from 'react'
-import cn from 'classnames'
-import * as styles from './newsletter.module.scss'
-import VerticalDivider from './vertical-divider'
+import React from 'react';
+import cn from 'classnames';
+import * as styles from './newsletter.module.scss';
+import VerticalDivider from './vertical-divider';
+import NewsletterSubscription from './newsletter-subscription';
 
 import { withTranslation } from '@/root/i18n'
 
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g; // eslint-disable-line
-export const validate = (string) => {
-  if (!emailRegex.test(string)) {
-    return false;
-  }
-  return true;
-};
-
 const Newsletter = ({ t, title, description }) => {
-  const [subscriptionState, setSubscriptionState] = useState({});
-  const [email, setEmail] = useState("");
-
-  const handleTypeEmail = e => {
-    setEmail(e.target.value);
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    e.persist();
-    setSubscriptionState({});
-
-    const requestBody = {
-      email: email,
-      status: 'subscribed',
-      language: 'en',
-      //tags: [isoLang, machine],
-      tags: [],
-    };
-
-    const options = {
-      method: 'POST',
-      body: JSON.stringify(requestBody),
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    };
-
-    if (validate(email) === true) {
-      fetch(
-        'https://mailchimp-api.animeshon.com/api/v1/audience',
-        options
-      )
-        .then(res => (res.status === 204 ? { code: 204 } : res.json()))
-        .then(msg => {
-          if (msg.code === 500) {
-            setSubscriptionState({
-              error: t('subscribeNewsLetter_internalServerError'),
-              success: false,
-            });
-          } else if (msg.code === 400) {
-            if (msg.error === 'email in compliance state') {
-              requestBody.status = 'pending';
-
-              fetch(
-                'https://mailchimp-api.animeshon.com/api/v1/audience',
-                {
-                  method: 'POST',
-                  body: JSON.stringify(requestBody),
-                  mode: 'cors',
-                  headers: {
-                    'Content-Type': 'application/json',
-                  },
-                }
-              )
-                .then(res =>
-                  res.status === 204 ? {} : res.json()
-                )
-                .then(msg => {
-                  if (
-                    msg.code === 400 &&
-                    msg.error === 'invalid resource'
-                  ) {
-                    setSubscriptionState({
-                      error: t('subscribeNewsLetter_invalidResource'),
-                      success: false,
-                    });
-                  }
-                })
-                .catch(error => {
-                  throw new Error(error);
-                });
-            } else if (
-              msg.error === 'invalid resource' ||
-              msg.error === 'forgotten email not subscribed'
-            ) {
-              setSubscriptionState({
-                error: t('subscribeNewsLetter_invalidResource'),
-              });
-            } else if (msg.error === 'already subscribed') {
-              setSubscriptionState({
-                error: t('subscribeNewsLetter_alreadySubscribed'),
-                success: false,
-              });
-            } else {
-              setSubscriptionState({
-                error: t('subscribeNewsLetter_badRequest'),
-                success: false,
-              });
-            }
-          } else if (msg.code === 204) {
-            setSubscriptionState({
-              error: '',
-              success: true,
-            });
-          }
-        })
-        .catch(e => {
-          setSubscriptionState({
-            error: t('subscribeNewsLetter_badRequest'),
-            success: false,
-          });
-          throw new Error(e);
-        });
-    } else if (!validate(email)) {
-      setSubscriptionState({
-        error: t('subscribeNewsLetter_invalidEmail'),
-        success: false,
-      })
-    }
-  };
 
   return (
     <div className={cn(styles.newsletter)}>
@@ -145,28 +26,8 @@ const Newsletter = ({ t, title, description }) => {
             )}
           >
             <h3>{t('subscribeNewsLetterTitle')}</h3>
-            <form className={styles.form}
-              onSubmit={e => handleSubmit(e)}
-            >
-              <input
-                type="email"
-                name={'email'}
-                placeholder={t('subscribeNewsLetterPlaceholder')}
-                required
-                value={email}
-                onChange={e => handleTypeEmail(e)}
-              />
-              <input
-                type="button"
-                name={'submit'}
-                value={t('subscribeNewsLetterAction')}
-                onClick={e => handleSubmit(e)}
-              />
-            </form>
-            {subscriptionState.error && (<p className={styles.error}>{subscriptionState.error}</p>)}
-            {subscriptionState.success == true && (<p className={styles.success}>{t('subscribeNewsLetter_successfulStatus')}</p>)}
+            <NewsletterSubscription placeholder={t('subscribeNewsLetterPlaceholder')} button={t('subscribeNewsLetterAction')} />
           </div>
-
         </div>
       </div>
     </div>

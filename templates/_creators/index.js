@@ -9,6 +9,7 @@ import ThinProjectList from '@/components/thin-project-list'
 import BlogSummarySection from '@/components/blog-summary-section'
 import Partners from '@/components/partners'
 import Timeline from '@/components/vertical-timeline'
+import CreatorSubsciprion from '@/components/creator-subscription';
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
@@ -131,13 +132,16 @@ const Creators = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
     <Layout headerTheme={Target}>
-      <Hero 
+      <Hero
         theme={Target}
         fullpage={showablePosts.length == 0}
         title="This part of the page will be removed"
         subtitle="It will be replaced with a search bar or a console for developers."
         cta={[]}
-      />
+      >
+        <CreatorSubsciprion />
+      </Hero>
+
       {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
       <Partners onlyFeatured={true} />
       <ThinProjectList projects={projects} />
