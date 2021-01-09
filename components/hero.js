@@ -103,7 +103,7 @@ const Hero = ({ title, subtitle, cta, theme, fullpage = false, t, children }) =>
           <h2 className={cn("col-lg-10", windowDimensions.width < 1360 ? "col-lg-offset-1" : undefined, styles['hero-left-align'])}>{subtitle}</h2>
           <>{cta.map(CallToActionButton)}</>
         </div>
-        <div className="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 col-xlg-6 col-xlg-offset-1">
+        <div className="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-6 col-xlg-offset-1">
           {children}
         </div>
       </>

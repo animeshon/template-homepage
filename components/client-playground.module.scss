@@ -1,7 +1,13 @@
 @import '@/styles/reset.scss';
 
+.mini-graphiql-wrapper {
+  .test {
+    height: 100%;
+  }
+}
 
 .graphql-playground {
+  text-align: left;
   width: 100%;
   height: 500px;
 } 
