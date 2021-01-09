@@ -20,7 +20,7 @@ const Header = ({ theme, t }) => {
                         ref={input}
                         type="text"
                         className={styles.search_input}
-                        placeholder={t("searchPlaceholder")}
+                        placeholder={t("searchHeaderPlaceholder")}
                     />
                 </EncyclopediaTextSearch>
                 <HeaderDropdown theme={theme} />
