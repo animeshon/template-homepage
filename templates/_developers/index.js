@@ -136,7 +136,7 @@ const cta = [
     className: "primary",
   },
   {
-    title: "GraphQL Play",
+    title: "Try GraphQL",
     href: "https://api.animeshon.com/graphql",
     openInNewWindow: true,
   }
@@ -147,7 +147,7 @@ const Target = "developers";
 const Developers = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-      <Layout headerTheme={Target}>
+      <Layout theme={Target}>
         <Hero
           theme={Target}
           fullpage={showablePosts.length == 0}

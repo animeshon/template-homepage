@@ -119,11 +119,11 @@ const Layout = ({
   // menu = defaultMenu,
   // icons = defaultIconMenu,
   // announcement,
-  headerTheme
+  theme
 }) => (
-  <div className={`theme-default`}>
+  <div className={`theme-${theme}`}>
       {/* {announcement ? <Announcement>{announcement}</Announcement> : null} */}
-      <Header theme={headerTheme} />
+      <Header theme={theme} />
       <main>{children}</main>
       <Footer menu={menu} comp={comp}/>
   </div>

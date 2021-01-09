@@ -72,4 +72,4 @@ const Footer = ({menu, comp, t}) => (
   </footer>
 )
 
-export default withTranslation("Common")(Footer);
+export default withTranslation("common")(Footer);

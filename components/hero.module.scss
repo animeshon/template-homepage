@@ -1,9 +1,5 @@
 @import '../styles/properties.scss';
 
-.hero-users {
-  background-color: var(--colors-themed-white);
-}
-
 .hero {
   background-color: var(--colors-themed-default);
   color: var(--colors-base-white);
@@ -73,6 +69,9 @@
   }
 }
 
+.hero-users {
+  background-color: var(--colors-themed-white);
+}
 
 @media (--sm-viewport) {
   .hero {

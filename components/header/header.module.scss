@@ -7,28 +7,45 @@
     border-bottom: 1px solid #dfdfdf;
     width: 100%;
     display: flex;
-    padding: 25px 33px;
-    display: flex;
+    align-items: center;
+
+    & .logo {
+        color: var(--colors-themed-default);
+      }
+    
+      & a,
+      & a:visited {
+        color: var(--colors-themed-default);
+    
+        &:hover,
+        &:focus,
+        &:active {
+          color: var(--colors-themed-default);
+        }
+      }
 }
 
 .padder {
   min-height: 96px;
 }
 
+.header .brand-a {
+    height: 46px;
+}
+
 .header .brand {
     cursor: pointer;
-    display: block;
-    width: 148px;
-    height: 46px;
     background: url('../../public/brand/animeshon-brand-horizontal.svg');
+    background-repeat: no-repeat;
     margin-right: 40px;
 }
 
 @media (--md-viewport) { 
     .header .brand {
-        width: 46px; 
+        width: 46px;
         margin-right: 20px;
         background: url('../../public/brand/animeshon-brand-horizontal-small.svg');
+        background-repeat: no-repeat;
     } 
 }
 
@@ -45,12 +62,12 @@
     max-width: 500px;
     width: 100%;
     height: 44px;
-    border: 1px solid #cfcfcf;
+    border: 1px solid var(--colors-base-text);
     border-radius: 22px;
     outline: none;
 }
+
 .header .hamburger_icon {
-    display: block;
     height: 32px;
     width: 32px;
     padding: 3px 0;
@@ -65,9 +82,40 @@
     outline: none;
     cursor: pointer;
 }
+
 .header .hamburger_icon span {
     height: 1px;
     background-color: #7f7f7f;
     width: 100%;
     display: block;
 }
+
+.right-menu {
+    flex-grow: 0;
+  }
+  
+  .icon-menu {
+    & ul {
+      padding: 0;
+      margin: 0;
+    }
+  
+    & li {
+      padding: 0;
+      display: inline-block;
+      margin: 0 8px;
+      font-size: 14px;
+  
+      & a img {
+        transition: filter ease 200ms;
+      }
+  
+      & a:hover,
+      & a:active {
+        & img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+  

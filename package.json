@@ -12,7 +12,8 @@
     "dev:creators": "rimraf pages/creators/index.js && cpy templates/_creators/index.js pages/creators/",
     "build:creators": "rimraf pages/index.js && cpy templates/_creators/index.js pages/ && next build",
     "start": "next start",
-    "start:production": "next start -p $PORT"
+    "start:production": "next start -p $PORT",
+    "checkout": "cpy pages/creators/index.js templates/_creators/ && cpy pages/developers/index.js templates/_developers/ && cpy pages/users/index.js templates/_users/"
   },
   "dependencies": {
     "cache-manager": "^3.4.0",

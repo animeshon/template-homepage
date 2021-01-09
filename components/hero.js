@@ -98,7 +98,7 @@ const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, child
   if (title && children) {
     inside = (
       <>
-        <div className={cn("col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-10 col-xlg-4", styles['hero-left-align'])}>
+        <div className={cn("col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-offset-1 col-lg-10 col-xlg-4", styles['hero-left-align'])}>
           <h1>{title}</h1>
           <h2 className={cn("col-lg-10", windowDimensions.width < 1360 ? "col-lg-offset-1" : undefined)}>{subtitle}</h2>
           {cta && cta.map(CallToActionButton)}

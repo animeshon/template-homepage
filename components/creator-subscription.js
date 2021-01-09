@@ -1,7 +1,8 @@
-import React from 'react'
-import { withTranslation } from '@/root/i18n'
+import React from 'react';
+import Image from 'next/image';
+import { withTranslation } from '@/root/i18n';
 
-import * as styles from './creator-subscription.module.scss'
+import * as styles from './creator-subscription.module.scss';
 
 import NewsletterSubscription from '@/components/newsletter-subscription';
 
@@ -15,6 +16,12 @@ export const validate = (string) => {
 
 const CreatorSubsciprion = ({ t }) => {
   return (
+    <>
+    <img
+        src={require("@/public/images/creators-cta.png")}
+        alt="creators call to action"
+        className={styles.image}
+      />
     <NewsletterSubscription
       placeholder={t('subscribeNewsLetterPlaceholder')}
       button={t('subscribeNewsLetterAction')}
@@ -22,6 +29,7 @@ const CreatorSubsciprion = ({ t }) => {
       buttonClassName={styles['submit-button']}
       inputClassName={styles['input']}
     />
+    </>
   )
 }
 

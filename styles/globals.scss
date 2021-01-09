@@ -18,6 +18,24 @@ video {
   max-width: 100%;
 }
 
+.theme-users {
+  --colors-themed-default: var(--colors-blue-default);
+  --colors-themed-weak: var(--colors-blue-weak);
+  --colors-themed-light: var(--colors-blue-light);
+}
+
+.theme-creators {
+  --colors-themed-default: var(--colors-red-default);
+  --colors-themed-weak: var(--colors-red-weak);
+  --colors-themed-light: var(--colors-red-light);
+}
+
+.theme-developers {
+  --colors-themed-default: var(--colors-purple-default);
+  --colors-themed-weak: var(--colors-purple-weak);
+  --colors-themed-light: var(--colors-purple-light);
+}
+
 .youtube {
   overflow: hidden;
   position: relative;

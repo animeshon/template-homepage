@@ -131,7 +131,7 @@ const Target = "users";
 const Users = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <Layout headerTheme={Target}>
+    <Layout theme={Target}>
       <Hero
         theme={Target}
         fullpage={showablePosts.length == 0}
