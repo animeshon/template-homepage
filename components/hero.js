@@ -12,13 +12,13 @@ import { ThemeLinks } from '@/root/config';
 const CallToActionButton = ({
   title,
   href,
-  style = 'secondary',
+  className = 'secondary',
   openInNewWindow = false
 }) => (
   <a
     key={title}
     href={href}
-    className={cn(style, 'cta')}
+    className={cn(className, 'cta')}
     rel={openInNewWindow ? 'noopener noreferrer' : ''}
     target={openInNewWindow ? '_blank' : ''}
   >
@@ -67,7 +67,7 @@ function getWindowDimensions() {
   };
 }
 
-const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, children }) => {
+const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, childrenClassName, children }) => {
   const [windowDimensions, setWindowDimensions] = useState({});
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, child
     <div className="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">
       <h1>{title}</h1>
       <h2 className="col-lg-10 col-lg-offset-1">{subtitle}</h2>
-      <>{cta.map(CallToActionButton)}</>
+      {cta && cta.map(CallToActionButton)}
     </div>
   )
 
@@ -98,12 +98,12 @@ const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, child
   if (title && children) {
     inside = (
       <>
-        <div className={cn("col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1 col-xlg-4 col-xlg-offset-1")}>
-          <h1 className={styles['hero-left-align']}>{title}</h1>
-          <h2 className={cn("col-lg-10", windowDimensions.width < 1360 ? "col-lg-offset-1" : undefined, styles['hero-left-align'])}>{subtitle}</h2>
-          <>{cta.map(CallToActionButton)}</>
+        <div className={cn("col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-10 col-xlg-4", styles['hero-left-align'])}>
+          <h1>{title}</h1>
+          <h2 className={cn("col-lg-10", windowDimensions.width < 1360 ? "col-lg-offset-1" : undefined)}>{subtitle}</h2>
+          {cta && cta.map(CallToActionButton)}
         </div>
-        <div className="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-6 col-xlg-offset-1">
+        <div className={childrenClassName}>
           {children}
         </div>
       </>

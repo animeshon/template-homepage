@@ -46,9 +46,15 @@
   top: calc(100% - 70px);
 }
 
-@media (max-width: 1500px) {
-  .arrow {
-    display: none;
+@media (--blog-viewport) {
+  .right {
+    top: calc(20px);
+    right: 10px;
+  }
+  
+  .left {
+    top: calc(20px);
+    left: 10px;
   }
 }
 

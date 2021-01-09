@@ -13,6 +13,8 @@ import ClientPlayground from '@/components/client-playground'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
+import heroStyles from '@/components/hero.module.scss';
+
 const timeline = {
   "header": {
     title: "What comes next?"
@@ -126,6 +128,20 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
+const cta = [
+  {
+    title: "Docs",
+    href: "https://docs.animeshon.com",
+    openInNewWindow: true,
+    className: "primary",
+  },
+  {
+    title: "GraphQL Play",
+    href: "https://api.animeshon.com/graphql",
+    openInNewWindow: true,
+  }
+]
+
 const Target = "developers";
 
 const Developers = ({ t, posts }) => {
@@ -137,8 +153,9 @@ const Developers = ({ t, posts }) => {
           fullpage={showablePosts.length == 0}
           title="Want"
           subtitle="It will be replaced with a search bar or a console for developers."
-          cta={[]}
+          cta={cta}
           overlay={require("@/public/images/background-header.png")}
+          childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
         >
           <ClientPlayground />
 

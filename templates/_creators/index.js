@@ -137,7 +137,7 @@ const Creators = ({ t, posts }) => {
         fullpage={showablePosts.length == 0}
         title="This part of the page will be removed"
         subtitle="It will be replaced with a search bar or a console for developers."
-        cta={[]}
+        childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
       >
         <CreatorSubsciprion />
       </Hero>
