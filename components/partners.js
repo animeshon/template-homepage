@@ -21,6 +21,12 @@ const adopters = [
     url: 'https://github.com/skyborgff/KaDoKo'
   },
   {
+    title: 'Vantan Game Academy',
+    featured: true,
+    image: require('../public/images/partner-vantan.png'),
+    url: 'https://www.vantan-game.com/'
+  },
+  {
     title: 'NOI',
     featured: true,
     image: require('../public/images/partner-noi.png'),
@@ -32,12 +38,12 @@ const adopters = [
     image: require('../public/images/partner-lub.png'),
     url: 'https://www.unibz.it'
   },
-  // {
-  //   title: 'Enterprise Europe Network',
-  //   featured: true,
-  //   image: require('../public/images/partner-een.png'),
-  //   url: 'https://een.ec.europa.eu/'
-  // },
+  {
+    title: 'Enterprise Europe Network',
+    featured: true,
+    image: require('../public/images/partner-een.png'),
+    url: 'https://een.ec.europa.eu/'
+  },
 ]
 
 const Partners = ({ onlyFeatured }) => (
