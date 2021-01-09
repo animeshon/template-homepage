@@ -49,19 +49,19 @@ const ClientPlayground = () => {
   }, []);
 
   const queries = [
-    "queryAnime",
-    "queryManga",
-    "queryVisualNovel",
-    "queryDoujinshi",
-    "queryLightNovel",
+    {q: "queryAnime", max: 23000},
+    {q: "queryManga", max: 23000},
+    {q: "queryVisualNovel", max: 25000},
+    {q: "queryDoujinshi", max: 150000},
+    {q: "queryLightNovel", max: 10000},
   ];
 
   const query = queries[Math.floor(Math.random() * queries.length)];
-  const offset = getRandomInt(1, 20000);
+  const offset = getRandomInt(1, query.max);
 
   const queryConent = `
   {
-      ${query}(first: 1, offset:${offset}) {
+      ${query.q}(first: 1, offset:${offset}) {
         names {
           text
         }
