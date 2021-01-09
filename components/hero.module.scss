@@ -18,7 +18,6 @@
     position: absolute;
     left: 0;
     right: 0;
-    background-image: url('../public/images/background-header.png');
     height: calc(100% + 96px);
   }
 
@@ -63,6 +62,10 @@
     position: relative;
     padding: 112px 0;
   }
+}
+
+.hero-users {
+  background-color: var(--colors-themed-white);
 }
 
 @media (--sm-viewport) {

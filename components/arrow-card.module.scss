@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  font-weight: 500;
 
   -webkit-transition: all ease 200ms;
   -moz-transition: all ease 200ms;
@@ -48,5 +49,20 @@
 @media (max-width: 1500px) {
   .arrow {
     display: none;
+  }
+}
+
+.arrow-users {
+  color: var(--colors-base-dark);
+
+  & {
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colors-themed-weak);
+      & .icon {
+        color: var(--colors-themed-weak);
+      }
+    }
   }
 }

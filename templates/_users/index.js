@@ -9,6 +9,7 @@ import ThinProjectList from '@/components/thin-project-list'
 import BlogSummarySection from '@/components/blog-summary-section'
 import Partners from '@/components/partners'
 import Timeline from '@/components/vertical-timeline'
+import UserSearch from '@/components/user-search'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
@@ -125,18 +126,20 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
+const Target = "users";
+
 const Users = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <Layout headerTheme={"users"}>
-      <Hero 
-        theme={"users"}
+    <Layout headerTheme={Target}>
+      <Hero
+        theme={Target}
         fullpage={showablePosts.length == 0}
-        title="This part of the page will be removed"
-        subtitle="It will be replaced with a search bar or a console for developers."
         cta={[]}
-      />
-      {showablePosts.length && <BlogSummarySection posts={showablePosts} />}
+      >
+        <UserSearch />
+      </Hero>
+      {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
       <Partners onlyFeatured={true} />
       <ThinProjectList projects={projects} />
       <Timeline events={timeline.events} header={timeline.header} />
@@ -148,7 +151,7 @@ const Users = ({ t, posts }) => {
 
 export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
-  const posts = await cache.GetOrRefresh()
+  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
 
   return {
     props: {

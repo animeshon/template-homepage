@@ -1,41 +1,32 @@
 import React, {useRef} from 'react';
-import Router, { useRouter } from 'next/router';
+import { withTranslation } from '@/root/i18n';
 
+import EncyclopediaTextSearch from '@/components/encyclopedia-text-search';
 import HeaderDropdown from './header-dropdown';
 import styles from './header.module.scss';
 
-const Header = ({ theme }) => {
+const Header = ({ theme, t }) => {
     const input = useRef(undefined)
-    const handleQuerySubmit = e => {
-        e.preventDefault();
-        if (input.current.value != '') {
-            Router.push({
-                pathname: 'https://animeshon.com/e/search',
-                query: { q: input.current.value },
-            });
-        }
-    };
-
     return (
         <div className={styles.padder}>
             <header className={styles.header}>
                 <a href="/">
                     <h1 className={styles.brand}>
-                        <span>Search Manga and Anime</span>
+                        <span>{t("brandAltText")}</span>
                     </h1>
                 </a>
-                <form onSubmit={handleQuerySubmit} className={styles.search_group}>
+                <EncyclopediaTextSearch className={styles.search_group} textRef={input}>
                     <input
                         ref={input}
                         type="text"
                         className={styles.search_input}
-                        name="searchQuery"
+                        placeholder={t("searchPlaceholder")}
                     />
-                </form>
+                </EncyclopediaTextSearch>
                 <HeaderDropdown theme={theme} />
             </header>
         </div>
     );
 };
 
-export default Header;
+export default withTranslation("common")(Header);

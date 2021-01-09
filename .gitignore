@@ -38,3 +38,6 @@ yarn-error.log*
 
 # dynamic page
 /pages/index.js
+/pages/developers/index.js
+/pages/users/index.js
+/pages/creators/index.js

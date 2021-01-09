@@ -36,4 +36,4 @@ const HeaderDropdown = ({ t, theme }) => {
     );
 };
 
-export default withTranslation()(HeaderDropdown);
+export default withTranslation("common")(HeaderDropdown);

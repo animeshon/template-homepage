@@ -9,7 +9,6 @@ import ThinProjectList from '@/components/thin-project-list'
 import BlogSummarySection from '@/components/blog-summary-section'
 import Partners from '@/components/partners'
 import Timeline from '@/components/vertical-timeline'
-import ClientPlayground from '@/components/client-playground'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
@@ -65,19 +64,19 @@ const stats = {
   },
   "numbers": [
     {
-      title: 'Graph edges',
-      amount: 1200000000,
+      title: 'Official titles',
+      amount: 176000,
       description: `Overall`
     },
     {
-      title: 'Indexed frames',
-      amount: 2250000000,
-      description: 'Estimated'
+      title: 'Independent titles',
+      amount: 1500000,
+      description: 'Overall'
     },
     {
-      title: 'Average request time',
-      amount: 50,
-      description: 'Milliseconds'
+      title: 'External links',
+      amount: 12000000,
+      description: 'Overall'
     }
   ],
 };
@@ -85,11 +84,11 @@ const stats = {
 const projects = [
   {
     id: '1',
-    action: 'Explore GraphQL directly from your browser',
-    title: 'Your graph knowledge-base',
+    action: 'Search in our multimedia database',
+    title: 'Everything in one place',
     description:
-      'Everything about Anime, Manga, Light-, and Visual- Novels is available to you from the most interconnected graph database on the planet.',
-    href: 'https://play.animeshon.com/',
+      'Search your favorite content through millions of official and independent Anime, Manga, Light-, and Visual- Novels.',
+    href: '/',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/lf30_editor_Poez3y.json'),
@@ -97,27 +96,27 @@ const projects = [
   },
   {
     id: '2',
-    action: 'Lookup your own screenshot',
-    title: 'Anime image search at scale',
+    action: 'Explore universes and series',
+    title: 'Explore multiple universes',
     description:
-      'We can identify up to 2 billion frames from 25.000 anime episodes and provide graph knowledge such as episode and anime metadata (incl. ids and names).',
-    href: 'https://source.animeshon.com/',
+      'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
+    href: '/',
   },
   {
     id: '3',
-    action: 'Learn more about cross-references',
-    title: 'Cross-site references',
+    action: 'Sync all your lists now',
+    title: 'Track all your lists',
     description:
-      'We can lookup references, links, or ids from external websites and return the equivalent resource in Animeshon as well as all other known data sources.',
-    href: 'https://developers.animeshon.com/blog/building-a-cross-site-app-through-structured-cross-references',
+      'Import and export all tracking lists from your favorite websites - or build your own directly on Animeshon.',
+    href: '/',
   },
   {
     id: '4',
-    action: 'Explore our integration ecosystem',
-    title: 'We are integration driven',
+    action: 'Start reading new titles',
+    title: 'Read independent Manga',
     description:
-      'We work together with research institutions and universities to make the most advanced technologies ready to be integrated by third-party applications.',
-    href: 'https://docs.animeshon.com/docs/ecosystem/introduction',
+      'Join our community of independent content creators and make sure your favorite stories are never interrupted and always available in your language.',
+    href: '/',
   },
 ];
 
@@ -126,30 +125,26 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
-const Target = "developers";
+const Target = "creators";
 
-const Developers = ({ t, posts }) => {
+const Creators = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-      <Layout headerTheme={Target}>
-        <Hero
-          theme={Target}
-          fullpage={showablePosts.length == 0}
-          title="Want"
-          subtitle="It will be replaced with a search bar or a console for developers."
-          cta={[]}
-          overlay={require("@/public/images/background-header.png")}
-        >
-          <ClientPlayground />
-
-        </Hero>
-        {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
-        <Partners onlyFeatured={true} />
-        <ThinProjectList projects={projects} />
-        <Timeline events={timeline.events} header={timeline.header} />
-        <Stats stats={stats.numbers} header={stats.header} />
-        <Newsletter title={newsletter.title} description={newsletter.description} />
-      </Layout>
+    <Layout headerTheme={Target}>
+      <Hero 
+        theme={Target}
+        fullpage={showablePosts.length == 0}
+        title="This part of the page will be removed"
+        subtitle="It will be replaced with a search bar or a console for developers."
+        cta={[]}
+      />
+      {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
+      <Partners onlyFeatured={true} />
+      <ThinProjectList projects={projects} />
+      <Timeline events={timeline.events} header={timeline.header} />
+      <Stats stats={stats.numbers} header={stats.header} />
+      <Newsletter title={newsletter.title} description={newsletter.description} />
+    </Layout>
   )
 }
 
@@ -165,4 +160,4 @@ export const getStaticProps = async () => {
   };
 }
 
-export default withTranslation('common')(Developers);
+export default withTranslation('common')(Creators);

@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev:users": "rimraf pages/index.js && cpy templates/_users/index.js pages/&& next dev",
+    "dev": "next dev",
+    "dev:setup": "npm run dev:users && npm run dev:developers && npm run dev:creators && npm run dev",
+    "dev:users": "rimraf pages/users/index.js && cpy templates/_users/index.js pages/users/",
     "build:users": "rimraf pages/index.js && cpy templates/_users/index.js pages/ && next build",
-    "dev:developers": "rimraf pages/index.js && cpy templates/_developers/index.js pages/ && next dev",
+    "dev:developers": "rimraf pages/developers/index.js && cpy templates/_developers/index.js pages/developers/",
     "build:developers": "rimraf pages/index.js && cpy templates/_developers/index.js pages/ && next build",
-    "dev:creators": "rimraf pages/index.js && cpy templates/_creators/index.js pages/ && next dev",
+    "dev:creators": "rimraf pages/creators/index.js && cpy templates/_creators/index.js pages/creators/",
     "build:creators": "rimraf pages/index.js && cpy templates/_creators/index.js pages/ && next build",
     "start": "next start",
     "start:production": "next start -p $PORT"

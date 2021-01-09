@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react'
+import React, { useState, useEffect } from 'react'
 import { withTranslation } from '@/root/i18n';
 
 import cn from 'classnames'
@@ -67,7 +67,7 @@ function getWindowDimensions() {
   };
 }
 
-const Hero = ({ title, subtitle, cta, theme, fullpage = false, t, children }) => {
+const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, children }) => {
   const [windowDimensions, setWindowDimensions] = useState({});
 
   useEffect(() => {
@@ -110,18 +110,22 @@ const Hero = ({ title, subtitle, cta, theme, fullpage = false, t, children }) =>
     )
   }
 
+  const stylingOverlay = {
+    backgroundImage: `url('${overlay}')`,
+  }
+
   return (
-    <div className={cn(styles.hero, fullpage ? styles.full : undefined)}>
-      <div className={styles.overlay} />
+    <div className={cn(styles.hero, fullpage ? styles.full : undefined, styles[`hero-${theme}`])}>
+      {overlay && (<div className={styles.overlay} style={stylingOverlay} />)}
       <div className="container-fluid">
         <div className="row">
           {inside}
         </div>
 
-        <ArrowCard href={themeToArrow[theme].right.href} fullpage={fullpage}>
+        <ArrowCard href={themeToArrow[theme].right.href} fullpage={fullpage} theme={theme}>
           {t(themeToArrow[theme].right.text)}
         </ArrowCard>
-        <ArrowCard left={true} href={themeToArrow[theme].left.href} fullpage={fullpage}>
+        <ArrowCard left={true} href={themeToArrow[theme].left.href} fullpage={fullpage} theme={theme}>
           {t(themeToArrow[theme].left.text)}
         </ArrowCard>
       </div>
@@ -129,4 +133,4 @@ const Hero = ({ title, subtitle, cta, theme, fullpage = false, t, children }) =>
   )
 }
 
-export default withTranslation()(Hero);
+export default withTranslation("common")(Hero);

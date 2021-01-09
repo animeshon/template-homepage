@@ -15,5 +15,10 @@
   "subscribeNewsLetter_successfulStatus": "Thank you for registering to Animeshon! You will receive a confirmation email soon.",
   "arrowCreator": "Are you a creator?",
   "arrowUser": "Are you a user?",
-  "arrowDeveloper": "Are you a developer?"
+  "arrowDeveloper": "Are you a developer?",
+  "brandAltText": "Search Manga and Anime",
+  "searchPlaceholder": "Search...",
+  "footerContactUs": "Get in touch with us",
+  "footerMotto": "Made with ❤️ by Animeshon",
+  "footerCopyrights": "All rights belong to their respective owners."
 }

@@ -1,21 +1,23 @@
 import React from 'react'
+import { withTranslation } from '@/root/i18n';
+
 import cn from 'classnames'
 import styles from './footer.module.scss'
 
 import logo from '../public/brand/animeshon-brand-white.svg'
 
-const Footer = ({menu, comp}) => (
+const Footer = ({menu, comp, t}) => (
   <footer className={cn(styles.footer)}>
     <div className="container-fluid">
       <div className="row">
         <div className={cn("col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile", styles.logo)}>
           <img loading="lazy" src={logo} alt={'Animeshon logo'} />
           <p className={cn(styles.contact)}>
-            Get in touch with us
+            {t("footerContactUs")}
             <br />
             <a href="mailto:hello@animeshon.com">hello@animeshon.com</a>
           </p>
-          <p className={cn(styles.contact)}>Made with ❤️ by Animeshon</p>
+          <p className={cn(styles.contact)}>{t("footerMotto")}</p>
           <br />
         </div>
         <div className="col-lg-7 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile mobile-offset-64">
@@ -47,7 +49,7 @@ const Footer = ({menu, comp}) => (
 
       <div className="row">
         <div className="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
-          <p className={styles.copyright}>All rights belong to their respective owners.</p>
+          <p className={styles.copyright}>{t("footerCopyrights")}</p>
         </div>
 
         <div className="col-lg-6 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
@@ -70,4 +72,4 @@ const Footer = ({menu, comp}) => (
   </footer>
 )
 
-export default Footer
+export default withTranslation("Common")(Footer);
