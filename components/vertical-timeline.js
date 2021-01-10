@@ -14,7 +14,7 @@ const Timeline = ({ header, events }) => {
             <h3>{header.title}</h3>
             {header.subtitle && <p>{header.subtitle}</p>}
           </div>
-          <VerticalTimeline className={"col-lg-offset-1 col-lg-12 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10"}>
+          <VerticalTimeline className={"col-lg-offset-1 col-lg-12 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10"} style={{ overflow: "hidden" }}>
             {events.map(e => {
               return (
                 <VerticalTimelineElement
