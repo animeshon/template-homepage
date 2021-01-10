@@ -13,6 +13,9 @@ import UserSearch from '@/components/user-search'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
+import { NextSeo } from 'next-seo';
+import { PageSEO } from '@/root/config';
+
 const timeline = {
   "header": {
     title: "What comes next?"
@@ -131,21 +134,24 @@ const Target = "users";
 const Users = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <Layout theme={Target}>
-      <Hero
-        theme={Target}
-        fullpage={showablePosts.length == 0}
-        cta={[]}
-      >
-        <UserSearch />
-      </Hero>
-      {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
-      <Partners onlyFeatured={true} />
-      <ThinProjectList projects={projects} />
-      <Timeline events={timeline.events} header={timeline.header} />
-      <Stats stats={stats.numbers} header={stats.header} />
-      <Newsletter title={newsletter.title} description={newsletter.description} />
-    </Layout>
+    <>
+      <NextSeo {...PageSEO(t, Target)}/>
+      <Layout theme={Target}>
+        <Hero
+          theme={Target}
+          fullpage={showablePosts.length == 0}
+          cta={[]}
+        >
+          <UserSearch />
+        </Hero>
+        {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
+        <Partners onlyFeatured={true} />
+        <ThinProjectList projects={projects} />
+        <Timeline events={timeline.events} header={timeline.header} />
+        <Stats stats={stats.numbers} header={stats.header} />
+        <Newsletter title={newsletter.title} description={newsletter.description} />
+      </Layout>
+    </>
   )
 }
 
@@ -155,10 +161,10 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      namespacesRequired: ['common', 'blog'],
+      namespacesRequired: ['common'],
       posts: posts
     }
   };
 }
 
-export default withTranslation('common')(Users);
+export default withTranslation(['common'])(Users);

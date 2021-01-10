@@ -13,6 +13,9 @@ import CreatorSubsciprion from '@/components/creator-subscription';
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
+import { NextSeo } from 'next-seo';
+import { PageSEO } from '@/root/config';
+
 const timeline = {
   "header": {
     title: "What comes next?"
@@ -131,24 +134,27 @@ const Target = "creators";
 const Creators = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-    <Layout theme={Target}>
-      <Hero
-        theme={Target}
-        fullpage={showablePosts.length == 0}
-        title="This part of the page will be removed"
-        subtitle="It will be replaced with a search bar or a console for developers."
-        childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
-      >
-        <CreatorSubsciprion />
-      </Hero>
+    <>
+      <NextSeo {...PageSEO(t, Target)}/>
+      <Layout theme={Target}>
+        <Hero
+          theme={Target}
+          fullpage={showablePosts.length == 0}
+          title="This part of the page will be removed"
+          subtitle="It will be replaced with a search bar or a console for developers."
+          childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
+        >
+          <CreatorSubsciprion />
+        </Hero>
 
-      {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
-      <Partners onlyFeatured={true} />
-      <ThinProjectList projects={projects} />
-      <Timeline events={timeline.events} header={timeline.header} />
-      <Stats stats={stats.numbers} header={stats.header} />
-      <Newsletter title={newsletter.title} description={newsletter.description} />
-    </Layout>
+        {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
+        <Partners onlyFeatured={true} />
+        <ThinProjectList projects={projects} />
+        <Timeline events={timeline.events} header={timeline.header} />
+        <Stats stats={stats.numbers} header={stats.header} />
+        <Newsletter title={newsletter.title} description={newsletter.description} />
+      </Layout>
+    </>
   )
 }
 
@@ -158,7 +164,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      namespacesRequired: ['common', 'blog'],
+      namespacesRequired: ['common'],
       posts: posts
     }
   };

@@ -10,10 +10,13 @@ import { GetGlobalBlogCache } from '@/src/blog-cache';
 
 import * as styles from './blog.module.scss'
 
+import { NextSeo } from 'next-seo';
+import { PageSEO } from '@/root/config';
+
 const Post = ({ path, title, teaser, target, overline, author, publishedAt }) => (
 
   <div>
-    <p className={styles['post-overline']}>{target &&<b>{target} | </b>}{overline}</p>
+    <p className={styles['post-overline']}>{target && <b>{target} | </b>}{overline}</p>
     <h2 className={styles['post-title']}>
       <Link href={path}>{title}</Link>
     </h2>
@@ -27,6 +30,7 @@ const Post = ({ path, title, teaser, target, overline, author, publishedAt }) =>
 const BlogList = ({ t, posts }) => {
   return (
     <>
+      <NextSeo {...PageSEO(t, "blog")}/>
       <Header />
       <BlogSection overrideStyles={{ paddingTop: 32, paddingBottom: 32 }}>
         <h1 className={styles['page-title']}>{t('blogList_title')}</h1>
@@ -48,10 +52,10 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      namespacesRequired: ['common', 'blog'],
+      namespacesRequired: ['common'],
       posts: posts
     }
   };
 }
 
-export default withTranslation('blog')(BlogList);
+export default withTranslation('common')(BlogList);

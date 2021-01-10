@@ -9,7 +9,6 @@ import * as style from './header-dropdown.module.scss';
 
 
 const HeaderDropdown = ({ t, theme }) => {
-    console.log(theme)
     const options = [
         { href: ThemeLinks.users, value: 'users', label: <div className={style.wrapper}><img src={"../svg/open-book.svg"} className={style.icon} /><span>{t('aboutDispatcher_choose_user')}</span></div> },
         { href: ThemeLinks.creators, value: 'creators', label: <div className={style.wrapper}><img src={"../svg/painter.svg"} className={style.icon} /><span>{t('aboutDispatcher_choose_creator')}</span></div> },

@@ -13,7 +13,8 @@ import ClientPlayground from '@/components/client-playground'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
-import heroStyles from '@/components/hero.module.scss';
+import { NextSeo } from 'next-seo';
+import { PageSEO } from '@/root/config';
 
 const timeline = {
   "header": {
@@ -147,6 +148,8 @@ const Target = "developers";
 const Developers = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
+    <>
+      <NextSeo {...PageSEO(t, Target)}/>
       <Layout theme={Target}>
         <Hero
           theme={Target}
@@ -167,19 +170,20 @@ const Developers = ({ t, posts }) => {
         <Stats stats={stats.numbers} header={stats.header} />
         <Newsletter title={newsletter.title} description={newsletter.description} />
       </Layout>
+    </>
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({locale}) => {
   const cache = GetGlobalBlogCache();
   const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
 
   return {
     props: {
-      namespacesRequired: ['common', 'blog'],
+      namespacesRequired: ['common'],
       posts: posts
     }
   };
 }
 
-export default withTranslation('common')(Developers);
+export default withTranslation(['common'])(Developers);

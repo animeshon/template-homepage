@@ -35,6 +35,17 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     min-width: 260px;
     max-width: 280px;
+
+    & a,
+    & a:visited {
+      color: var(--colors-themed-default);
+  
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--colors-themed-default);
+      }
+    }
 }
 .sidebar.opened {
     transform: translateX(0);
@@ -48,7 +59,6 @@
 .sidebar ul li a,
 .sidebar ul li button {
     font-size: 14px;
-    color: #656565;
     padding: 20px 30px;
     display: block;
     width: 100%;

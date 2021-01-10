@@ -14,6 +14,7 @@ const routes = [
     { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Reddit' },
     { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Twitter' },
     { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Github' },
+    { href: 'https://animeshon.com/blog', label: 'Blog' },
 ];
 
 const Header = ({ theme, t }) => {

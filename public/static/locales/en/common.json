@@ -21,5 +21,23 @@
   "searchPlaceholder": "Search...",
   "footerContactUs": "Get in touch with us",
   "footerMotto": "Made with ❤️ by Animeshon",
-  "footerCopyrights": "All rights belong to their respective owners."
+  "footerCopyrights": "All rights belong to their respective owners.",
+
+  "blogList_title": "Blogs and Articles",
+
+  "DefaultSEO_Title": "Animeshon",
+  "DefaultSEO_Description": "test_default_desc",
+  "DefaultSEO_SiteName": "",
+  "SEO_UserTitle": "",
+  "SEO_UserDescription": "",
+  "SEO_UserSiteName": "",
+  "SEO_CreatorTitle": "",
+  "SEO_CreatorDescription": "test_user_desc",
+  "SEO_CreatorSiteName": "",
+  "SEO_DevTitle": "",
+  "SEO_DevDescription": "test_dev_desc",
+  "SEO_DevSiteName": "",
+  "SEO_BlogTitle": "",
+  "SEO_BlogDescription": "",
+  "SEO_BlogSiteName": ""
 }

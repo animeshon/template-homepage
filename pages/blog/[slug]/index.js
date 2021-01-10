@@ -13,6 +13,9 @@ import ReactMarkdown from 'react-markdown'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
+import { NextSeo } from 'next-seo';
+import { PageSEO } from '@/root/config';
+
 const renderers = {
     code: ({ language, value }) => {
         return <SyntaxHighlighter language={language} children={value} />
@@ -22,8 +25,14 @@ const renderers = {
 const BlogPost = ({ post }) => {
     if (!post) return null;
 
+    let seo = PageSEO(t, "blog");
+    // add custom fields
+    seo.title = post.title;
+    seo.description = post.subtitle;
+
     return (
         <>
+            <NextSeo {...seo} />
             <Header />
             <BlogHero
                 title={post.title}

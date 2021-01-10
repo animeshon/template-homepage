@@ -40,7 +40,6 @@ const ClientPlayground = () => {
     };
     const observer = new MutationObserver(callback);
     var targetNodes = $(".mini-graphiql-wrapper")[0];
-    console.log(targetNodes)
     observer.observe(targetNodes, obsConfig);
 
     return () => {
