@@ -13,6 +13,9 @@ import ClientPlayground from '@/components/client-playground'
 
 import { GetGlobalBlogCache } from '@/src/blog-cache';
 
+import { NextSeo } from 'next-seo';
+import { PageSEO } from '@/root/config';
+
 const timeline = {
   "header": {
     title: "What comes next?"
@@ -126,40 +129,61 @@ const newsletter = {
   description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
 }
 
+const cta = [
+  {
+    title: "Docs",
+    href: "https://docs.animeshon.com",
+    openInNewWindow: true,
+    className: "primary",
+  },
+  {
+    title: "Try GraphQL",
+    href: "https://api.animeshon.com/graphql",
+    openInNewWindow: true,
+  }
+]
+
+const Target = "developers";
+
 const Developers = ({ t, posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
-      <Layout headerTheme={"developers"}>
+    <>
+      <NextSeo {...PageSEO(t, Target)}/>
+      <Layout theme={Target}>
         <Hero
-          theme={"developers"}
+          theme={Target}
           fullpage={showablePosts.length == 0}
-          title="Want"
-          subtitle="It will be replaced with a search bar or a console for developers."
-          cta={[]}
+          title="A rich toolset for your idea"
+          subtitle="Start building the future of Japanese multimedia."
+          cta={cta}
+          overlay={require("@/public/images/background-header.png")}
+          childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
         >
           <ClientPlayground />
 
         </Hero>
-        {showablePosts.length && <BlogSummarySection posts={showablePosts} />}
+        {showablePosts.length != 0 && <BlogSummarySection posts={showablePosts} />}
         <Partners onlyFeatured={true} />
         <ThinProjectList projects={projects} />
         <Timeline events={timeline.events} header={timeline.header} />
         <Stats stats={stats.numbers} header={stats.header} />
         <Newsletter title={newsletter.title} description={newsletter.description} />
       </Layout>
+    </>
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({locale}) => {
   const cache = GetGlobalBlogCache();
-  const posts = await cache.GetOrRefresh()
+  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
 
   return {
     props: {
-      namespacesRequired: ['common', 'blog'],
+      namespacesRequired: ['common'],
       posts: posts
     }
   };
 }
 
-export default withTranslation('common')(Developers);
+export default withTranslation(['common'])(Developers);

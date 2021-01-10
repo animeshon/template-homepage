@@ -22,7 +22,7 @@ const renderers = {
     }
 }
 
-const BlogPost = ({ post }) => {
+const BlogPost = ({ post, t }) => {
     if (!post) return null;
 
     let seo = PageSEO(t, "blog");
