@@ -29,6 +29,25 @@
   min-height: 96px;
 }
 
+.lang-select  {
+  & button {
+    border: 0px;
+    border-radius: unset;
+    outline:none;
+  }
+
+  & ul {
+    padding: 0px;
+    width: 150px;
+    margin-left: -40px;
+    margin-top: 0px;
+  }
+}
+
+.lang-select-wrapper > div {
+  padding-bottom: 0px;
+}
+
 .header .brand-a {
     height: 46px;
 }

@@ -8,6 +8,8 @@ import Sidebar from './sidebar';
 import HeaderDropdown from './header-dropdown';
 import styles from './header.module.scss';
 
+import ReactFlagsSelect from 'react-flags-select';
+
 const routes = [
     { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Discord' },
     { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Patreon' },
@@ -19,6 +21,7 @@ const routes = [
 
 const Header = ({ theme, t }) => {
     const [sidebarOpen, setSidebar] = useState(false);
+    const [lang, setLang] = useState("US");
 
     const handleSidebarOpening = e => {
         const target = e.currentTarget.id === 'sidebar-opener';
@@ -78,7 +81,23 @@ const Header = ({ theme, t }) => {
                                     <span />
                                     <span />
                                 </button>
-                                <Sidebar open={sidebarOpen} closeSidebar={handleSidebarOpening} routes={routes}/>
+                                {/* TODO! this is just a placeholder
+                                    need to add the logic and the translations*/}
+
+                                <div className={styles["lang-select-wrapper"]}>
+                                    <ReactFlagsSelect
+                                        className={styles["lang-select"]}
+                                        countries={["US"]}
+                                        selected={lang}
+                                        onSelect={code => setLang(code)}
+                                        customLabels={{ "US": t('LangSelector_english') }}
+                                        defaultCountry="US"
+                                        showSelectedLabel={false}
+                                    // disabled={true}
+                                    />
+                                </div>
+
+                                <Sidebar open={sidebarOpen} closeSidebar={handleSidebarOpening} routes={routes} />
                             </div>
                         </div>
                     </div>
