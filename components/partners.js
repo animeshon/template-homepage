@@ -44,6 +44,12 @@ const adopters = [
     image: require('../public/images/partner-een.png'),
     url: 'https://een.ec.europa.eu/'
   },
+  {
+    title: 'EU-Japan Centre for Industrial Cooperation',
+    featured: true,
+    image: require('../public/images/partner-eujpc.png'),
+    url: 'https://www.eu-japan.eu/'
+  },
 ]
 
 const Partners = ({ onlyFeatured }) => (
