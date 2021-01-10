@@ -95,7 +95,7 @@ const projects = [
     href: '/',
     visual: {
       type: "lottie",
-      data: require('@/root/public/lotties/lf30_editor_Poez3y.json'),
+      data: require('@/root/public/lotties/user_1.json'),
     }
   },
   {
@@ -105,6 +105,10 @@ const projects = [
     description:
       'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
     href: '/',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/user_2.json'),
+    }
   },
   {
     id: '3',
@@ -113,6 +117,10 @@ const projects = [
     description:
       'Import and export all tracking lists from your favorite websites - or build your own directly on Animeshon.',
     href: '/',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/user_3.json'),
+    }
   },
   {
     id: '4',
@@ -120,7 +128,10 @@ const projects = [
     title: 'Read independent Manga',
     description:
       'Join our community of independent content creators and make sure your favorite stories are never interrupted and always available in your language.',
-    href: '/',
+    href: '/',visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/user_4.json'),
+    }
   },
 ];
 
