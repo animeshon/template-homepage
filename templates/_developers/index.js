@@ -95,7 +95,7 @@ const projects = [
     href: 'https://play.animeshon.com/',
     visual: {
       type: "lottie",
-      data: require('@/root/public/lotties/lf30_editor_Poez3y.json'),
+      data: require('@/root/public/lotties/developers_1.json'),
     }
   },
   {
@@ -105,6 +105,10 @@ const projects = [
     description:
       'We can identify up to 2 billion frames from 25.000 anime episodes and provide graph knowledge such as episode and anime metadata (incl. ids and names).',
     href: 'https://source.animeshon.com/',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/developers_2.json'),
+    }
   },
   {
     id: '3',
@@ -113,6 +117,10 @@ const projects = [
     description:
       'We can lookup references, links, or ids from external websites and return the equivalent resource in Animeshon as well as all other known data sources.',
     href: 'https://developers.animeshon.com/blog/building-a-cross-site-app-through-structured-cross-references',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/developers_3.json'),
+    }
   },
   {
     id: '4',
@@ -121,6 +129,10 @@ const projects = [
     description:
       'We work together with research institutions and universities to make the most advanced technologies ready to be integrated by third-party applications.',
     href: 'https://docs.animeshon.com/docs/ecosystem/introduction',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/developers_4.json'),
+    }
   },
 ];
 
@@ -138,7 +150,7 @@ const cta = [
   },
   {
     title: "Try GraphQL",
-    href: "https://api.animeshon.com/graphql",
+    href: "https://play.animeshon.com/",
     openInNewWindow: true,
   }
 ]
@@ -154,7 +166,7 @@ const Developers = ({ t, posts }) => {
         <Hero
           theme={Target}
           fullpage={showablePosts.length == 0}
-          title="A rich toolset for your idea"
+          title="Bring to life your ideas"
           subtitle="Start building the future of Japanese multimedia."
           cta={cta}
           overlay={require("@/public/images/background-header.png")}

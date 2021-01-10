@@ -30,11 +30,12 @@
 }
 
 .footer .copyright {
-  color: var(--colors-base-grey);
+  line-height: 2;
+  margin-top: 0;
+  color: var(--colors-base-text);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 168%;
   margin-bottom: 16px;
 }
 
@@ -95,7 +96,7 @@
 }
 
 .comp-row a:any-link {
-  color: var(--colors-base-grey);
+  color: var(--colors-base-text);
 
   &:hover,
   &:active,
