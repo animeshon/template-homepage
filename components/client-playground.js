@@ -72,13 +72,6 @@ const ClientPlayground = () => {
             formattedAddress
           }
         }
-        images {
-          image {
-            files {
-              publicUri
-            }
-          }
-        }
       }
   }`;
 
