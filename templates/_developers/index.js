@@ -166,7 +166,7 @@ const Developers = ({ t, posts }) => {
         <Hero
           theme={Target}
           fullpage={showablePosts.length == 0}
-          title="Bring to life your ideas"
+          title="Bring your ideas to life"
           subtitle="Start building the future of Japanese multimedia."
           cta={cta}
           overlay={require("@/public/images/background-header.png")}
