@@ -11,11 +11,11 @@ import styles from './header.module.scss';
 import ReactFlagsSelect from 'react-flags-select';
 
 const routes = [
-    { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Discord' },
-    { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Patreon' },
-    { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Reddit' },
-    { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Twitter' },
-    { href: 'https://github.com/animeshon/website-encyclopedia', label: 'Github' },
+    { href: 'https://discord.gg/WvNsjtR', label: 'Discord' },
+    { href: 'https://www.patreon.com/animeshon', label: 'Patreon' },
+    { href: 'https://www.reddit.com/r/animeshon/', label: 'Reddit' },
+    { href: 'https://twitter.com/animeshonsns', label: 'Twitter' },
+    { href: 'https://github.com/animeshon', label: 'Github' },
     { href: 'https://animeshon.com/blog', label: 'Blog' },
 ];
 
