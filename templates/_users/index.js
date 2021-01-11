@@ -92,7 +92,7 @@ const projects = [
     title: 'Everything in one place',
     description:
       'Search your favorite content through millions of official and independent Anime, Manga, Light-, and Visual- Novels.',
-    href: '/',
+    href: 'https://animeshon.com/e/search?q=boruto',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/users_1.json'),
@@ -100,11 +100,11 @@ const projects = [
   },
   {
     id: '2',
-    action: 'Explore universes and series',
+    action: '(coming soon) Explore universes and series',
     title: 'Explore multiple universes',
     description:
       'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
-    href: '/',
+    href: '#',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/users_2.json'),
@@ -112,11 +112,11 @@ const projects = [
   },
   {
     id: '3',
-    action: 'Sync all your lists now',
+    action: '(coming soon) Sync all your lists now',
     title: 'Track all your lists',
     description:
       'Import and export all tracking lists from your favorite websites - or build your own directly on Animeshon.',
-    href: '/',
+    href: '#',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/users_3.json'),
@@ -124,11 +124,12 @@ const projects = [
   },
   {
     id: '4',
-    action: 'Start reading new titles',
+    action: '(coming soon) Start reading new titles',
     title: 'Read independent Manga',
     description:
       'Join our community of independent content creators and make sure your favorite stories are never interrupted and always available in your language.',
-    href: '/',visual: {
+    href: '#',
+    visual: {
       type: "lottie",
       data: require('@/root/public/lotties/users_4.json'),
     }
