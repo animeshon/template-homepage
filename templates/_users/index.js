@@ -95,7 +95,7 @@ const projects = [
     href: '/',
     visual: {
       type: "lottie",
-      data: require('@/root/public/lotties/user_1.json'),
+      data: require('@/root/public/lotties/users_1.json'),
     }
   },
   {
@@ -107,7 +107,7 @@ const projects = [
     href: '/',
     visual: {
       type: "lottie",
-      data: require('@/root/public/lotties/user_2.json'),
+      data: require('@/root/public/lotties/users_2.json'),
     }
   },
   {
@@ -119,7 +119,7 @@ const projects = [
     href: '/',
     visual: {
       type: "lottie",
-      data: require('@/root/public/lotties/user_3.json'),
+      data: require('@/root/public/lotties/users_3.json'),
     }
   },
   {
@@ -130,7 +130,7 @@ const projects = [
       'Join our community of independent content creators and make sure your favorite stories are never interrupted and always available in your language.',
     href: '/',visual: {
       type: "lottie",
-      data: require('@/root/public/lotties/user_4.json'),
+      data: require('@/root/public/lotties/users_4.json'),
     }
   },
 ];
@@ -168,7 +168,8 @@ const Users = ({ t, posts }) => {
 
 export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
-  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
 
   return {
     props: {

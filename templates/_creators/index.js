@@ -88,39 +88,51 @@ const stats = {
 const projects = [
   {
     id: '1',
-    action: 'Search in our multimedia database',
-    title: 'Everything in one place',
+    action: 'Share information about your content',
+    title: 'Let the world know about you',
     description:
-      'Search your favorite content through millions of official and independent Anime, Manga, Light-, and Visual- Novels.',
-    href: '/',
+      'Upload the information of your own content to our database of Anime, Manga, Light-, and Visual- Novels.',
+    href: 'mailto:hello@animeshon.com',
     visual: {
       type: "lottie",
-      data: require('@/root/public/lotties/lf30_editor_Poez3y.json'),
+      data: require('@/root/public/lotties/creators_1.json'),
     }
   },
   {
     id: '2',
-    action: 'Explore universes and series',
-    title: 'Explore multiple universes',
+    action: '(coming soon) Subscribe to our incubator',
+    title: 'Incubator for artists',
     description:
-      'Explore all stories and media that belongs to the same universe through highly interconnected graphs and timelines.',
-    href: '/',
+      'Brush up your Manga skills with amazing courses from Japanese academies and Sensei.',
+    href: '#',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/creators_2.json'),
+    }
   },
   {
     id: '3',
-    action: 'Sync all your lists now',
-    title: 'Track all your lists',
+    action: '(coming soon) Discover our media platform',
+    title: 'Publish your Manga',
     description:
-      'Import and export all tracking lists from your favorite websites - or build your own directly on Animeshon.',
-    href: '/',
+      'Upload your Manga, share it with global communities and start making revenue.',
+    href: '#',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/creators_3.json'),
+    }
   },
   {
     id: '4',
-    action: 'Start reading new titles',
-    title: 'Read independent Manga',
+    action: '(coming soon) Explore all translation options',
+    title: 'Translations made easy',
     description:
-      'Join our community of independent content creators and make sure your favorite stories are never interrupted and always available in your language.',
-    href: '/',
+      'Overcome language barriers and access global markets: translations available in English, Italian, German, French, Spanish, Portuguese and more.',
+    href: '#',
+    visual: {
+      type: "lottie",
+      data: require('@/root/public/lotties/creators_4.json'),
+    }
   },
 ];
 
@@ -141,7 +153,7 @@ const Creators = ({ t, posts }) => {
           theme={Target}
           fullpage={showablePosts.length == 0}
           title="This part of the page will be removed"
-          subtitle="It will be replaced with a search bar or a console for developers."
+          subtitle="Contact us for uploading the information about your content"
           childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
         >
           <CreatorSubsciprion />
@@ -160,7 +172,8 @@ const Creators = ({ t, posts }) => {
 
 export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
-  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
 
   return {
     props: {
