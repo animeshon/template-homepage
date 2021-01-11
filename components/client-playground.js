@@ -64,6 +64,21 @@ const ClientPlayground = () => {
         names {
           text
         }
+        aliases {
+          text
+        }
+        crossrefs {
+          website {
+            formattedAddress
+          }
+        }
+        images {
+          image {
+            files {
+              publicUri
+            }
+          }
+        }
       }
   }`;
 
