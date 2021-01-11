@@ -169,7 +169,7 @@ const Developers = ({ t, posts }) => {
           title="Bring your ideas to life"
           subtitle="Start building the future of Japanese multimedia."
           cta={cta}
-          overlay={require("@/public/images/background-header.png")}
+          // overlay={require("@/public/images/background-header.png")}
           childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
         >
           <ClientPlayground />
