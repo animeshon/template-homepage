@@ -127,7 +127,7 @@ const projects = [
     action: 'Explore our integration ecosystem',
     title: 'We are integration driven',
     description:
-      'We work together with research institutions and universities to make the most advanced technologies ready to be integrated by third-party applications.',
+      'We work together with research institutions and universities to make the most advanced technologies ready to be integrated by your applications.',
     href: 'https://docs.animeshon.com/docs/ecosystem/introduction',
     visual: {
       type: "lottie",
