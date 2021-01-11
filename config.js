@@ -43,7 +43,7 @@ export const PageSEO = (t, p) => {
         users: {
             title: t('SEO_UserTitle'),
             description: t('SEO_UserDescription'),
-            // canonical: "",
+            canonical: "https://animeshon.com/",
             openGraph: {
                 site_name: t('SEO_UserSiteName'),
                 title: t('SEO_UserTitle'),
@@ -53,7 +53,7 @@ export const PageSEO = (t, p) => {
         creators: {
             title: t('SEO_CreatorTitle'),
             description: t('SEO_CreatorDescription'),
-            // canonical: "",
+            canonical: "https://creators.animeshon.com/",
             openGraph: {
                 site_name: t('SEO_CreatorSiteName'),
                 title: t('SEO_CreatorTitle'),
@@ -63,7 +63,7 @@ export const PageSEO = (t, p) => {
         developers: {
             title: t('SEO_DevTitle'),
             description: t('SEO_DevDescription'),
-            // canonical: "",
+            canonical: "https://developers.animeshon.com/",
             openGraph: {
                 site_name: t('SEO_DevSiteName'),
                 title: t('SEO_DevTitle'),
@@ -73,7 +73,7 @@ export const PageSEO = (t, p) => {
         blog: {
             title: t('SEO_BlogTitle'),
             description: t('SEO_BlogDescription'),
-            // canonical: "",
+            // canonical: "https://animeshon.com/blog/",
             openGraph: {
                 site_name: t('SEO_BlogSiteName'),
                 title: t('SEO_BlogTitle'),
