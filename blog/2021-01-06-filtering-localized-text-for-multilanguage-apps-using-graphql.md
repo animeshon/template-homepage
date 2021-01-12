@@ -10,9 +10,6 @@ teaser: |
   Learn how to take advantage of text localization to build a simple app
   with multi-language support and language fallback system.
 
-subtitle: >
-  TODO
-
 overline: >
   GraphQL API insight
 ---
