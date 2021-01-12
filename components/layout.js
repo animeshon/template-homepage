@@ -108,7 +108,7 @@ const menu = [
       },
       {
         title: 'Blog',
-        href: 'https://developers.animeshon.com/blog'
+        href: 'https://animeshon.com/blog'
       }
     ]
   }
