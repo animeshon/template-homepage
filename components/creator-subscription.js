@@ -22,13 +22,13 @@ const CreatorSubsciprion = ({ t }) => {
         alt="creators call to action"
         className={styles.image}
       />
-    <NewsletterSubscription
+    {/* <NewsletterSubscription
       placeholder={t('subscribeNewsLetterPlaceholder')}
       button={t('subscribeNewsLetterAction')}
       className={styles.form}
       buttonClassName={styles['submit-button']}
       inputClassName={styles['input']}
-    />
+    /> */}
     </>
   )
 }
