@@ -67,11 +67,6 @@ const ClientPlayground = () => {
         aliases {
           text
         }
-        crossrefs {
-          website {
-            formattedAddress
-          }
-        }
       }
   }`;
 
