@@ -7,6 +7,7 @@ import * as styles from './hero.module.scss'
 import ArrowCard from './arrow-card';
 
 import { ThemeLinks } from '@/root/config';
+import Listener, { IsSmallViewport } from '@/src/resize-listener';
 
 
 const CallToActionButton = ({
@@ -59,24 +60,11 @@ const themeToArrow = {
   },
 }
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height
-  };
-}
-
 const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, childrenClassName, children }) => {
   const [windowDimensions, setWindowDimensions] = useState({});
 
   useEffect(() => {
-    function handleResize() {
-      setWindowDimensions(getWindowDimensions());
-    }
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    Listener(setWindowDimensions);
   }, []);
 
   let inside = (
@@ -123,10 +111,10 @@ const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, child
         </div>
 
         <ArrowCard href={themeToArrow[theme].right.href} fullpage={fullpage} theme={theme}>
-          {t(themeToArrow[theme].right.text)}
+          {t(IsSmallViewport(windowDimensions) ? themeToArrow[theme].right.text + "Short" : themeToArrow[theme].right.text)}
         </ArrowCard>
         <ArrowCard left={true} href={themeToArrow[theme].left.href} fullpage={fullpage} theme={theme}>
-          {t(themeToArrow[theme].left.text)}
+          {t(IsSmallViewport(windowDimensions) ? themeToArrow[theme].left.text + "Short" : themeToArrow[theme].left.text)}
         </ArrowCard>
       </div>
     </div>

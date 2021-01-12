@@ -1,16 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import cn from 'classnames'
 import * as styles from './thin-project.module.scss'
 import { Link } from '@/root/i18n'
 import Lottie from 'react-lottie';
 
-const ThinProject = ({
-  title,
-  description,
-  action,
-  href,
-  visual
-}) => {
+import Listener, {IsSmallViewport} from '@/src/resize-listener';
+
+const ThinProject = ({ title, description, action, href, visual }) => {
+
+  const [windowDimensions, setWindowDimensions] = useState({});
+
+  useEffect(() => {
+    Listener(setWindowDimensions);
+  }, []);
 
   const lottieOption = {
     loop: true,
@@ -43,8 +45,8 @@ const ThinProject = ({
               {visual.type == "lottie" && <Link href={href}>
                 <Lottie
                   options={lottieOption}
-                  width={330}
-                  height={330}
+                  width={IsSmallViewport(windowDimensions) ? 250 : 330}
+                  height={IsSmallViewport(windowDimensions) ? 250 : 330}
                   title={`${title} visualized`}
                 />
               </Link>}
