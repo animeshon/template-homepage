@@ -49,6 +49,7 @@
 }
 
 .header .brand-a {
+    overflow: hidden;
     height: 46px;
 }
 
@@ -78,6 +79,7 @@
 }
 
 .header .brand span {
+    display: inline-block;
     font-size: 12px;
     opacity: 0;
 }
