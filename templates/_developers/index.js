@@ -166,7 +166,7 @@ const Developers = ({ t, posts }) => {
         <Hero
           theme={Target}
           fullpage={showablePosts.length == 0}
-          title="Bring your ideas to life"
+          title="Hello developer, your ideas are waiting for you"
           subtitle="Start building the future of Japanese multimedia."
           cta={cta}
           // overlay={require("@/public/images/background-header.png")}
@@ -188,7 +188,8 @@ const Developers = ({ t, posts }) => {
 
 export const getStaticProps = async ({locale}) => {
   const cache = GetGlobalBlogCache();
-  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  const posts = [];
 
   return {
     props: {

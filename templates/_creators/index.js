@@ -143,8 +143,8 @@ const newsletter = {
 
 const cta = [
   {
-    title: "Google Submission",
-    href: "#",
+    title: "Contact Form",
+    href: "https://forms.gle/BaJqk4map8ZKZsWy9",
     openInNewWindow: true,
     className: "primary",
   },
@@ -166,7 +166,7 @@ const Creators = ({ t, posts }) => {
         <Hero
           theme={Target}
           fullpage={showablePosts.length == 0}
-          title="Something missing?"
+          title="Hello creator, something missing?"
           subtitle="Get in touch with us if information about your content is missing in our database."
           cta={cta}
           childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
