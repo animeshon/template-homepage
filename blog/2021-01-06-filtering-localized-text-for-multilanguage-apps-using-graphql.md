@@ -37,6 +37,7 @@ You can try all queries described here in our [GraphQL Playground](https://play.
 ## Alpha-3
 
 Animeshon APIs allow you to fetch texts and localizations in the format required by your own application.
+
 In the following example we are fetching all the names of the anime "Re:ZERO -Starting Life in Another World-" and we request the result to be in the default format (i.e. ALPHA-3 countries, ALPHA-3 languages, and TEXT scripts).
 
 ```graphql
@@ -61,7 +62,7 @@ In the following example we are fetching all the names of the anime "Re:ZERO -St
 }
 ```
 
-The (truncated) response to the previous query is the following, please note that not always languages, countries, or scripts are set.
+The (truncated) response to the previous query is the following, please note that not always languages, countries, or scripts are set.  
 An explanation why this is the case is that "Generic Chinese" (zho-Hans) is not spoken in one specific country but in multiple and therefore we cannot provide a single region in the query results. Your application should be ready to handle such cases as they are very common (think about Chinese, English, Portuguese, etc.).
 
 ```json
@@ -443,7 +444,7 @@ type Text {
 
 ## Localizations
 
-The `Localization` field is at the core of multi-language support of Animeshon and implements the [BCP47](https://tools.ietf.org/html/bcp47) standard.
+The `Localization` field is at the core of multi-language support of Animeshon and implements the [BCP47](https://tools.ietf.org/html/bcp47) standard.  
 Animeshon implements `BCP47` using ALPHA-3 country and language identifiers which makes them non-canonical but still valid according to the standard.
 
 Examples of tags commonly used in Animeshon are the following:
@@ -455,7 +456,7 @@ Examples of tags commonly used in Animeshon are the following:
 | mul-Latn | Generic Latin (e.g. the name of a person, which has no specific "language") |
 | jpn-Latn | Japanese with Latin script (aka Romaji) |
 | por-POR | Portuguese (Portugal) |
-| por-BRA | Portuguese (Brazil) |
+| por-BRA | Portuguese (Brazil) |  
 
 The structure used by `BCP47` and implemented by Animeshon is xxx-Yyyy-ZZZ where:
 
@@ -482,9 +483,9 @@ type Localization {
 
 ## Countries
 
-The `Country` field implements the representation of a country according to the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) standard.
-The field `code` is choosen by default in all our services and stores the ALPHA-3 representation code of the country (e.g. `DEU`, `JPN`).
-The field `alpha2` stores the ALPHA-2 representation code of the country (e.g. `DE`, `JP`).
+The `Country` field implements the representation of a country according to the [ISO 3166](https://www.iso.org/iso-3166-country-codes.html) standard.  
+The field `code` is choosen by default in all our services and stores the ALPHA-3 value (e.g. `DEU`, `JPN`).  
+The field `alpha2` stores the ALPHA-2 value (e.g. `DE`, `JP`).
 
 ```graphql
 type Country {
@@ -498,11 +499,11 @@ type Country {
 
 ## Languages
 
-The `Language` field implements the representation of a language according to the [ISO 639](https://www.iso.org/iso-639-language-codes.html) standard.
-The field `code` is choosen by default in all our services and stores the ALPHA-3 `ISO 639-3` representation code of the language (e.g. `deu`, `jpn`).
-The field `alpha3t` stores the ALPHA-3 `ISO 639-2 (T)` representation code of the language (e.g. `ger`, `jpn`).
-The field `alpha3b` stores the ALPHA-3 `ISO 639-2 (B)` representation code of the language (e.g. `deu`, `jpn`).
-The field `alpha2` stores the ALPHA-2 `ISO 639-1` representation code of the language (e.g. `de`, `jp`).
+The `Language` field implements the representation of a language according to the [ISO 639](https://www.iso.org/iso-639-language-codes.html) standard.  
+The field `code` is choosen by default in all our services and stores the ALPHA-3 `ISO 639-3` value (e.g. `deu`, `jpn`).  
+The field `alpha3t` stores the ALPHA-3 `ISO 639-2 (T)` value (e.g. `ger`, `jpn`).  
+The field `alpha3b` stores the ALPHA-3 `ISO 639-2 (B)` value (e.g. `deu`, `jpn`).  
+The field `alpha2` stores the ALPHA-2 `ISO 639-1` value (e.g. `de`, `jp`).  
 The field `parent` stores the parent language (if any), an example where this field is set is Mandarin, where Chinese is the macro-language parent.
 
 ```graphql
@@ -531,8 +532,8 @@ type MacroLanguage {
 
 ## Scripts
 
-The `Script` field implements the representation of a script according to the [ISO 15924](https://www.unicode.org/iso15924/) standard.
-The field `code` is choosen by default in all our services and stores the text representation code of the script (e.g. `Latn`, `Jpan`).
+The `Script` field implements the representation of a script according to the [ISO 15924](https://www.unicode.org/iso15924/) standard.  
+The field `code` is choosen by default in all our services and stores the text value (e.g. `Latn`, `Jpan`).  
 The field `number` stores the 3-digits representation code of the script.
 
 ```graphql
