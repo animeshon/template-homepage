@@ -1,7 +1,7 @@
 ---
 path: '/blog/filtering-localized-text-for-multilanguage-apps-using-graphql/'
 slug: 'filtering-localized-text-for-multilanguage-apps-using-graphql'
-publishedAt: '2021-01-06'
+publishedAt: '2021-01-16'
 author: Christian Roggia
 target: developers
 

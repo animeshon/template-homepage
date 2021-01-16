@@ -1,7 +1,7 @@
 ---
 path: '/blog/building-a-cross-site-app-through-structured-cross-references/'
 slug: 'building-a-cross-site-app-through-structured-cross-references'
-publishedAt: '2021-01-12'
+publishedAt: '2021-01-16'
 author: Christian Roggia
 target: developers
 
