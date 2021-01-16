@@ -3,7 +3,7 @@ path: '/blog/information-transparency-italian-public-administration/'
 slug: 'information-transparency-italian-public-administration'
 publishedAt: '2020-05-01'
 author: Christian Roggia
-target: all
+target: transparency
 
 title: '(IT) Trasparenza sullo stato della startup innovativa'
 teaser: |

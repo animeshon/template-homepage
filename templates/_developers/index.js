@@ -188,7 +188,7 @@ const Developers = ({ t, posts }) => {
 
 export const getStaticProps = async ({locale}) => {
   const cache = GetGlobalBlogCache();
-  // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
   const posts = [];
 
   return {
