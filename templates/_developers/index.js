@@ -166,8 +166,8 @@ const Developers = ({ t, posts }) => {
         <Hero
           theme={Target}
           fullpage={showablePosts.length == 0}
-          title="Hello developer, your ideas are waiting for you"
-          subtitle="Start building the future of Japanese multimedia."
+          title="Stay focused on your idea"
+          subtitle="We research and develop core enterprise technologies so that you don't have to."
           cta={cta}
           // overlay={require("@/public/images/background-header.png")}
           childrenClassName={"col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 col-xlg-5 col-xlg-offset-1"}
