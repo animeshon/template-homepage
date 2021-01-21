@@ -28,7 +28,7 @@ const BlogPost = ({ post, t }) => {
     let seo = PageSEO(t, "blog");
     // add custom fields
     seo.openGraph.title = post.title;
-    seo.openGraph.description = post.subtitle;
+    seo.openGraph.description = post.teaser;
     seo.canonical = "https://animeshon.com/blog/" + post.slug;
 
     return (

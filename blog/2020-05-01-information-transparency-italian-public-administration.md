@@ -11,9 +11,6 @@ teaser: |
   the Ministry of Economy and Finance, the Chamber of Commerce of Bolzano, and
   the Innovation Office of the Province of Bolzano.
 
-subtitle: >
-  This page is available only in Italian language.
-
 overline: >
   Business transparency
 ---
