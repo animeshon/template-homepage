@@ -29,18 +29,27 @@
   "DefaultSEO_Title": "Animeshon",
   "DefaultSEO_Description": "Take part in the future of independent Anime, Manga, Light- and Visual- Novels.",
   "DefaultSEO_SiteName": "Animeshon",
+  "DefaultSEO_ImageAlt": "Animeshon - Search Engine Logo",
+
   "SEO_UserTitle": "Animeshon",
   "SEO_UserDescription": "Take part in the future of independent Anime, Manga, Light- and Visual- Novels.",
   "SEO_UserSiteName": "Animeshon",
+  "SEO_UserImageAlt": "Animeshon - Search Engine Logo",
+
   "SEO_CreatorTitle": "Creators - Animeshon",
   "SEO_CreatorDescription": "Start publishing your content to the global audience. Join our network of content creators, translators, and developers.",
   "SEO_CreatorSiteName": "Animeshon",
+  "SEO_CreatorImageAlt": "Animeshon Creators - Search Engine Logo",
+
   "SEO_DevTitle": "Developers - Animeshon",
   "SEO_DevDescription": "Bring your ideas to life and start building the future of Japanese multimedia.",
   "SEO_DevSiteName": "Animeshon",
+  "SEO_DevImageAlt": "Animeshon Developers - Search Engine Logo",
+
   "SEO_BlogTitle": "Blog - Animeshon",
   "SEO_BlogDescription": "Blog articles, news, and updates about Animeshon.",
   "SEO_BlogSiteName": "Animeshon",
+  "SEO_BlogImageAlt": "Animeshon Blog - Search Engine Logo",
 
   "LangSelector_english": "English"
 }
