@@ -19,20 +19,20 @@ export const DefaultSEO = (t) => {
             site_name: t('DefaultSEO_SiteName'),
             title: t('DefaultSEO_Title'),
             description: t('DefaultSEO_Description'),
+            images: [
+                {
+                  url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-users.png',
+                  width: 1200,
+                  height: 627,
+                  alt: t('DefaultSEO_ImageAlt'),
+                },
+            ],
         },
         twitter: {
             handle: '@handle',
             site: '@site',
             cardType: 'summary_large_image',
         },
-        images: [
-            {
-              url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-users.png',
-              width: 1200,
-              height: 627,
-              alt: t('DefaultSEO_ImageAlt'),
-            },
-        ]
     });
 };
 
@@ -47,15 +47,13 @@ export const PageSEO = (t, p) => {
                 site_name: t('SEO_UserSiteName'),
                 title: t('SEO_UserTitle'),
                 description: t('SEO_UserDescription'),
+                images: [{
+                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-users.png',
+                    width: 1200,
+                    height: 627,
+                    alt: t('SEO_UserImageAlt'),
+                }],
             },
-            images: [
-                {
-                  url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-users.png',
-                  width: 1200,
-                  height: 627,
-                  alt: t('SEO_UserImageAlt'),
-                },
-            ]
         },
         creators: {
             title: t('SEO_CreatorTitle'),
@@ -65,15 +63,13 @@ export const PageSEO = (t, p) => {
                 site_name: t('SEO_CreatorSiteName'),
                 title: t('SEO_CreatorTitle'),
                 description: t('SEO_CreatorDescription'),
+                images: [{
+                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-developers.png',
+                    width: 1200,
+                    height: 627,
+                    alt: t('SEO_DevImageAlt'),
+                }],
             },
-            images: [
-                {
-                  url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-creators.png',
-                  width: 1200,
-                  height: 627,
-                  alt: t('SEO_CreatorImageAlt'),
-                },
-            ]
         },
         developers: {
             title: t('SEO_DevTitle'),
@@ -83,15 +79,13 @@ export const PageSEO = (t, p) => {
                 site_name: t('SEO_DevSiteName'),
                 title: t('SEO_DevTitle'),
                 description: t('SEO_DevDescription'),
+                images: [{
+                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-creators.png',
+                    width: 1200,
+                    height: 627,
+                    alt: t('SEO_CreatorImageAlt'),
+                }],
             },
-            images: [
-                {
-                  url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-developers.png',
-                  width: 1200,
-                  height: 627,
-                  alt: t('SEO_DeveloperImageAlt'),
-                },
-            ]
         },
         blog: {
             title: t('SEO_BlogTitle'),
@@ -101,15 +95,13 @@ export const PageSEO = (t, p) => {
                 site_name: t('SEO_BlogSiteName'),
                 title: t('SEO_BlogTitle'),
                 description: t('SEO_BlogDescription'),
+                images: [{
+                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-users.png',
+                    width: 1200,
+                    height: 627,
+                    alt: t('SEO_BlogImageAlt'),
+                }],
             },
-            images: [
-                {
-                  url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-users.png',
-                  width: 1200,
-                  height: 627,
-                  alt: t('SEO_BlogImageAlt'),
-                },
-            ]
         }
     };
     return page[p];

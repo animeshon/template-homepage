@@ -29,6 +29,7 @@ const BlogPost = ({ post, t }) => {
     // add custom fields
     seo.title = post.title;
     seo.description = post.subtitle;
+    seo.canonical = "https://animeshon.com/blog/" + post.slug;
 
     return (
         <>
