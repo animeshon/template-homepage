@@ -64,7 +64,7 @@ export const PageSEO = (t, p) => {
                 title: t('SEO_CreatorTitle'),
                 description: t('SEO_CreatorDescription'),
                 images: [{
-                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-developers.png',
+                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-creators.png',
                     width: 1200,
                     height: 627,
                     alt: t('SEO_DevImageAlt'),
@@ -80,7 +80,7 @@ export const PageSEO = (t, p) => {
                 title: t('SEO_DevTitle'),
                 description: t('SEO_DevDescription'),
                 images: [{
-                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-creators.png',
+                    url: 'https://cdn-us.animeshon.com/brand/logo-preview-seo-developers.png',
                     width: 1200,
                     height: 627,
                     alt: t('SEO_CreatorImageAlt'),
