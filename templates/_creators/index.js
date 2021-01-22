@@ -138,7 +138,7 @@ const projects = [
 
 const newsletter = {
   title: "Stay up to date",
-  description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
+  description: "Animeshon is constantly evolving with new technologies always under development. Subscribe to our newsletter for official announcements."
 }
 
 const cta = [

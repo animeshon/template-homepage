@@ -103,7 +103,7 @@ const projects = [
     action: 'Lookup your own screenshot',
     title: 'Anime image search at scale',
     description:
-      'We can identify up to 2 billion frames from 25.000 anime episodes and provide graph knowledge such as episode and anime metadata (incl. ids and names).',
+      'We can identify up to 2 billion frames from 25,000 anime episodes and provide graph knowledge such as episode and anime metadata (incl. IDs and names).',
     href: 'https://source.animeshon.com/',
     visual: {
       type: "lottie",
@@ -115,7 +115,7 @@ const projects = [
     action: 'Learn more about cross-references',
     title: 'Cross-site references',
     description:
-      'We can lookup references, links, or ids from external websites and return the equivalent resource in Animeshon as well as all other known data sources.',
+      'We can lookup references, links, or IDs from external websites and return the equivalent resource in Animeshon as well as all other known data sources.',
     href: 'https://developers.animeshon.com/blog/building-a-cross-site-app-through-structured-cross-references',
     visual: {
       type: "lottie",
@@ -138,7 +138,7 @@ const projects = [
 
 const newsletter = {
   title: "Stay up to date",
-  description: "Animeshon is constantly evolving with new technolgies always under development. Subscribe to our newsletter for official announcements."
+  description: "Animeshon is constantly evolving with new technologies always under development. Subscribe to our newsletter for official announcements."
 }
 
 const cta = [
