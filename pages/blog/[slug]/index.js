@@ -16,6 +16,8 @@ import { GetGlobalBlogCache } from '@/src/blog-cache';
 import { NextSeo } from 'next-seo';
 import { PageSEO } from '@/root/config';
 
+import 'github-markdown-css';
+
 const renderers = {
     code: ({ language, value }) => {
         return <SyntaxHighlighter language={language} children={value} />
@@ -46,7 +48,9 @@ const BlogPost = ({ post, t }) => {
                 target={post.target}
             />
             <BlogSection>
-                <ReactMarkdown plugins={[gfm, emoji]} renderers={renderers} children={post.body} />
+                <div className='markdown-body'>
+                    <ReactMarkdown plugins={[gfm, emoji]} renderers={renderers} children={post.body} />
+                </div>
             </BlogSection>
         </>
     );
