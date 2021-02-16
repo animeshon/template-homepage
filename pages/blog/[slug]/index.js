@@ -1,5 +1,6 @@
 // ./pages/blog/index.js
 import React from 'react';
+import cn from 'classnames';
 import { Link, withTranslation } from '@/root/i18n'
 
 import Header from '@/components/header/header'
@@ -17,6 +18,7 @@ import { NextSeo } from 'next-seo';
 import { PageSEO } from '@/root/config';
 
 import 'github-markdown-css';
+import styles from './markdown-body.module.scss';
 
 const renderers = {
     code: ({ language, value }) => {
@@ -48,7 +50,7 @@ const BlogPost = ({ post, t }) => {
                 target={post.target}
             />
             <BlogSection>
-                <div className='markdown-body'>
+                <div className={cn('markdown-body', styles['markdown-body'])}>
                     <ReactMarkdown plugins={[gfm, emoji]} renderers={renderers} children={post.body} />
                 </div>
             </BlogSection>
