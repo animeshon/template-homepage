@@ -84,7 +84,7 @@ We changed our concept of cross referencing, allowing it to express partial cros
 For instance, the above example of `Kizumonogatari` has been solved by ***linking every Movie of MyAnimeList to Animeshon’s resources, and partially linking AniDB’s extended Anime to Animeshon’s resource***.
 
 Searching for AniDB’s `Kizumonogatari` cross reference in Detabesu, you will get 3 cross reference nodes, pointing to Animeshon’s resources, with the flag `partial` set as **true**,
-while traversing Animeshon’s `Kizumonogatari - Nekketsu` node you will find the cross reference to MyAnimelist’s `Kizumonogatari - Nekketsu` Anime with the flag `partial` set as **false** and AniDB’s `Kizumonogatari` Anime with the flag `partial` set as **true**.
+while traversing Animeshon’s `Kizumonogatari - Nekketsu` node you will find the cross reference to MyAnimeList's `Kizumonogatari - Nekketsu` Anime with the flag `partial` set as **false** and AniDB’s `Kizumonogatari` Anime with the flag `partial` set as **true**.
 
 ![Cross Reference structure](/blog/2021-02-14-dev-log-1/cross-reference.svg)
 ###### *Cross Reference structure*
