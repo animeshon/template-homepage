@@ -89,7 +89,7 @@ while traversing Animeshon’s `Kizumonogatari - Nekketsu` node you will find th
 ![Cross Reference structure](/blog/2021-02-14-dev-log-1/cross-reference.svg)
 ###### *Cross Reference structure*
 
-We spent a lot of time improving the algorithm responsible for the cross reference generation. We invested a lot in this process because at release time the algorithm was too simple and couldn’t automatically detect most of the cross references, leaving the operators (we) with 35k+ Manga, 20k+ Light Novels, and 200k+ Characters to cross reference manually to be approved or discarded.
+We spent a lot of time improving the algorithm responsible for the cross reference generation. We invested a lot in this process because at release time the algorithm was too simple and couldn’t automatically detect most of the cross references, leaving the operators (we) with 35k+ Manga, 20k+ Light Novels, and 250k+ Characters to cross reference manually to be approved or discarded.
 
 Taking advantage as much as possible of the cross references available in external sources (AniDB provides a good amount of Anime cross references, and MangaDex has an extraordinary amount of manga cross references), and making the algorithm smarter, we were able to lower the number to few thousand cross references left for manual approvals (doujinshi excluded, as they have the most chaotic data structure and the worst data quality).
 
