@@ -86,9 +86,7 @@ For instance, the above example of `Kizumonogatari` has been solved by ***linkin
 Searching for AniDB’s `Kizumonogatari` cross reference in Detabesu, you will get 3 cross reference nodes, pointing to Animeshon’s resources, with the flag `partial` set as **true**,
 while traversing Animeshon’s `Kizumonogatari - Nekketsu` node you will find the cross reference to MyAnimelist’s `Kizumonogatari - Nekketsu` Anime with the flag `partial` set as **false** and AniDB’s `Kizumonogatari` Anime with the flag `partial` set as **true**.
 
-![Cross Reference structure](/blog/2021-02-14-dev-log-1/cross reference.svg)
-
-
+![Cross Reference structure](/blog/2021-02-14-dev-log-1/cross-reference.svg)
 ###### *Cross Reference structure*
 
 We spent a lot of time improving the algorithm responsible for the cross reference generation. We invested a lot in this process because at release time the algorithm was too simple and couldn’t automatically detect most of the cross references, leaving the operators (we) with 35k+ Manga, 20k+ Light Novels, and 200k+ Characters to cross reference manually to be approved or discarded.
