@@ -104,7 +104,7 @@ Taking advantage as much as possible of the cross references available in extern
 | - | - | - | - 
 | 17k+ | 700+ | 1.8k+ | 130k+ 
 
-*Number of Cross References waiting to be manually approved across ALL sources at `V21.02.0 Release`*
+*Number of Cross References waiting to be manually approved across ALL sources at `V21.02 Release`*
 
 The result of this operation is a more complete dataset available in production.
 
@@ -115,16 +115,16 @@ Schema stitching means taking more than one database containing different data a
 
 In the current version of Detabesu, the Query querySearch, asking for information to an Elasticsearch cluster, returns a list of IDs, which have to be used again with Detabesu to retrieve the information. This leads to quite some delay (data have to be received from the Elasticsearch processed and re-sent to Detabesu) and a lot of boiler plating on the client-side to transform the list of IDs in a new request.
 
-Thanks to schema stitching, this task will be interpolated directly in our GraphQL Gateway (available [here](http://play.animeshon.com/)) and the whole process is transparent to the outer world: the `querySearch` after Beta v21.02.0 release returns an array of Search Results, which can be expanded to actual types in a single query.
+Thanks to schema stitching, this task will be interpolated directly in our GraphQL Gateway (available [here](http://play.animeshon.com/)) and the whole process is transparent to the outer world: the `querySearch` after Beta v21.02 release returns an array of Search Results, which can be expanded to actual types in a single query.
 
 ###### *Beta Release*
 
 ![Beta Release](/blog/2021-02-14-dev-log-1/stitching-before.svg)
 
 
-###### *v21.02.0 Release*
+###### *v21.02 Release*
 
-![v21.02.0 Release](/blog/2021-02-14-dev-log-1/stitching-after.svg)
+![v21.02 Release](/blog/2021-02-14-dev-log-1/stitching-after.svg)
 
 
 While it might seem like a very small achievement, it will serve as the foundation for the development of our ecosystem, where Ashen will be directly plugged in Detabesu and where the Animeshon Media Platform can integrate Detabesu knowledge. 
@@ -154,6 +154,12 @@ It is very hard to tell to an application that `Naruto` and `Boruto` are in the 
 
 ###### *Universe & Canonical Back-Office Preview*
 
+Note: At 21.02 Release, only few universes and canonical will be served since we first want to validate our concept.
+The test Universes and Canonicals are:
+
+* Monogatari Series
+* Science Adventure Series
+* Re:Zero
 
 ### User Contribution Alpha V1
 
