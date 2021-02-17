@@ -113,7 +113,7 @@ The result of this operation is a more complete dataset available in production.
 
 Schema stitching means taking more than one database containing different data and merging their endpoints, giving the external world the illusion that we have only one very big database serving a **big data graph**.
 
-In the current version of Detabesu, the Query querySearch, asking for information to an Elasticsearch cluster, returns a list of IDs, which have to be used again with Detabesu to retrieve the information. This leads to quite some delay (data have to be received from the Elasticsearch processed and re-sent to Detabesu) and a lot of boiler plating on the client-side to transform the list of IDs in a new request.
+In the current version of Detabesu, the Query `querySearch`, asking for information to an Elasticsearch cluster, returns a list of IDs, which have to be used again with Detabesu to retrieve the information. This leads to quite some delay (data have to be received from the Elasticsearch processed and re-sent to Detabesu) and a lot of boiler plating on the client-side to transform the list of IDs in a new request.
 
 Thanks to schema stitching, this task will be interpolated directly in our GraphQL Gateway (available [here](http://play.animeshon.com/)) and the whole process is transparent to the outer world: the `querySearch` after Beta v21.02 release returns an array of Search Results, which can be expanded to actual types in a single query.
 
