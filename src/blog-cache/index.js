@@ -35,6 +35,9 @@ class BlogCache {
             if (ext.startsWith('.md') && ext !== 'index') {
                 try {
                     let data = fm(fs.readFileSync(filePath, 'utf8'));
+                    if (data.attributes.visibility == "hide") {
+                        continue;
+                    }
                     arr.push({
                         ...data.attributes,
                     });

@@ -1,7 +1,7 @@
 ---
 path: '/blog/weekly-updates-1/'
 slug: 'weekly-updates-1'
-publishedAt: '2021-02-15'
+publishedAt: '2021-02-17'
 author: Matteo Roggia
 target: all
 
@@ -17,7 +17,7 @@ Konnichiwa, Matteo desu.
 
 Our beloved data fetishists, it has been a while since the release of the Animeshon Encyclopedia and Detabesu.
 
-Today, to celebrate the v21.02 release we want to present you our new initiative, the **weekly updates**, as well as illustrate the **progress** done so far and our plans for Animeshon.
+Today, to celebrate the imminent v21.02 release we want to present you our new initiative, the **weekly updates**, as well as illustrate the **progress** done so far and our plans for Animeshon.
 
 
 # Weekly updates
