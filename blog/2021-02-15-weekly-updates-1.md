@@ -142,7 +142,7 @@ This milestone is quite important to us for 2 main reasons:
 
 **Definition:**
 
-We defined Universes as a set of content sharing the same base-story, characters, or references. e.g. `Science Adventures Series` is a universe which groups the Steins;Gate story, Chaos;Head story, Chaos;Child story, etc. The contents in the universe share elements, stories, or events that are relevant to each other in one way or another.
+We defined Universes as a set of content sharing the same base-story, characters, or references. e.g. `Science Adventure Series` is a universe which groups the Steins;Gate story, Chaos;Head story, Chaos;Child story, etc. The contents in the universe share elements, stories, or events that are relevant to each other in one way or another.
 
 We defined Canonicals (or Series) as a set of content about the SAME story. e.g. `Steins;Gate` is a Canonical grouping of all Anime, Visual Novels, Manga, and Drama CDs about the events of Okabe Rintarou (spoiler alert...from the first two episodes) creating a time machine by chance, and struggling to achieve the world line called Steins;Gate.
 
