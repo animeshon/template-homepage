@@ -160,6 +160,7 @@ The test Universes and Canonicals are:
 * Monogatari Series
 * Science Adventure Series
 * Re:Zero
+* Neon Genesis Evangelion
 
 ### User Contribution Alpha V1
 
