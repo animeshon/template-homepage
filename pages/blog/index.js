@@ -13,12 +13,13 @@ import * as styles from './blog.module.scss'
 
 import { NextSeo } from 'next-seo';
 import { PageSEO } from '@/root/config';
+import { useRouter } from 'next/router';
 
 const Post = ({ path, title, teaser, target, overline, author, publishedAt }) => (
   <div>
     <p className={styles['post-overline']}>{target && <b>{target} | </b>}{overline}</p>
     <h2 className={styles['post-title']}>
-      <Link href={path}>{title}</Link>
+      <Link href={path} locale={useRouter().locale}>{title}</Link>
     </h2>
     <p className={styles['post-teaser']}>{teaser}</p>
     <p className={styles.info}>

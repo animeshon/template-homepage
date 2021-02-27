@@ -1,0 +1,56 @@
+{
+  "aboutDispatcher_choose_creator": "[JP] Creators",
+  "aboutDispatcher_choose_user": "[JP] Users",
+  "aboutDispatcher_choose_developer": "[JP] Developers",
+  "subscribeNewsLetterTitle": "[JP] Subscribe now",
+  "subscribeNewsLetterPlaceholder": "[JP] Enter your email",
+  "subscribeNewsLetterAction": "[JP] Subscribe",
+  "subscribeNewsLetter_invalidEmail": "[JP] Please provide a valid email address.",
+  "subscribeNewsLetter_internalServerError":"An error has occurred trying to process your request. Please refresh the page and try again.",
+  "subscribeNewsLetter_badRequest": "[JP] An error has occurred trying to process your request. Please refresh the page and try again.",
+  "subscribeNewsLetter_invalidResource": "[JP] The email address you provided is either invalid or suspicious. Please check the email address and try again.",
+  "subscribeNewsLetter_alreadySubscribed": "[JP] The email address you provided is already registered.",
+  "subscribeNewsLetter_successfulStatus": "[JP] Thank you for registering to Animeshon! You will receive a confirmation email soon.",
+  "arrowCreator": "[JP] Are you a creator?",
+  "arrowCreatorShort": "[JP] Creator?",
+  "arrowUser": "[JP] Are you a user?",
+  "arrowUserShort": "[JP] User?",
+  "arrowDeveloper": "[JP] Are you a developer?",
+  "arrowDeveloperShort": "[JP] Developer?",
+  "brandAltText": "[JP] Search Manga and Anime",
+  "searchHeaderPlaceholder": "[JP] Search...",
+  "searchPlaceholder": "[JP] Search for Naruto, Fate, Konosuba...",
+  "footerContactUs": "[JP] Get in touch with us",
+  "footerMotto": "[JP] Made with ❤️ by Animeshon",
+  "footerCopyrights": "[JP] All rights belong to their respective owners.",
+
+  "blogList_title": "[JP] Blogs and Articles",
+
+  "DefaultSEO_Title": "[JP] Animeshon",
+  "DefaultSEO_Description": "[JP] Take part in the future of independent Anime, Manga, Light- and Visual- Novels.",
+  "DefaultSEO_SiteName": "[JP] Animeshon",
+  "DefaultSEO_ImageAlt": "[JP] Animeshon - Search Engine Logo",
+
+  "SEO_UserTitle": "[JP] Animeshon",
+  "SEO_UserDescription": "[JP] Take part in the future of independent Anime, Manga, Light- and Visual- Novels.",
+  "SEO_UserSiteName": "[JP] Animeshon",
+  "SEO_UserImageAlt": "[JP] Animeshon - Search Engine Logo",
+
+  "SEO_CreatorTitle": "[JP] Creators - Animeshon",
+  "SEO_CreatorDescription": "[JP] Start publishing your content to the global audience. Join our network of content creators, translators, and developers.",
+  "SEO_CreatorSiteName": "[JP] Animeshon",
+  "SEO_CreatorImageAlt": "[JP] Animeshon Creators - Search Engine Logo",
+
+  "SEO_DevTitle": "[JP] Developers - Animeshon",
+  "SEO_DevDescription": "[JP] Bring your ideas to life and start building the future of Japanese multimedia.",
+  "SEO_DevSiteName": "[JP] Animeshon",
+  "SEO_DevImageAlt": "[JP] Animeshon Developers - Search Engine Logo",
+
+  "SEO_BlogTitle": "[JP] Blog - Animeshon",
+  "SEO_BlogDescription": "[JP] Blog articles, news, and updates about Animeshon.",
+  "SEO_BlogSiteName": "[JP] Animeshon",
+  "SEO_BlogImageAlt": "[JP] Animeshon Blog - Search Engine Logo",
+
+  "LangSelector_english": "[JP] English",
+  "LangSelector_japanese": "[JP] Japanese"
+}

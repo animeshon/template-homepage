@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router'
 
 import cn from 'classnames'
 
@@ -16,13 +17,14 @@ const routes = [
     { href: 'https://www.reddit.com/r/animeshon/', label: 'Reddit' },
     { href: 'https://twitter.com/animeshonsns', label: 'Twitter' },
     { href: 'https://github.com/animeshon', label: 'Github' },
-    { href: 'https://animeshon.com/blog', label: 'Blog' },
+    { href: 'https://animeshon.com/blog', label: 'Blog', locale: true },
 ];
 
 const Header = ({ theme }) => {
+    const router = useRouter();
     const { t } = useTranslation('common');
     const [sidebarOpen, setSidebar] = useState(false);
-    const [lang, setLang] = useState("US");
+    const [lang, setLang] = useState(router.locale == "en" ? "US" : router.locale.toUpperCase());
 
     const handleSidebarOpening = e => {
         const target = e.currentTarget.id === 'sidebar-opener';
@@ -32,6 +34,23 @@ const Header = ({ theme }) => {
             setSidebar(false);
         }
     };
+
+    const changeLocale = (code) => {
+        if (code == lang) {
+            return;
+        }
+        let newLocale = "";
+        if (code == "US") {
+            newLocale = "en";
+        } else {
+            newLocale = code.toLowerCase();
+        }
+
+        console.log(newLocale)
+        router.push(router.pathname, router.pathname, {
+            locale: newLocale,
+        })
+    }
 
     const input = useRef(undefined)
     return (
@@ -88,11 +107,11 @@ const Header = ({ theme }) => {
                                 <div className={styles["lang-select-wrapper"]}>
                                     <ReactFlagsSelect
                                         className={styles["lang-select"]}
-                                        countries={["US"]}
+                                        countries={["US", "JP"]}
                                         selected={lang}
-                                        onSelect={code => setLang(code)}
-                                        customLabels={{ "US": t('LangSelector_english') }}
-                                        defaultCountry="US"
+                                        onSelect={code => changeLocale(code)}
+                                        customLabels={{ "US": t('LangSelector_english'), "JP": t('LangSelector_japanese') }}
+                                        selected={lang}
                                         showSelectedLabel={false}
                                     // disabled={true}
                                     />

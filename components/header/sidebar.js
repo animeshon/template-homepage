@@ -1,14 +1,15 @@
 import React, { useCallback, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { withRouter } from 'next/router';
+import { withRouter, useRouter } from 'next/router';
 
 import styles from './sidebar.module.scss';
 
 const RenderRoutes = ({ arr, closeSidebar, page }) => {
+    console.log(useRouter().locale)
     return arr.map(item => {
         return (
             <li key={item.href} onClick={closeSidebar}>
-                <Link href={item.href}>
+                <Link href={item.href} locale={item.locale ? useRouter().locale : undefined}>
                     <a className={page == item.href ? 'selected' : ''}>
                         {item.label}
                     </a>
