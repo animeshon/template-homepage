@@ -11,10 +11,13 @@ overline: >
   Weekly Updates
 ---
 Konnichiwa, Matteo desu.
-Here again with a Weekly Update.
-This week we spent most of our time brainstorming and deciding how to reallocate our manpower from the Encyclopedia and Detabesu to the Media Platform.
+
+Here again with a Weekly Update. This week we spent most of our time brainstorming and deciding how to reallocate our manpower from the Encyclopedia and Detabesu to the Media Platform.
+
 Not an easy task considering the completely different nature of the product (Detabesu / Encyclopedia -> data-driven, very technical | Media Platform -> user-driven, very interactive).
+
 In the meantime we also analyzed and tested out some technologies we selected as candidates in the past months, laying down a pretty sound and nice technology stack which will assure perfect integration across our ecosystem's components and third parties application as well.
+
 To summarize the week in a bullet list:
 * Design of the entire datagraph's schema needed for the Media Platform
 * Analysis and test of integration across our component through schema-stitching
