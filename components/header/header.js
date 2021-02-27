@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
 import cn from 'classnames'
 
@@ -19,10 +20,12 @@ const routes = [
     { href: 'https://animeshon.com/blog', label: 'Blog' },
 ];
 
-const Header = ({ theme }) => {
+const Header = () => {
+    const router = useRouter();
     const { t } = useTranslation('common');
     const [sidebarOpen, setSidebar] = useState(false);
-    const [lang, setLang] = useState("US");
+    const [lang, setLang] = useState(router.query.hl ? router.query.hl.split("-")[1] : "US");
+    router.locale = router.query.hl ? router.query.hl.split("-")[0] : "en";
 
     const handleSidebarOpening = e => {
         const target = e.currentTarget.id === 'sidebar-opener';
@@ -32,6 +35,22 @@ const Header = ({ theme }) => {
             setSidebar(false);
         }
     };
+
+    const handleLanguageSelect = e => {
+        setLang(e);
+        switch (e) {
+            case "US": {
+                router.locale = "en";
+                router.query.hl = "en-US";
+            }
+            case "JP": {
+                router.locale = "jp";
+                router.query.hl = "jp-JP";
+            }
+        }
+        
+        router.push(router);
+    }
 
     const input = useRef(undefined)
     return (
@@ -88,10 +107,10 @@ const Header = ({ theme }) => {
                                 <div className={styles["lang-select-wrapper"]}>
                                     <ReactFlagsSelect
                                         className={styles["lang-select"]}
-                                        countries={["US"]}
+                                        countries={["US", "JP"]}
                                         selected={lang}
-                                        onSelect={code => setLang(code)}
-                                        customLabels={{ "US": t('LangSelector_english') }}
+                                        onSelect={handleLanguageSelect}
+                                        customLabels={{ "US": t('LangSelector_english'), "JP": t('LangSelector_japanese') }}
                                         defaultCountry="US"
                                         showSelectedLabel={false}
                                     // disabled={true}
