@@ -3,10 +3,10 @@ import cn from 'classnames';
 import * as styles from './newsletter.module.scss';
 import VerticalDivider from './vertical-divider';
 import NewsletterSubscription from './newsletter-subscription';
+import { useTranslation } from 'next-i18next';
 
-import { withTranslation } from '@/root/i18n'
-
-const Newsletter = ({ t, title, description }) => {
+const Newsletter = ({ title, description }) => {
+  const { t } = useTranslation('common');
 
   return (
     <div className={cn(styles.newsletter)}>
@@ -34,4 +34,4 @@ const Newsletter = ({ t, title, description }) => {
   )
 }
 
-export default withTranslation('common')(Newsletter);
+export default Newsletter;

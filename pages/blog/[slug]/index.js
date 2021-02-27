@@ -1,7 +1,6 @@
 // ./pages/blog/index.js
 import React from 'react';
 import cn from 'classnames';
-import { Link, withTranslation } from '@/root/i18n'
 
 import Header from '@/components/header/header'
 import BlogSection from '@/components/blog-section'
@@ -20,16 +19,18 @@ import { PageSEO } from '@/root/config';
 import 'github-markdown-css';
 import styles from './markdown-body.module.scss';
 
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
 const renderers = {
     code: ({ language, value }) => {
         return <SyntaxHighlighter language={language} children={value} />
     }
 }
 
-const BlogPost = ({ post, t }) => {
+const BlogPost = ({ post }) => {
     if (!post) return null;
 
-    let seo = PageSEO(t, "blog");
+    let seo = PageSEO("blog");
     // add custom fields
     seo.title = post.title;
     seo.description = post.teaser;
@@ -67,7 +68,7 @@ export async function getStaticPaths() {
     };
 }
 
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params, locale }) => {
     const cache = GetGlobalBlogCache();
     const post = cache.GetWithBody(params.slug)
     if (post == undefined) {
@@ -79,10 +80,10 @@ export const getStaticProps = async ({ params }) => {
 
     return {
         props: {
-            namespacesRequired: ['common'],
+            ...await serverSideTranslations(locale, ['common']),
             post: post
         }
     };
 }
 
-export default withTranslation('common')(BlogPost);
+export default BlogPost;

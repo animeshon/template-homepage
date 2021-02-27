@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { withTranslation } from '@/root/i18n';
+import { useTranslation } from 'next-i18next';
 
 import cn from 'classnames'
 import * as styles from './hero.module.scss'
@@ -60,7 +60,8 @@ const themeToArrow = {
   },
 }
 
-const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, childrenClassName, children }) => {
+const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, childrenClassName, children }) => {
+  const { t } = useTranslation('common');
   const [windowDimensions, setWindowDimensions] = useState({});
 
   useEffect(() => {
@@ -121,4 +122,4 @@ const Hero = ({ title, subtitle, overlay, cta, theme, fullpage = false, t, child
   )
 }
 
-export default withTranslation("common")(Hero);
+export default Hero;

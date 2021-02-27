@@ -2,8 +2,10 @@ const basePath = process.env.NEXT_PUBLIC_BASEPATH || '';
 const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || '';
 
 const withImages = require('next-images');
+const { i18n } = require('./next-i18next.config');
 
 module.exports = withImages({
+    i18n,
     webpack: (config, { isServer }) => {
         // Fixes npm packages that depend on `fs` module
         if (!isServer) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { withTranslation } from '@/root/i18n'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Layout from '@/components/layout'
 import Hero from '@/components/hero'
@@ -143,11 +143,11 @@ const newsletter = {
 
 const Target = "users";
 
-const Users = ({ t, posts }) => {
+const Users = ({ posts }) => {
   const showablePosts = posts.slice(0, 3);
   return (
     <>
-      <NextSeo {...PageSEO(t, Target)}/>
+      <NextSeo {...PageSEO(Target)}/>
       <Layout theme={Target}>
         <Hero
           theme={Target}
@@ -167,17 +167,17 @@ const Users = ({ t, posts }) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }) => {
   const cache = GetGlobalBlogCache();
   // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
   const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
 
   return {
     props: {
-      namespacesRequired: ['common'],
+      ...await serverSideTranslations(locale, ['common']),
       posts: posts
     }
   };
 }
 
-export default withTranslation(['common'])(Users);
+export default Users;

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { withTranslation } from '@/root/i18n';
+import { useTranslation } from 'next-i18next';
 
 import cn from 'classnames'
 
@@ -19,7 +19,8 @@ const routes = [
     { href: 'https://animeshon.com/blog', label: 'Blog' },
 ];
 
-const Header = ({ theme, t }) => {
+const Header = ({ theme }) => {
+    const { t } = useTranslation('common');
     const [sidebarOpen, setSidebar] = useState(false);
     const [lang, setLang] = useState("US");
 
@@ -107,4 +108,4 @@ const Header = ({ theme, t }) => {
     );
 };
 
-export default withTranslation("common")(Header);
+export default Header;

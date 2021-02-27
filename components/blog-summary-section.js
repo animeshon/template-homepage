@@ -1,7 +1,7 @@
 import React from 'react'
 import * as styles from './blog-summary-section.module.scss'
 import cn from 'classnames'
-import { Link } from '@/root/i18n'
+import Link from 'next/link'
 
 const BlogSummarySection = ({ posts }) => {
   return (

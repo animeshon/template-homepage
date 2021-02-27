@@ -1,6 +1,7 @@
 // ./pages/blog/index.js
 import React from 'react';
-import { Link, withTranslation } from '@/root/i18n'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 import Header from '@/components/header/header'
 import BlogSection from '@/components/blog-section'
@@ -14,7 +15,6 @@ import { NextSeo } from 'next-seo';
 import { PageSEO } from '@/root/config';
 
 const Post = ({ path, title, teaser, target, overline, author, publishedAt }) => (
-
   <div>
     <p className={styles['post-overline']}>{target && <b>{target} | </b>}{overline}</p>
     <h2 className={styles['post-title']}>
@@ -27,10 +27,12 @@ const Post = ({ path, title, teaser, target, overline, author, publishedAt }) =>
   </div>
 )
 
-const BlogList = ({ t, posts }) => {
+const BlogList = ({ posts }) => {
+  const { t } = useTranslation('common');
+
   return (
     <>
-      <NextSeo {...PageSEO(t, "blog")}/>
+      <NextSeo {...PageSEO("blog")}/>
       <Header />
       <BlogSection overrideStyles={{ paddingTop: 32, paddingBottom: 32 }}>
         <h1 className={styles['page-title']}>{t('blogList_title')}</h1>
@@ -46,16 +48,16 @@ const BlogList = ({ t, posts }) => {
   );
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }) => {
   const cache = GetGlobalBlogCache();
   const posts = await cache.GetOrRefresh()
 
   return {
     props: {
-      namespacesRequired: ['common'],
+      ...await serverSideTranslations(locale, ['common']),
       posts: posts
     }
   };
 }
 
-export default withTranslation('common')(BlogList);
+export default BlogLists;

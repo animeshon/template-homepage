@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import * as styles from './arrow-card.module.scss'
 
-import { Link } from '@/root/i18n'
+import Link from 'next/link'
 
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 

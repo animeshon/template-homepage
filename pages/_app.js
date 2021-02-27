@@ -1,13 +1,7 @@
 import React from 'react';
 import App from 'next/app'
 import Head from 'next/head';
-
-//! TODO next-i18n is currently broken with server side rendere
-//! refear to https://github.com/isaachinman/next-i18next/issues/869
-//! and  https://github.com/isaachinman/next-i18next to kee up to date the development
-
-import { appWithTranslation, withTranslation } from '@/root/i18n'
-
+import { appWithTranslation } from 'next-i18next';
 import { DefaultSeo } from 'next-seo';
 
 import '../styles/reset.scss';
@@ -19,10 +13,10 @@ import '../styles/typography.scss'
 
 import { DefaultSEO } from '@/root/config';
 
-const Homepage = ({ Component, pageProps, t }) => {
+const Homepage = ({ Component, pageProps }) => {
   return (
     <>
-      <DefaultSeo {...DefaultSEO(t)} />
+      <DefaultSeo {...DefaultSEO()} />
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
@@ -35,4 +29,4 @@ Homepage.getInitialProps = async (appContext) => {
   return { ...await App.getInitialProps(appContext) }
 }
 
-export default appWithTranslation(withTranslation('common')(Homepage));
+export default appWithTranslation(Homepage);

@@ -1,3 +1,4 @@
+import { useTranslation } from 'next-i18next';
 
 export const ThemeLinks = {
     users: 'https://animeshon.com/',
@@ -9,7 +10,9 @@ export const EncyclopediaSearchHref = "https://animeshon.com/e/search";
 
 // default seo at root level, can be override with PageSEO
 // both DefaultSEO and PageSEO should use i18n string keys for strings
-export const DefaultSEO = (t) => {
+export const DefaultSEO = () => {
+    const { t } = useTranslation('common')
+
     return ({
         title: t('DefaultSEO_Title'),
         description: t('DefaultSEO_Description'),
@@ -37,7 +40,9 @@ export const DefaultSEO = (t) => {
 };
 
 // list of available props https://github.com/garmeeh/next-seo
-export const PageSEO = (t, p) => {
+export const PageSEO = (p) => {
+    const { t } = useTranslation('common')
+
     const page = {
         users: {
             title: t('SEO_UserTitle'),

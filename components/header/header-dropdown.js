@@ -2,13 +2,15 @@ import React from 'react';
 import Router from 'next/router';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-import { withTranslation } from '@/root/i18n';
 import { ThemeLinks } from '@/root/config';
+import { useTranslation } from 'next-i18next';
 
 import * as style from './header-dropdown.module.scss';
 
 
-const HeaderDropdown = ({ t, theme }) => {
+const HeaderDropdown = ({ theme }) => {
+    const { t } = useTranslation('common');
+
     const options = [
         { href: ThemeLinks.users, value: 'users', label: <div className={style.wrapper}><img src={"../svg/open-book.svg"} className={style.icon} /><span>{t('aboutDispatcher_choose_user')}</span></div> },
         { href: ThemeLinks.creators, value: 'creators', label: <div className={style.wrapper}><img src={"../svg/painter.svg"} className={style.icon} /><span>{t('aboutDispatcher_choose_creator')}</span></div> },
@@ -35,4 +37,4 @@ const HeaderDropdown = ({ t, theme }) => {
     );
 };
 
-export default withTranslation("common")(HeaderDropdown);
+export default HeaderDropdown;

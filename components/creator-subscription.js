@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { withTranslation } from '@/root/i18n';
+import { useTranslation } from 'next-i18next';
 
 import * as styles from './creator-subscription.module.scss';
 
@@ -14,7 +14,9 @@ export const validate = (string) => {
   return true;
 };
 
-const CreatorSubsciprion = ({ t }) => {
+const CreatorSubsciprion = () => {
+  const { t } = useTranslation('common');
+
   return (
     <>
     <img
@@ -33,4 +35,4 @@ const CreatorSubsciprion = ({ t }) => {
   )
 }
 
-export default withTranslation('common')(CreatorSubsciprion);;
+export default CreatorSubsciprion;

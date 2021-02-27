@@ -1,13 +1,15 @@
 import React from 'react'
-import { withTranslation } from '@/root/i18n';
+import { useTranslation } from 'next-i18next';
 
 import cn from 'classnames'
 import styles from './footer.module.scss'
 
 import logo from '../public/brand/animeshon-brand-white.svg'
 
-const Footer = ({menu, comp, t}) => (
-  <footer className={cn(styles.footer)}>
+const Footer = ({menu, comp}) => {
+  const { t } = useTranslation('common');
+
+  return (<footer className={cn(styles.footer)}>
     <div className="container-fluid">
       <div className="row">
         <div className={cn("col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile", styles.logo)}>
@@ -70,6 +72,6 @@ const Footer = ({menu, comp, t}) => (
       </div>
     </div>
   </footer>
-)
+  )};
 
-export default withTranslation("common")(Footer);
+export default Footer;

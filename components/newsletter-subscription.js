@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 
 import cn from 'classnames'
 import * as styles from './newsletter-subscription.module.scss'
-
-import { withTranslation } from '@/root/i18n'
+import { useTranslation } from 'next-i18next'
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/g; // eslint-disable-line
 export const validate = (string) => {
@@ -13,7 +12,8 @@ export const validate = (string) => {
   return true;
 };
 
-const NewsletterSubscription = ({ button, placeholder, className, inputClassName, buttonClassName, style, t }) => {
+const NewsletterSubscription = ({ button, placeholder, className, inputClassName, buttonClassName, style }) => {
+  const { t } = useTranslation('common');
   const [subscriptionState, setSubscriptionState] = useState({});
   const [email, setEmail] = useState("");
 
@@ -155,4 +155,4 @@ const NewsletterSubscription = ({ button, placeholder, className, inputClassName
   )
 }
 
-export default withTranslation('common')(NewsletterSubscription);
+export default NewsletterSubscription;

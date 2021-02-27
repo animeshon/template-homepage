@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import cn from 'classnames'
 import * as styles from './thin-project.module.scss'
-import { Link } from '@/root/i18n'
+import Link from 'next/link'
 import Lottie from 'react-lottie';
 
 import Listener, {IsSmallViewport} from '@/src/resize-listener';

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { withTranslation } from '@/root/i18n';
+import { useTranslation } from 'next-i18next';
 
 import cn from 'classnames';
 import * as styles from './user-search.module.scss';
@@ -7,7 +7,8 @@ import * as styles from './user-search.module.scss';
 import EncyclopediaTextSearch from './encyclopedia-text-search';
 import { set } from 'numeral';
 
-const UserSearch = ({t}) => {
+const UserSearch = () => {
+  const { t } = useTranslation('common');
   const [searchDisabled, searchSearchDisabled] = useState(true);
   const [text, setText] = useState("");
   const input = useRef(undefined);
@@ -50,4 +51,4 @@ const UserSearch = ({t}) => {
   )
 }
 
-export default withTranslation("common")(UserSearch);
+export default UserSearch;
