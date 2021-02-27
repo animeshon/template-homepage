@@ -5,7 +5,7 @@ publishedAt: '2021-02-17'
 author: Matteo Roggia
 target: all
 
-title: 'Weekly Updates #1 - v21.02 Release'
+title: 'Weekly Updates #1'
 teaser: |
   To celebrate the v21.02 release we want to introduce to our community the new "weekly updates" initiative as well as illustrate our achievements and plans for the future.
 
