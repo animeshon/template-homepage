@@ -22,18 +22,21 @@ video {
   --colors-themed-default: var(--colors-blue-default);
   --colors-themed-weak: var(--colors-blue-weak);
   --colors-themed-light: var(--colors-blue-light);
+  --colors-themed-blog: var(--colors-base-light);
 }
 
 .theme-creators {
   --colors-themed-default: var(--colors-red-default);
   --colors-themed-weak: var(--colors-red-weak);
   --colors-themed-light: var(--colors-red-light);
+  --colors-themed-blog: var(--colors-red-default);
 }
 
 .theme-developers {
   --colors-themed-default: var(--colors-purple-default);
   --colors-themed-weak: var(--colors-purple-weak);
   --colors-themed-light: var(--colors-purple-light);
+  --colors-themed-blog: var(--colors-purple-default);
 }
 
 .youtube {

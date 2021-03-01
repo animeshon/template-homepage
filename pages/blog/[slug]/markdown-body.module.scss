@@ -5,3 +5,16 @@
     margin-top: unset;
   }
 }
+
+img[src*='#left'] {
+  float: left;
+  margin-right: 10px;
+}
+img[src*='#right'] {
+  float: right;
+  margin-left: 10px;
+}
+img[src*='#center'] {
+  display: block;
+  margin: auto;
+}

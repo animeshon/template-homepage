@@ -169,8 +169,8 @@ const Users = ({ t, posts }) => {
 
 export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
-  // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
-  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
+  const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target || p.target == 'all');
+  // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
 
   return {
     props: {
