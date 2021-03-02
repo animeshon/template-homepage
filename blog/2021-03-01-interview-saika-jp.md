@@ -8,7 +8,7 @@ title: '世界のコスプレイヤーインタビュー #1 - サイカちゃん
 teaser: |
   コスプレイヤーインタビュー第一弾。ロシア系ドイツ人コスプレイヤーのサイカちゃんがコスプレの経験を公開。
 overline: >
-  Inteview
+  Interview
 ---
 
 ![saika-1 cosplay](/blog/2021-03-01-interview-saika/saika-1.jpg#left)
@@ -17,21 +17,15 @@ overline: >
 
 **[Instagram](https://www.instagram.com/saika.virus/)  [Tik Tok](https://tiktok.com/@saika.virus)**
 
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
 **Animeshon:** サイカちゃん、こんにちは。インタビューに応じて頂き、ありがとうございます。サイカちゃんとは2020年3月からさまざまな形で提携してきて、サイカちゃんのコスプレ活動をたくさん見てきました。私たちのコミュニティはアニメやマンガの大ファンですので、コスプレイヤーの方へのインタビューを企画しました。今回、サイカちゃんが第一回目のインタビューです。まずはコスプレイヤーになった理由を教えてください。
 
 **サイカちゃん:** 私の親友がきっかけです。二人とも昔からコスプレイヤーに憧れていました。その親友にどうにかしてコスプレを始めたいと言ったところ、一緒に始めることになりました。
 
-![saika-2 cosplay](/blog/2021-03-01-interview-saika/saika-2.jpg#left)
 **Animeshon:**  コスプレイヤーとして一番大切なことは何ですか。
 
 **サイカちゃん:** 何があっても諦めずに、とにかく楽しむことだと思います。
 
+![saika-2 cosplay](/blog/2021-03-01-interview-saika/saika-2.jpg#left)
 **Animeshon:**  コスプレイヤーとして一番面白いことは何ですか。
 
 **サイカちゃん:** 他の役になりきったり、変装したり、別人のような気分になったり:two_hearts::two_hearts: それが一番面白いです:heart_eyes_cat:
