@@ -1,7 +1,7 @@
 .blog-summary {
   background: linear-gradient(
     to bottom,
-    var(--colors-themed-default) 96px,
+    var(--colors-themed-blog) 96px,
     var(--colors-base-light) 96px
   );
 
@@ -26,6 +26,7 @@
 }
 
 .blog-box {
+  cursor: pointer;
   position: relative;
   width: 33.33%;
   background-color: var(--colors-base-white);
