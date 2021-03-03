@@ -1,10 +1,10 @@
 ---
 path: '/blog/interview-saika-en/'
 slug: 'interview-saika-en'
-publishedAt: '2021-03-01'
+publishedAt: '2021-03-03'
 author: Animeshon
 target: users
-title: 'Interview with a Cosplayer #1 - Saika'
+title: 'Interview with a Cosplayer - Saika'
 teaser: |
   Our first interview with a cosplayer. A German-Russian cosplayer, Saika-chan is revealing her cosplay life.
 overline: >

@@ -1,10 +1,10 @@
 ---
 path: '/blog/interview-saika-jp/'
 slug: 'interview-saika-jp'
-publishedAt: '2021-03-01'
+publishedAt: '2021-03-03'
 author: Animeshon
 target: users
-title: '世界のコスプレイヤーインタビュー #1 - サイカちゃん'
+title: '世界のコスプレイヤーインタビュー - サイカちゃん'
 teaser: |
   コスプレイヤーインタビュー第一弾。ロシア系ドイツ人コスプレイヤーのサイカちゃんがコスプレの経験を公開。
 overline: >
