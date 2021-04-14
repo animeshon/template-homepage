@@ -1,14 +1,14 @@
 ---
-path: '/blog/weekly-updates-5/'
-slug: 'weekly-updates-5'
+path: '/blog/biweekly-updates-5/'
+slug: 'biweekly-updates-5'
 publishedAt: '2021-03-30'
 author: Matteo Roggia
 target: all
-title: 'Weekly Updates #5'
+title: 'Bi-Weekly Updates #5'
 teaser: |
   GraphQL schema specification and a close encounter with Covid-19.
 overline: >
-  Weekly Updates
+  Bi-Weekly Updates
 ---
 Konnichiwa, Matteo desu.
 
