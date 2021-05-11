@@ -1,4 +1,5 @@
 ---
+cat: update
 path: '/blog/biweekly-updates-6/'
 slug: 'biweekly-updates-6'
 publishedAt: '2021-04-14'

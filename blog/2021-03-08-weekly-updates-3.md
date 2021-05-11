@@ -1,4 +1,5 @@
 ---
+cat: update
 path: '/blog/weekly-updates-3/'
 slug: 'weekly-updates-3'
 publishedAt: '2021-03-08'

@@ -81,6 +81,10 @@ class BlogCache {
         });
     };
 
+    FilterCategories = (posts) => {
+        return posts.filter((v,i,a) => {return v.cat == undefined || a.findIndex(t=>(t.cat === v.cat))===i});
+    };
+
     GetOrRefresh = async () => {
         let that = this;
         return await this.memoryCache.get("_").then((result, err) => {
