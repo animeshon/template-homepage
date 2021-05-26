@@ -36,7 +36,7 @@ When we started the Detabesu project we wanted to have all the information about
 
 As an example, information like the address of an Organization, or the broadcasts of an Episode will be temporarily pruned from the final Data-Graph.
 
-Another very important decision was to put on hold the management of [Doujinshi](https://www.doujinshi.org) data. After 4 different iterations we came to the conclusion that their data is too chaotic to be worth the effort of analyzing and consolidating, and since we got some data from MangaDex and nHentai we prioritize those data sources for the "Doujin" domain.
+Another very important decision was to put on hold the management of [Doujinshi.org](https://www.doujinshi.org) data. After 4 different iterations we came to the conclusion that their data is too chaotic to be worth the effort of analyzing and consolidating, and since we got some data from MangaDex and nHentai we prioritize those data sources for the "Doujin" domain.
 
 To conclude, we are close to the conclusion of the Detabesu chapter and we are very enthusiastic about the upcoming series of releases.
 
