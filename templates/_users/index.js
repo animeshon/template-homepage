@@ -171,6 +171,7 @@ export const getStaticProps = async () => {
   const cache = GetGlobalBlogCache();
   const posts = (cache.FilterCategories(await cache.GetOrRefresh())).filter(p => p.target == Target || p.target == 'all');
   // const posts = (await cache.GetOrRefresh()).filter(p => p.target == Target);
+  
 
   return {
     props: {
