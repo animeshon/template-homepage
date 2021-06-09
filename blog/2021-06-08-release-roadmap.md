@@ -1,10 +1,9 @@
 ---
-cat: update
 path: '/blog/release-roadmap-media-platform-2021/'
 slug: 'release-roadmap-media-platform-2021'
 publishedAt: '2021-06-08'
 author: Christian Roggia
-target: all
+target: developers
 title: 'Release Roadmap: Animeshon Ecosystem'
 teaser: |
   What to expect in the next few months with a complete roadmap and a sneak peek at what is already here.
