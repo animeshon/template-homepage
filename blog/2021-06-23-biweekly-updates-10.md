@@ -39,7 +39,7 @@ To explain the importance of this little but essential component of our Ecosyste
 ### CrossReference
 
 When we started working on *Detabesu*, we thought that grouping different representations of the same entity across multiple external data sources was a good feature both for Projects integrating *Animeshon* and for Animeshon itself.
-A big Data-Graph consolidating information in a way no one did before (for us), and traversable edges to external sources (for Third-Partiy projects).
+A big Data-Graph consolidating information in a way no one did before (for us), and traversable edges to external sources (for Third-Party projects).
 
 At the time *Wormhole* was just a pipeline to preseed data into *Detabesu*, and the **CrossReferences** were just a convenient way to tell the system to "put this data together with this one".
 
@@ -52,11 +52,11 @@ By doing this, any **Contribution** submitted to *Isekai* gets piped in *Wormhol
 
 But of course, we need to tell the system that a particular **User Contributions** belongs to a specific entity, and it might change the output or correct some data of another external entity. Basically, the system has to attach the **User Contributions** to a **CrossReference**.
 
-In the end the concept of **CrossReference** changed from `a nice feature which helps us to preseed the database and helps third-party projects link entities across multiple services` to `If something is not attached to a **CrossReferences**, it doesn't exist in the Animeshon's Ecosystem`.
+In the end the concept of **CrossReference** changed from `A nice feature which helps us to preseed the database and helps third-party projects link entities across multiple services` to `If something is not attached to a **CrossReference**, it doesn't exist in the Animeshon Ecosystem`.
 
 ### CrossRefs Manager
 
-By making the **CrossReferences** the most important concept of the entire Ecosystem, we had to ensure that the service managing them was not just a helper which takes data from the database, does some stuff, and then puts everything back in the same database.
+By making **CrossReferences** the most important concept of the entire Ecosystem, we had to ensure that the service managing them was not just a helper which takes data from the database, does some stuff, and then puts everything back in the same database.
 
 ![CrossRefs Manager diagram](/blog/2021-06-23-biweekly-updates-10/crossrefs-manager-diagram.svg)
 
@@ -72,6 +72,6 @@ Last but not least, we also wanted to make the **CrossRefs Manager** the first s
 
 At this point you might wonder "who cares about *Detabesu*, do some work for the actual **Media Platform**". Spoiler alert, release of chapters in the **Media Platform** are just **User Contributions**. But this is something we will exaplain in another post :)
 
-For the most curious, you can che the protobuf definitions in our [Open Source Repository](https://github.com/animeapis/animeapis/tree/master/animeshon/crossrefs/v1alpha1).
+For the most curious, you can check the protobuf definitions in our [Open Source Repository](https://github.com/animeapis/animeapis/tree/master/animeshon/crossrefs/v1alpha1).
 
 Ja ne～
