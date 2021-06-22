@@ -24,7 +24,7 @@ I'll also spend some more words on the **CrossRefs Manager** since this is the t
 But first things first, let's go with the bullet list:
 
 - Conversion of the CrossRefs Manager into a standalone service
-- Conversion of the CrossRefs Manager into a gRPC service
+- Refactor of the CrossRefs Manager to allow gRPC communication
 - Refactor of the CrossReference management flow and GUI (still on WIP)
 - Full Implementation of gRBAC which flags the Authentication and Authorization infrastructure to be ready for release
 - Development of a library to write our Data-Graph directly in our Graph-Databases (instead of using an asynchronous flow)
