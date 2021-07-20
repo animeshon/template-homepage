@@ -39,7 +39,7 @@ A new improved version has been discussed, and its features and schemas are pret
 It will support:
 - **Shared trackers** (not that you have any friends to share it with), where two or more people can update it.
 - **Multiple re-watches/re-reads**, for those weirdos that saw [Eromanga Sensei](https://animeshon.com/e/Eromanga_Sensei-Anime-V6mW7BVchUPC) 7 times and want to let everyone know.
-- And a **universe tracker**! Do you want to know how much of the whole of Fate universe you have watched? For starters, too little, anything below 5 re-watches of [Fate/Apocrypha](https://animeshon.com/e/Fate_Apocrypha-Anime-inJawW-CbYgs)is too little screentime for our sweet Astolfo. And secondly, with the Universe tracker you can!
+- And a **universe tracker**! Do you want to know how much of the whole of Fate universe you have watched? For starters, too little, anything below 5 re-watches of [Fate/Apocrypha](https://animeshon.com/e/Fate_Apocrypha-Anime-inJawW-CbYgs) is too little screentime for our sweet Astolfo. And secondly, with the Universe tracker you can!
 
 
 The following week(s) I’ll be implementing the importing from external tracking providers, so you can join our side as smoothly as possible. It will also come with an exporter, so your pesky friends who dislike change can still see you are a weeb on the other platforms, as it will keep those in sync with Animeshon.
