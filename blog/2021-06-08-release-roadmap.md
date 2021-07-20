@@ -119,7 +119,7 @@ This release already includes Social Sign-In (Google, Discord, GitHub) and the t
 - [x]  gRBAC core endpoints
 - [x]  gRBAC connectivity through internal VPC network
 - [ ]  gRBAC first integration with APIs
-- [ ]  gRBAC registration hook for newly registered users
+- [x]  gRBAC registration hook for newly registered users
 
 ### Other
 
@@ -140,7 +140,7 @@ This release will introduce the newer version of detabesu with the new associate
 - [x]  Refactor of Circles - data will be merged into Organizations
 - [x]  Removal of the provider [doujinshi.org](https://www.doujinshi.org/)
 - [x]  Migration of images from detabesu to the Image API
-- [ ]  End-to-End migration of data with the new schema
+- [x]  End-to-End migration of data with the new schema
 
 ### Image API
 
@@ -158,15 +158,15 @@ This release will introduce the newer version of detabesu with the new associate
 
 - [x]  Migration to the new cluster
 - [x]  Refactor of the matching algorithm
-- [ ]  Implementation with gRPC (in progress)
-- [ ]  Refactor to remove asynchronous operations
+- [x]  Implementation with gRPC (in progress)
+- [x]  Refactor to remove asynchronous operations
 
 ### GraphQL Gateway
 
 - [x]  Added custom resolvers for languages
 - [x]  Added custom resolvers for cross-references lookup
 - [x]  Schema stitching with new services (e.g. Image API)
-- [ ]  Gateway aligned with the new schema
+- [x]  Gateway aligned with the new schema
 
 ## Release 3: IAM integration with the Gateway and UI
 
