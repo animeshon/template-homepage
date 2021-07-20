@@ -30,7 +30,7 @@ I’ll start a small piggy bank to get him a dictionary on Christmas. Not for hi
 From my jurisdiction, the beautiful tracker! Well, if the name isn’t enough, I’ll give you a small explanation. 
 The tracker service / API is responsible for remembering what content you have seen, and when. It will be where the fact that you re-watched [Darling in the FranXX](https://animeshon.com/e/Darling_in_the_FranXX-Anime-YS-5VRlRF6Is) episode 15 482 times will be recorded, so that you can reminisce about all the happy time you spent seeing best girl.
 
-![Jumpy best girl](https://thumbs.gfycat.com/UntimelyBothHoneycreeper-size_restricted.gif)
+![Jumpy best girl](/blog/2021-07-20-biweekly-updates-11/jumpy02.gif)
 
 This week the basic tracker implementation got completed and online. It currently supports basic operations (creation, deletion, listing, getting, and update), and features a basic schema with minimal information. 
 
