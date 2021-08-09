@@ -118,7 +118,7 @@ This release already includes Social Sign-In (Google, Discord, GitHub) and the t
 - [x]  gRBAC schema and proto
 - [x]  gRBAC core endpoints
 - [x]  gRBAC connectivity through internal VPC network
-- [ ]  gRBAC first integration with APIs
+- [x]  gRBAC first integration with APIs
 - [x]  gRBAC registration hook for newly registered users
 
 ### Other
@@ -131,7 +131,7 @@ This release will introduce the newer version of detabesu with the new associate
 
 ### Encyclopedia
 
-- [ ]  Encyclopedia UI aligned with the new schema
+- [x]  Encyclopedia UI aligned with the new schema
 
 ### Detabesu
 
@@ -145,9 +145,9 @@ This release will introduce the newer version of detabesu with the new associate
 ### Image API
 
 - [x]  Implementation with gRPC
-- [x]  Persisten layer
-- [x]  Management of *restricted* images
-- [x]  Support for both system-defined and user-defined annotations
+- [x]  Persistent layer
+- [ ]  Management of *restricted* images
+- [ ]  Support for both system-defined and user-defined annotations
 - [x]  Support for thumbnail generation on-the-fly
 - [x]  Support for cache images and thumbnails
 - [ ]  Migration to the new cluster
