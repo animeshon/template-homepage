@@ -46,7 +46,7 @@ Tutte tali attività potranno essere svolte in via non esclusiva o prevalente, n
 
 Ai sensi dell’art. 25, comma 11 del D.L. 179/2012, il sottoscritto Christian Roggia, nella sua qualità di legale rappresentante della società, autorizza la ripubblicazione gratuita da parte di soggetti terzi dei dati e delle informazioni contenute nella presente tabella e nei documenti informatici ad essa collegati, purché la ripubblicazione effettuata da terzi sia rispondente ad esigenze e finalità non contrarie alla vigente normativa; non comporti violazione dei diritti garantiti dal vigente Codice in materia di protezione dei dati personali, di cui al D.Lgs. 196/2003, ai titolari dei dati ripubblicati.
 
-L’ultimo bilancio depositato, nello standard XBRL, è disponibile al seguente LINK: **bilancio non ancora presentato**.
+L’ultimo bilancio depositato, nello standard XBRL, è disponibile al seguente LINK: [03072020211-31122020-20210726110513.xbrl](/blog/2020-05-01-information-transparency-italian-public-administration/03072020211-31122020-20210726110513.xbrl).
 
 Maggiori informazioni sono disponibili presso il database nazionale delle startup accessibile al [seguente link](http://startup.registroimprese.it/isin/dettaglioStartup?0&id=KXU3bCJQBfS92AJOXqJVKg%2BWN%2BruCCEiwqwlVA/how%3D%3D).
 
