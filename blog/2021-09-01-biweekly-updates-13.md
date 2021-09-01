@@ -14,7 +14,7 @@ overline: >
 
 Konnichiwa, Matteo desu.
 
-Long time no see! This time we missed the deadline due to quite a lot to "thigs" to do.
+Long time no see! This time we missed the deadline due to quite a lot to "things" to do.
 Joking aside, we gave maximum priority to development, aiming to start rolling out products and as such we got completely lost in our tasks forgetting the Update.
 Gommennasai! :(
 
