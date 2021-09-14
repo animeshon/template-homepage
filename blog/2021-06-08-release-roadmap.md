@@ -123,7 +123,7 @@ This release already includes Social Sign-In (Google, Discord, GitHub) and the t
 
 ### Other
 
-- [ ]  Identity-Aware Proxy PR [#774](https://github.com/ory/oathkeeper/pull/744)
+- [x]  Identity-Aware Proxy
 
 ## Release 2: Beta version of Detabesu
 
@@ -147,12 +147,12 @@ This release will introduce the newer version of detabesu with the new associate
 - [x]  Implementation with gRPC
 - [x]  Persistent layer
 - [ ]  Management of *restricted* images
-- [ ]  Support for both system-defined and user-defined annotations
+- [x]  Support for both system-defined and user-defined annotations
 - [x]  Support for thumbnail generation on-the-fly
 - [x]  Support for cache images and thumbnails
-- [ ]  Migration to the new cluster
-- [ ]  Google Cloud CDN integration [#1387](https://github.com/kubernetes/ingress-gce/pull/1387)
-- [ ]  Integration with Vision API from Google Cloud for SafeSearch annotations
+- [x]  Migration to the new cluster
+- [x]  Google Cloud CDN integration [#1387](https://github.com/kubernetes/ingress-gce/pull/1387)
+- [x]  Integration with Vision API from Google Cloud for SafeSearch annotations
 
 ### CrossRefs API
 

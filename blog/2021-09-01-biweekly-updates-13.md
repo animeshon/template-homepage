@@ -7,7 +7,7 @@ author: Matteo Roggia
 target: all
 title: 'Bi-Weekly Updates #13'
 teaser: |
-  Detabesu & Ecyclopedya Beta, Tracker and Identity Aware Proxy development status.
+  Detabesu, Encyclopedia, Tracker and Identity-Aware Proxy development status.
 overline: >
   Bi-Weekly Updates
 ---
