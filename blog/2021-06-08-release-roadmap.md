@@ -146,7 +146,7 @@ This release will introduce the newer version of detabesu with the new associate
 
 - [x]  Implementation with gRPC
 - [x]  Persistent layer
-- [ ]  Management of *restricted* images
+- [x]  Management of *restricted* images
 - [x]  Support for both system-defined and user-defined annotations
 - [x]  Support for thumbnail generation on-the-fly
 - [x]  Support for cache images and thumbnails
@@ -172,7 +172,7 @@ This release will introduce the newer version of detabesu with the new associate
 
 This release will introduce IAM globally and will be integrated with rate limiters as well as the website UI.
 
-- [ ]  Gateway integration with IAM
+- [x]  Gateway integration with IAM
 - [ ]  Rate Limiters integration with IAM
 - [ ]  UI integration with IAM
 - [ ]  Initial browser-facing IAM APIs to allow for access control
@@ -191,14 +191,14 @@ This release will introduce the most prominent features required by the users to
 ### User Interface
 
 - [x]  User Profile UI
-- [ ]  Tracker UI
-- [ ]  Library UI
+- [x]  Tracker UI
+- [x]  Library UI
 
 ### APIs
 
 - [ ]  Identity API
 - [ ]  Tracker API
-- [ ]  Library API
+- [x]  Library API
 
 ### General
 
@@ -215,7 +215,7 @@ This release will introduce service accounts and full IAM and permissions suppor
 ### APIs
 
 - [x]  Hub API
-- [ ]  IAM API
+- [x]  IAM API
 
 ### Integration
 

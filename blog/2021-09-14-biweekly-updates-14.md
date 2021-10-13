@@ -39,4 +39,4 @@ Finally, we would like to announce that starting from tomorrow detabesu (encyclo
 
 What you could be expecting in the upcoming release is to be able to create identities and service accounts, to access Vision and Image APIs which include not only image binaries but also annotations and properties, and to access the new GraphQL gateway with advanced custom resolvers and overall better performance and usability.
 
-See you on Discord!
+See you on [Discord](https://discord.gg/WvNsjtR)!
