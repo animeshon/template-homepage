@@ -7,7 +7,7 @@ author: Matteo Roggia
 target: all
 title: 'Bi-Weekly Updates #15'
 teaser: |
-  Beta Version of the encyclopedia released. Status of the development and next steps
+  Beta Version of the encyclopedia released. Development status and next steps
 overline: >
   Bi-Weekly Updates
 ---
