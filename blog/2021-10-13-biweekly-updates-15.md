@@ -7,7 +7,7 @@ author: Matteo Roggia
 target: all
 title: 'Bi-Weekly Updates #15'
 teaser: |
-  Production is getting ready for the public release with identities, brand new APIs, and a refactored gateway.
+  Beta Version of the encyclopedia released. Status of the development and next steps
 overline: >
   Bi-Weekly Updates
 ---
