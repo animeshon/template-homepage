@@ -104,7 +104,7 @@ const menu = [
       },
       {
         title: 'Playground',
-        href: 'https://play.animeshon.com/'
+        href: 'https://graphql.animeapis.dev/graphql'
       },
       {
         title: 'Blog',

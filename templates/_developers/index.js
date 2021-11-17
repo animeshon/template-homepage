@@ -92,7 +92,7 @@ const projects = [
     title: 'Your graph knowledge-base',
     description:
       'Everything about Anime, Manga, Light-, and Visual- Novels is available to you from the most interconnected graph database on the planet.',
-    href: 'https://play.animeshon.com/',
+    href: 'https://graphql.animeapis.dev/graphql',
     visual: {
       type: "lottie",
       data: require('@/root/public/lotties/developers_1.json'),
@@ -150,7 +150,7 @@ const cta = [
   },
   {
     title: "Try GraphQL",
-    href: "https://play.animeshon.com/",
+    href: "https://graphql.animeapis.dev/graphql",
     openInNewWindow: true,
   }
 ]

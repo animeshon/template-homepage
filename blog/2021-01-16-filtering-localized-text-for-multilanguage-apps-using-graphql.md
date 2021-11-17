@@ -32,7 +32,7 @@ If you are looking for an answer to one or more of the following questions this 
 # Queries
 
 In this section we will analyze a few examples of queries that are commonly used to fetch localized texts.
-You can try all queries described here in our [GraphQL Playground](https://play.animeshon.com/).
+You can try all queries described here in our [GraphQL Playground](https://graphql.animeapis.dev/graphql).
 
 ## Alpha-3
 

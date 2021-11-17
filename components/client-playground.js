@@ -62,10 +62,14 @@ const ClientPlayground = () => {
   {
       ${query.q}(first: 1, offset:${offset}) {
         names {
-          text
+          hits {
+            text
+          }
         }
         aliases {
-          text
+          hits {
+            text
+          }
         }
       }
   }`;
